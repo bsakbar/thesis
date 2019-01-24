@@ -17,4 +17,4 @@
 
 **4. Meaning in Linguistic Interaction**
 
-<sup>Jaszczolt, Kasia M. *Meaning In Linguistic Interaction: Semantics, Metasemantics, Philosophy of Language*. Oxford, United Kingdom: OXFORD UNIV Press, 2016.</sup>
+<sup>Jaszczolt, Kasia M. *Meaning In Linguistic Interaction: Semantics, Metasemantics, Philosophy of Language*. Oxford, United Kingdom: Oxford University Press, 2016.</sup>
