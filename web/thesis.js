@@ -3,32 +3,36 @@ var chart = new Chart(ctx, {
 
     type: 'radar',
 
-
     data: {
 
         labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
         datasets: [{
             label: 'TBD',
-            backgroundColor: 'rgb(255, 56, 3, 0.4)',
-            borderColor: 'rgba(0, 0, 0, 0)',
-            pointBackgroundColor: 'pointBackgroundColor',
+            backgroundColor:"transparent",
+            borderWidth: 0.5,
+            borderColor: 'rgba(255 , 82,  29, 1)',
+            pointBackgroundColor: 'rgba(255 , 82,  29, 1)',
+            pointBorderWidth: 5,
+            pointHitRadius:5,
             pointHoverBackgroundColor	: '#FF5F40',
-            data: [0, 10, 20, 30, 40, 50, 60,70, 80, 90]
+            hoverRadius: 7,
+            data: [20, 20, 30, 30, 40, 50, 60,70, 80, 88],
+            fontSize: 20
 
         }]
     },
     options: {
-      gridlines: {
-        circular:true,
-      },
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: false,
+      scale: {
+               gridLines: {
+                  circular: true,
+                  color: 'white',
+                  lineWidth: 0.3
+              }
+      }
 
-      legend: {
-            position: 'bottom',
-          },
-
-          title: {
-            text: 'Chart.js Outcome Graph'
-          }
 
     },
 
