@@ -28,8 +28,8 @@ var chart = new Chart(ctx, {
       scale: {
                gridLines: {
                   circular: true,
-                  color: 'white',
-                  lineWidth: 0.3
+                  color: 'black',
+                  lineWidth: 0.2
               }
       }
 
