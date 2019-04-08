@@ -1,4 +1,5 @@
-var ctx = document.getElementById('canvas').getContext('2d');
+
+var ctx = document.getElementById('chart1').getContext('2d');
 var chart = new Chart(ctx, {
 
     type: 'radar',
@@ -6,18 +7,18 @@ var chart = new Chart(ctx, {
     data: {
 
         labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
+
         datasets: [{
-            label: 'TBD',
-            backgroundColor:"transparent",
+            backgroundColor:'rgba(77, 255, 178, 0.7)',
             borderWidth: 0.5,
-            borderColor: 'rgba(255 , 82,  29, 1)',
-            pointBackgroundColor: 'rgba(255 , 82,  29, 1)',
-            pointBorderWidth: 5,
-            pointHitRadius:5,
+            borderColor: 'rgba(255 , 82,  29, 0)',
+            pointBackgroundColor: 'rgba(255 , 82,  29, 0',
+            pointBorderWidth: 0,
+            pointHitRadius:0,
             pointHoverBackgroundColor	: '#FF5F40',
-            hoverRadius: 7,
-            data: [20, 20, 30, 30, 40, 50, 60,70, 80, 88],
-            fontSize: 20
+            hoverRadius: 0,
+            data: [60,60,60,60,60,60,60,60,60],
+            fontSize: 10,
 
         }]
     },
@@ -26,17 +27,97 @@ var chart = new Chart(ctx, {
       maintainAspectRatio: false,
       legend: false,
       scale: {
+              ticks: {
+                  display: false,
+              },
                gridLines: {
                   circular: true,
-                  color: 'black',
-                  lineWidth: 0.2
+                  color: '#232323',
+                  lineWidth: 0.1
               }
       }
-
-
     },
 
+});
 
+var ctx = document.getElementById('chart2').getContext('2d');
+var chart = new Chart(ctx, {
 
+    type: 'radar',
 
+    data: {
+
+        labels: ['Neutrophils', 'Lymphocytes', 'Monocytes', 'Eosinophils', 'Basophils'],
+        datasets: [{
+            // label: '#',
+            backgroundColor:'rgba(100, 77, 255, 0.7)',
+            borderWidth: 0,
+            borderColor: 'rgba(41, 234, 255, 0)',
+            pointBackgroundColor: 'rgba(41, 234, 255, 0)',
+            pointBorderWidth: 0,
+            pointHitRadius:0,
+            pointHoverBackgroundColor	: '#29eaff',
+            hoverRadius: 0,
+            data: [40,40,40,40,40],
+            fontSize: 12,
+
+        }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: false,
+      scale: {
+
+          ticks: {
+              display: false,
+          },
+          gridLines: {
+              circular: true,
+              color: 'rgba(100, 77, 255, 1)',
+              lineWidth: 0.1
+          }
+      }
+    },
+});
+
+var ctx = document.getElementById('chart3').getContext('2d');
+var chart = new Chart(ctx, {
+
+    type: 'radar',
+
+    data: {
+
+        labels: ['Blood Glucose', 'Calcium', 'Sodium', 'Potassium','Bicarbonate','Chloride'],
+        datasets: [{
+            // label: '#',
+            backgroundColor:'rgba(255, 36, 69, 0.7)',
+            borderWidth: 0,
+            borderColor: 'rgba(41, 234, 255, 0)',
+            pointBackgroundColor: 'rgba(41, 234, 255, 0)',
+            pointBorderWidth: 0,
+            pointHitRadius:0,
+            pointHoverBackgroundColor	: '#29eaff',
+            hoverRadius: 0,
+            data: [70,70,70,70,70,70],
+            fontSize: 12,
+
+        }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: false,
+      scale: {
+
+          ticks: {
+              display: false,
+          },
+          gridLines: {
+              circular: true,
+              color: 'rgba(100, 77, 255, 1)',
+              lineWidth: 0.1
+          }
+      }
+    },
 });
