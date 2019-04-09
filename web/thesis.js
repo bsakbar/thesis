@@ -121,3 +121,53 @@ var chart = new Chart(ctx, {
       }
     },
 });
+
+var ctx = document.getElementById('chart4').getContext('2d');
+var chart = new Chart(ctx, {
+
+    type: 'radar',
+
+    data: {
+
+        labels: ['AST','ALT','Bilirubin','GGT','ALP','PT','PTT','Albumin','Creatinine','BUN'],
+        datasets: [{
+            backgroundColor:'rgba(255, 36, 69, 0.7)',
+            borderWidth: 0,
+            borderColor: 'rgba(41, 234, 255, 0)',
+            pointBackgroundColor: 'rgba(41, 234, 255, 0)',
+            pointBorderWidth: 0,
+            pointHitRadius:0,
+            pointHoverBackgroundColor	: '#29eaff',
+            hoverRadius: 0,
+            data: [70,30,79,34,70,60,90,44,0,0],
+            fontSize: 12,
+          },{
+            backgroundColor:'rgba(77, 255, 178, 0.7)',
+            borderWidth: 0,
+            borderColor: 'rgba(41, 234, 255, 0)',
+            pointBackgroundColor: 'rgba(41, 234, 255, 0)',
+            pointBorderWidth: 0,
+            pointHitRadius:0,
+            pointHoverBackgroundColor	: '#29eaff',
+            hoverRadius: 0,
+            data: [0,0,0,0,0,0,0,0,57,78],
+            fontSize: 12,
+        }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: false,
+      scale: {
+
+          ticks: {
+              display: false,
+          },
+          gridLines: {
+              circular: true,
+              color: 'rgba(100, 77, 255, 1)',
+              lineWidth: 0.1
+          }
+      }
+    },
+});

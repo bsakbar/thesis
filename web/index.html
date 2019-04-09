@@ -21,7 +21,7 @@
         <canvas id="chart1"></canvas>
     </div>
 
-    <div class="card1" style="margin-top:555px;">
+    <div class="card1" style="margin-top:538px;">
       <div class="about">
         <h3>Differential Blood Count</h3>
         <div id="tooltip" class="tooltip-placeholder"></div>
@@ -29,12 +29,20 @@
         <canvas id="chart2"></canvas>
     </div>
 
-    <div class="card1" style="margin-left:338px;">
+    <div class="card1" style="margin-left:320px;">
       <div class="about">
         <h3>Basic Metabolic Panel</h3>
         <div id="tooltip" class="tooltip-placeholder"></div>
       </div>
         <canvas id="chart3"></canvas>
+    </div>
+
+    <div class="card1" style="margin-left:320px; margin-top:538px;">
+      <div class="about">
+        <h3>Renal & Liver Function Tests</h3>
+        <div id="tooltip" class="tooltip-placeholder"></div>
+      </div>
+        <canvas id="chart4"></canvas>
     </div>
 
 
@@ -49,6 +57,7 @@
       <a href="#slide-3"></a>
       <a href="#slide-4"></a>
       <a href="#slide-5"></a>
+      <a href="#slide-6"></a>
     </div>
 
     <div class="boxSlider">
@@ -162,36 +171,38 @@
     <div id="slide-3">
         <text class="smallhead" style="color:#644dff">Differential Blood Count (DBC)
           <br>
-          <br>
+
           <br>
       <div class="slidecontainer1">
         <text class = "subhead">Neutrophils
-        <h2 class ="subsubhead"></h2>
+        <h2 class ="subsubhead">–</h2>
         <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
         <br>
         <br>
         <br>
         <text class = "subhead">Lymphocytes<br>
-        <h2 class ="subsubhead"></h2>
+        <h2 class ="subsubhead">–</h2>
         <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
           <br>
           <br>
           <br>
           <text class = "subhead">Monocytes<br>
-          <h2 class="subsubhead"></h2>
+          <h2 class="subsubhead">–</h2>
           <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
           <br>
           <br>
           <br>
+        </div>
+        <div class="slidecontainer2">
           <text class = "subhead">Eosinophils<br>
-          <h2 class="subsubhead"></h2>
+          <h2 class="subsubhead">–</h2>
           <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
           <br>
           <br>
           <br>
 
           <span class = "subhead">Basophils<br>
-            <h2 class="subsubhead"></h2>
+            <h2 class="subsubhead">–</h2>
           <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
             <br>
             <br>
@@ -206,38 +217,40 @@
         <br>
     <div class="slidecontainer1">
       <text class = "subhead">Blood Glucose
-      <h2 class ="subsubhead"></h2>
+      <h2 class ="subsubhead">–</h2>
       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
       <br>
       <br>
       <br>
       <text class = "subhead">Calcium<br>
-      <h2 class ="subsubhead"></h2>
+      <h2 class ="subsubhead">–</h2>
       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
         <br>
         <br>
         <br>
         <text class = "subhead">Sodium<br>
-        <h2 class="subsubhead"></h2>
+        <h2 class="subsubhead">–</h2>
         <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
         <br>
         <br>
         <br>
+      </div>
+        <div class="slidecontainer2">
         <text class = "subhead">Potassium<br>
-        <h2 class="subsubhead"></h2>
+        <h2 class="subsubhead">–</h2>
         <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
         <br>
         <br>
         <br>
 
         <span class = "subhead">Bicarbonate<br>
-          <h2 class="subsubhead"></h2>
+          <h2 class="subsubhead">–</h2>
         <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
           <br>
           <br>
           <br>
         <span class = "subhead">Chloride<br>
-          <h2 class="subsubhead"></h2>
+          <h2 class="subsubhead">–</h2>
         <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
           <br>
           <br>
@@ -246,10 +259,85 @@
     </div>
 
     <div id="slide-5">
-      5
+      <text class="smallhead" style="color:#ff2445;">Renal Function Tests
+        <br>
+        <br>
+    <div class="slidecontainer1">
+      <text class = "subhead">BUN
+      <h2 class ="subsubhead">Blood Urea Nitrogen</h2>
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <br>
+      <br>
+      <br>
+      <text class = "subhead">Creatinine<br>
+      <h2 class ="subsubhead">–</h2>
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <br>
+        <br>
+        <br>
     </div>
 
   </div>
+
+  <div id="slide-6">
+    <text class="smallhead" style="color:#ff2445;">Liver Function Tests
+      <br>
+      <br>
+  <div class="slidecontainer1">
+    <text class = "subhead">AST
+    <h2 class ="subsubhead">Blood Urea Nitrogen</h2>
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <br>
+      <br>
+      <br>
+    <text class = "subhead">ALT<br>
+    <h2 class ="subsubhead">–</h2>
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <br>
+      <br>
+      <br>
+    <text class = "subhead">Bilirubin<br>
+    <h2 class ="subsubhead">Glomerular Filtration Rate</h2>
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <br>
+      <br>
+      <br>
+    <text class = "subhead">GGT<br>
+    <h2 class ="subsubhead">Glomerular Filtration Rate</h2>
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <br>
+      <br>
+      <br>
+    </div>
+    <div class="slidecontainer2">
+    <text class = "subhead">ALP<br>
+    <h2 class ="subsubhead">Glomerular Filtration Rate</h2>
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <br>
+      <br>
+      <br>
+    <text class = "subhead">PT<br>
+    <h2 class ="subsubhead">Glomerular Filtration Rate</h2>
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <br>
+      <br>
+      <br>
+    <text class = "subhead">PTT<br>
+    <h2 class ="subsubhead">Glomerular Filtration Rate</h2>
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <br>
+      <br>
+      <br>
+    <text class = "subhead">Albumin<br>
+    <h2 class ="subsubhead">Glomerular Filtration Rate</h2>
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <br>
+      <br>
+      <br>
+
+  </div>
+  </div>
+</div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>

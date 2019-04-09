@@ -10,7 +10,7 @@ body, html {
   width:250px !important;
   height:250px !important;
   margin-top: 50px;
-  margin-left: 30px;
+  margin-left: 25px;
 }
 
 #chart2{
@@ -18,8 +18,8 @@ body, html {
   position: absolute;
   width:250px !important;
   height:250px !important;
-  margin-top: 50px;
-  margin-left: 40px;
+  margin-top: 40px;
+  margin-left: 35px;
 }
 
 #chart3{
@@ -28,16 +28,25 @@ body, html {
   width:250px !important;
   height:250px !important;
   margin-top: 50px;
-  margin-left: 30px;
+  margin-left: 20px;
+}
+
+#chart4{
+  display: block;
+  position: absolute;
+  width:250px !important;
+  height:250px !important;
+  margin-top: 50px;
+  margin-left: 25px;
 }
 
 .card1 {
   position: absolute;
   display: flex;
   margin-top: 218px;
-  left: 690px;
-  width: 320px;
-  height: 320px;
+  left: 730px;
+  width: 310px;
+  height: 310px;
   background: #ffffff;
   border: 1px solid;
   border-color: #232323;
