@@ -1,351 +1,358 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Pragati+Narrow:400,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
-    <link  rel="stylesheet" type="text/css" href="style.css">
-    <title>Thesissss!!</title>
-  </head>
-	<body>
-
-
-    <div class="card1">
-      <div class="about">
-        <h3>Complete Blood Count</h3>
-        <div id="tooltip" class="tooltip-placeholder"></div>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Pragati+Narrow:400,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <title>Thesissss!!</title>
+   </head>
+   <body>
+      <div class="card1">
+         <div class="about">
+            <h3>Complete Blood Count</h3>
+            <div id="tooltip" class="tooltip-placeholder"></div>
+         </div>
+         <canvas id="chart1"></canvas>
       </div>
-        <canvas id="chart1"></canvas>
-    </div>
-
-    <div class="card1" style="margin-top:538px;">
-      <div class="about">
-        <h3>Differential Blood Count</h3>
-        <div id="tooltip" class="tooltip-placeholder"></div>
+      <div class="card1" style="margin-top:538px;">
+         <div class="about">
+            <h3>Differential Blood Count</h3>
+            <div id="tooltip" class="tooltip-placeholder"></div>
+         </div>
+         <canvas id="chart2"></canvas>
       </div>
-        <canvas id="chart2"></canvas>
-    </div>
-
-    <div class="card1" style="margin-left:320px;">
-      <div class="about">
-        <h3>Basic Metabolic Panel</h3>
-        <div id="tooltip" class="tooltip-placeholder"></div>
+      <div class="card1" style="margin-left:320px;">
+         <div class="about">
+            <h3>Basic Metabolic Panel</h3>
+            <div id="tooltip" class="tooltip-placeholder"></div>
+         </div>
+         <canvas id="chart3"></canvas>
       </div>
-        <canvas id="chart3"></canvas>
-    </div>
-
-    <div class="card1" style="margin-left:320px; margin-top:538px;">
-      <div class="about">
-        <h3>Renal & Liver Function Tests</h3>
-        <div id="tooltip" class="tooltip-placeholder"></div>
+      <div class="card1" style="margin-left:320px; margin-top:538px;">
+         <div class="about">
+            <h3>Renal & Liver Function Tests</h3>
+            <div id="tooltip" class="tooltip-placeholder"></div>
+         </div>
+         <canvas id="chart4"></canvas>
       </div>
-        <canvas id="chart4"></canvas>
-    </div>
-
-
-        <div style="margin-left: 180px; margin-top: 100px; position: relative; display: flex;">
-        <text class="subhead">LOGO</text>
-        </div>
-
-
-    <div class="circles">
-      <a href="#slide-1"></a>
-      <a href="#slide-2"></a>
-      <a href="#slide-3"></a>
-      <a href="#slide-4"></a>
-      <a href="#slide-5"></a>
-      <a href="#slide-6"></a>
-    </div>
-
-    <div class="boxSlider">
-      <div class="slides">
-        <!-- <span id="rs-bullet" class="rs-label">0</span> -->
-        <div id="slide-1">
-          <text class="smallhead">User Information
-            <br>
-            <br>
-          <label class="nametext">Date Of Test
-            <input class="date" type="date">
-            <br>
-            <br>
-            <br>
-            <br>
-            Name
-            <br>
-            <input type="text" class="name"id="name" autocomplete="off">
-            <br>
-            <br>
-            <br>
-            DOB
-            <input  class="date" type="date">
-          </label>
-
-            <div class="genderradio">
-              <label class="nametext">Gender
-              <div class="radioText">
-                <label>&ensp;Male&emsp;
-                  <input type="radio" name="gender" value="male">
-                  <span class="checkmark"></span>
-                </label>
-                <label>&ensp;Female&emsp;
-                  <input type="radio" name="gender" value="female">
-                  <span class="checkmark"></span>
-              </label>
-              </div>
+      <div style="margin-left: 180px; margin-top: 100px; position: relative; display: flex;">
+         <text class="subhead">LOGO</text>
+      </div>
+      <div class="circles">
+         <a href="#slide-1"></a>
+         <a href="#slide-2"></a>
+         <a href="#slide-3"></a>
+         <a href="#slide-4"></a>
+         <a href="#slide-5"></a>
+         <a href="#slide-6"></a>
+      </div>
+      <div class="boxSlider">
+         <div class="slides">
+            <!-- <span id="rs-bullet" class="rs-label">0</span> -->
+            <div id="slide-1">
+               <form>
+                  <text class="smallhead">
+                  User Information</h1>
+                  <br>
+                  <br>
+                  <label class="nametext">Date Of Test
+                  <input class="date" type="date">
+                  <br>
+                  <br>
+                  <br>
+                  <br> Name
+                  <br>
+                  <input type="text" class="name" id="name" autocomplete="off">
+                  <br>
+                  <br>
+                  <br> DOB
+                  <input class="date" type="date">
+                  </label>
+                  <div class="genderradio">
+                     <label class="nametext">
+                        Gender
+                        <div class="radioText">
+                     <label>&ensp;Male&emsp;
+                     <input type="radio" name="gender" value="male">
+                     <span class="checkmark"></span>
+                     </label>
+                     <label>&ensp;Female&emsp;
+                     <input type="radio" name="gender" value="female">
+                     <span class="checkmark"></span>
+                     </label>
+                     </div>
+                  </div>
             </div>
-        </div>
-
-        <div id="slide-2">
-          <text class="smallhead" style="color:#4dffb2">Complete Blood Count (CBC)
-    				<br>
-    				<br>
-        <div class="slidecontainer1">
-    			<text class = "subhead">WBC
-          <h2 class ="subsubhead">White Blood Cells</h2>
-    			<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          <br>
-          <br>
-          <br>
-    			<text class = "subhead">RBC<br>
-          <h2 class ="subsubhead">Red Blood Cells</h2>
-    			<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-    				<br>
-            <br>
-            <br>
-    			<text class = "subhead">HGB<br>
-          <h2 class="subsubhead">Hemoglobin</h2>
-    			<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          <br>
-          <br>
-          <br>
-    			<text class = "subhead">HT<br>
-          <h2 class="subsubhead">Hematocrit </h2>
-    			<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          <br>
-          <br>
-          <br>
-
-          <span class = "subhead">MCV<br>
-            <h2 class="subsubhead">Mean Corpuscular Volume</h2>
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            <br>
-            <br>
-            <br>
-        </div>
-
-
-    		<div class="slidecontainer2">
-
-    			<span class = "subhead">MCH<br>
-            <h2 class="subsubhead">Mean Corpuscular Hemoglobin</h2>
-    			<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-    				<br>
-            <br>
-    				<br>
-    			<span class = "subhead">MCHC<br>
-            <h2 class="subsubhead">Mean Corpuscular Hemoglobin Concentration</h2>
-    			<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-    				<br>
-            <br>
-    				<br>
-    			<span class = "subhead">Platelets<br>
-            <h2 class="subsubhead">–</h2>
-    			<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            <br>
-            <br>
-            <br>
-          <span class = "subhead">RDW<br>
-            <h2 class="subsubhead">Red Cell Distribution Width</h2>
-    			<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          <br>
-          <br>
-          <br>
-
-          </div>
-        </div>
-
-
-    <div id="slide-3">
-        <text class="smallhead" style="color:#644dff">Differential Blood Count (DBC)
-          <br>
-
-          <br>
-      <div class="slidecontainer1">
-        <text class = "subhead">Neutrophils
-        <h2 class ="subsubhead">–</h2>
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        <br>
-        <br>
-        <br>
-        <text class = "subhead">Lymphocytes<br>
-        <h2 class ="subsubhead">–</h2>
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          <br>
-          <br>
-          <br>
-          <text class = "subhead">Monocytes<br>
-          <h2 class="subsubhead">–</h2>
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          <br>
-          <br>
-          <br>
-        </div>
-        <div class="slidecontainer2">
-          <text class = "subhead">Eosinophils<br>
-          <h2 class="subsubhead">–</h2>
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          <br>
-          <br>
-          <br>
-
-          <span class = "subhead">Basophils<br>
-            <h2 class="subsubhead">–</h2>
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            <br>
-            <br>
-            <br>
-        </div>
-    </div>
-
-    <div id="slide-4">
-      <text class="smallhead" style="color:#ff2445;">Basic Metabolic Panel
-
-        <br>
-        <br>
-    <div class="slidecontainer1">
-      <text class = "subhead">Blood Glucose
-      <h2 class ="subsubhead">–</h2>
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <br>
-      <br>
-      <br>
-      <text class = "subhead">Calcium<br>
-      <h2 class ="subsubhead">–</h2>
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        <br>
-        <br>
-        <br>
-        <text class = "subhead">Sodium<br>
-        <h2 class="subsubhead">–</h2>
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        <br>
-        <br>
-        <br>
+            </form>
+            <div id="slide-2">
+               <text class="smallhead" style="color:#FFB23B">
+               Complete Blood Count (CBC)
+               <br>
+               <br>
+               <div class="slidecontainer1">
+                  <text class="subhead">
+                  WBC
+                  <h2 class="subsubhead">White Blood Cells</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class="subhead">
+                  RBC
+                  <br>
+                  <h2 class="subsubhead">Red Blood Cells</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class="subhead">
+                  HGB
+                  <br>
+                  <h2 class="subsubhead">Hemoglobin</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class="subhead">
+                  HT
+                  <br>
+                  <h2 class="subsubhead">Hematocrit </h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <span class="subhead">MCV<br>
+                  <h2 class="subsubhead">Mean Corpuscular Volume</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+               </div>
+               <div class="slidecontainer2">
+                  <span class = "subhead">MCH<br>
+                  <h2 class="subsubhead">Mean Corpuscular Hemoglobin</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <span class = "subhead">MCHC<br>
+                  <h2 class="subsubhead">Mean Corpuscular Hemoglobin Concentration</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <span class = "subhead">Platelets<br>
+                  <h2 class="subsubhead">–</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <span class = "subhead">RDW<br>
+                  <h2 class="subsubhead">Red Cell Distribution Width</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+               </div>
+            </div>
+            <div id="slide-3">
+               <text class="smallhead" style="color:#A6C3BA">
+               Differential Blood Count (DBC)
+               <br>
+               <br>
+               <div class="slidecontainer1">
+                  <text class = "subhead">
+                  Neutrophils
+                  <h2 class ="subsubhead">–</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class = "subhead">
+                  Lymphocytes<br>
+                  <h2 class ="subsubhead">–</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class = "subhead">
+                  Monocytes<br>
+                  <h2 class="subsubhead">–</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+               </div>
+               <div class="slidecontainer2">
+                  <text class = "subhead">
+                  Eosinophils<br>
+                  <h2 class="subsubhead">–</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <span class = "subhead">Basophils<br>
+                  <h2 class="subsubhead">–</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+               </div>
+            </div>
+            <div id="slide-4">
+               <text class="smallhead" style="color:#4F76E2;">
+               Basic Metabolic Panel
+               <br>
+               <br>
+               <div class="slidecontainer1">
+                  <text class = "subhead">
+                  Glu
+                  <h2 class ="subsubhead">Blood Glucose</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <text class = "subhead">
+                  <br>Ca
+                  <h2 class ="subsubhead">Calcium</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class = "subhead">
+                  Na+<br>
+                  <h2 class="subsubhead">Sodium</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+               </div>
+               <div class="slidecontainer2">
+                  <text class = "subhead">
+                  K+<br>
+                  <h2 class="subsubhead">Potassium</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <span class = "subhead">HCO3<br>
+                  <h2 class="subsubhead">Bicarbonate</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <span class = "subhead">Cl<br>
+                  <h2 class="subsubhead">Chloride</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+               </div>
+            </div>
+            <div id="slide-5">
+               <text class="smallhead" style="color:#324A51;">
+               Renal Function Tests
+               <br>
+               <br>
+               <div class="slidecontainer1">
+                  <text class = "subhead">
+                  BUN
+                  <h2 class ="subsubhead">Blood Urea Nitrogen</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class = "subhead">
+                  Cr<br>
+                  <h2 class ="subsubhead">Creatinine</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+               </div>
+            </div>
+            <div id="slide-6">
+               <text class="smallhead" style="color:#FF7651;">
+               Liver Function Tests
+               <br>
+               <br>
+               <div class="slidecontainer1">
+                  <text class = "subhead">
+                  AST
+                  <h2 class ="subsubhead">Aspartate Aminotransferase</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class = "subhead">
+                  ALT<br>
+                  <h2 class ="subsubhead">Alanine Aminotransferase</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class = "subhead">
+                  Bilirubin<br>
+                  <h2 class ="subsubhead">–</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class = "subhead">
+                  GGT<br>
+                  <h2 class ="subsubhead">Gamma-Glutamyl Transferase</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+               </div>
+               <div class="slidecontainer2">
+                  <text class = "subhead">
+                  ALP<br>
+                  <h2 class ="subsubhead">Alkaline Phosphatase</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class = "subhead">
+                  PT<br>
+                  <h2 class ="subsubhead">Prothrombin Time</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class = "subhead">
+                  PTT<br>
+                  <h2 class ="subsubhead">Partial Thromboplastin Time</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+                  <text class = "subhead">
+                  Albumin<br>
+                  <h2 class ="subsubhead">–</h2>
+                  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                  <br>
+                  <br>
+                  <br>
+               </div>
+            </div>
+         </div>
+         <div class="downloadBtn">
+            <a href="javascript:demoFromHTML()">
+            <img width= 40px; src="download.svg" alt="download">
+            </a>
+         </div>
+         <div id="report"></div>
       </div>
-        <div class="slidecontainer2">
-        <text class = "subhead">Potassium<br>
-        <h2 class="subsubhead">–</h2>
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        <br>
-        <br>
-        <br>
-
-        <span class = "subhead">Bicarbonate<br>
-          <h2 class="subsubhead">–</h2>
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          <br>
-          <br>
-          <br>
-        <span class = "subhead">Chloride<br>
-          <h2 class="subsubhead">–</h2>
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-          <br>
-          <br>
-          <br>
-      </div>
-    </div>
-
-    <div id="slide-5">
-      <text class="smallhead" style="color:#ff2445;">Renal Function Tests
-        <br>
-        <br>
-    <div class="slidecontainer1">
-      <text class = "subhead">BUN
-      <h2 class ="subsubhead">Blood Urea Nitrogen</h2>
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <br>
-      <br>
-      <br>
-      <text class = "subhead">Creatinine<br>
-      <h2 class ="subsubhead">–</h2>
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        <br>
-        <br>
-        <br>
-    </div>
-
-  </div>
-
-  <div id="slide-6">
-    <text class="smallhead" style="color:#ff2445;">Liver Function Tests
-      <br>
-      <br>
-  <div class="slidecontainer1">
-    <text class = "subhead">AST
-    <h2 class ="subsubhead">Blood Urea Nitrogen</h2>
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <br>
-      <br>
-      <br>
-    <text class = "subhead">ALT<br>
-    <h2 class ="subsubhead">–</h2>
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <br>
-      <br>
-      <br>
-    <text class = "subhead">Bilirubin<br>
-    <h2 class ="subsubhead">Glomerular Filtration Rate</h2>
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <br>
-      <br>
-      <br>
-    <text class = "subhead">GGT<br>
-    <h2 class ="subsubhead">Glomerular Filtration Rate</h2>
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <br>
-      <br>
-      <br>
-    </div>
-    <div class="slidecontainer2">
-    <text class = "subhead">ALP<br>
-    <h2 class ="subsubhead">Glomerular Filtration Rate</h2>
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <br>
-      <br>
-      <br>
-    <text class = "subhead">PT<br>
-    <h2 class ="subsubhead">Glomerular Filtration Rate</h2>
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <br>
-      <br>
-      <br>
-    <text class = "subhead">PTT<br>
-    <h2 class ="subsubhead">Glomerular Filtration Rate</h2>
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <br>
-      <br>
-      <br>
-    <text class = "subhead">Albumin<br>
-    <h2 class ="subsubhead">Glomerular Filtration Rate</h2>
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-      <br>
-      <br>
-      <br>
-
-  </div>
-  </div>
-</div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script language="javascript" type="text/javascript" src="thesis.js"></script>
-    <!-- <script language="javascript" type="text/javascript" src="sliderOutput.js"></script> -->
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+      <script language="javascript" type="text/javascript" src="thesis.js"></script>
+      <script language="javascript" type="text/javascript" src="download.js"></script>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.0.min.js"></script>﻿
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   </body>
 </html>

@@ -9,13 +9,13 @@ var chart = new Chart(ctx, {
         labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
 
         datasets: [{
-            backgroundColor:'rgba(77, 255, 178, 0.7)',
+            backgroundColor:'rgba(255, 178, 59, 0.7)',
             borderWidth: 0.5,
             borderColor: 'rgba(255 , 82,  29, 0)',
             pointBackgroundColor: 'rgba(255 , 82,  29, 0',
             pointBorderWidth: 0,
             pointHitRadius:0,
-            pointHoverBackgroundColor	: '#FF5F40',
+            pointHoverBackgroundColor	: '#FFB23B',
             hoverRadius: 0,
             data: [60,60,60,60,60,60,60,60,60],
             fontSize: 10,
@@ -50,13 +50,13 @@ var chart = new Chart(ctx, {
         labels: ['Neutrophils', 'Lymphocytes', 'Monocytes', 'Eosinophils', 'Basophils'],
         datasets: [{
             // label: '#',
-            backgroundColor:'rgba(100, 77, 255, 0.7)',
+            backgroundColor:'rgba(166, 195, 186, 0.7)',
             borderWidth: 0,
             borderColor: 'rgba(41, 234, 255, 0)',
             pointBackgroundColor: 'rgba(41, 234, 255, 0)',
             pointBorderWidth: 0,
             pointHitRadius:0,
-            pointHoverBackgroundColor	: '#29eaff',
+            pointHoverBackgroundColor	: '#A6C3BA',
             hoverRadius: 0,
             data: [40,40,40,40,40],
             fontSize: 12,
@@ -74,7 +74,7 @@ var chart = new Chart(ctx, {
           },
           gridLines: {
               circular: true,
-              color: 'rgba(100, 77, 255, 1)',
+              color: '#232323',
               lineWidth: 0.1
           }
       }
@@ -88,20 +88,19 @@ var chart = new Chart(ctx, {
 
     data: {
 
-        labels: ['Blood Glucose', 'Calcium', 'Sodium', 'Potassium','Bicarbonate','Chloride'],
+        labels: ['Glu', 'Ca', 'Na+', 'K+','HCO3','Cl'],
+        fontSize: 8,
         datasets: [{
             // label: '#',
-            backgroundColor:'rgba(255, 36, 69, 0.7)',
+            backgroundColor:'rgba(79, 118, 226, 0.7)',
             borderWidth: 0,
             borderColor: 'rgba(41, 234, 255, 0)',
             pointBackgroundColor: 'rgba(41, 234, 255, 0)',
             pointBorderWidth: 0,
             pointHitRadius:0,
-            pointHoverBackgroundColor	: '#29eaff',
+            pointHoverBackgroundColor	: '#4F76E2',
             hoverRadius: 0,
             data: [70,70,70,70,70,70],
-            fontSize: 12,
-
         }]
     },
     options: {
@@ -115,7 +114,7 @@ var chart = new Chart(ctx, {
           },
           gridLines: {
               circular: true,
-              color: 'rgba(100, 77, 255, 1)',
+              color: '#232323',
               lineWidth: 0.1
           }
       }
@@ -129,28 +128,28 @@ var chart = new Chart(ctx, {
 
     data: {
 
-        labels: ['AST','ALT','Bilirubin','GGT','ALP','PT','PTT','Albumin','Creatinine','BUN'],
+        labels: ['AST','ALT','Bilirubin','GGT','ALP','PT','PTT','Albumin','Cr','BUN'],
         datasets: [{
-            backgroundColor:'rgba(255, 36, 69, 0.7)',
+            backgroundColor:'rgba(255, 118, 81, 0.7)',
             borderWidth: 0,
             borderColor: 'rgba(41, 234, 255, 0)',
             pointBackgroundColor: 'rgba(41, 234, 255, 0)',
             pointBorderWidth: 0,
             pointHitRadius:0,
-            pointHoverBackgroundColor	: '#29eaff',
+            pointHoverBackgroundColor	: '#FF7651',
             hoverRadius: 0,
-            data: [70,30,79,34,70,60,90,44,0,0],
+            data: [70,70,70,70,70,70,70,70,0,0],
             fontSize: 12,
           },{
-            backgroundColor:'rgba(77, 255, 178, 0.7)',
+            backgroundColor:'rgba(50, 74, 81, 0.7)',
             borderWidth: 0,
             borderColor: 'rgba(41, 234, 255, 0)',
             pointBackgroundColor: 'rgba(41, 234, 255, 0)',
             pointBorderWidth: 0,
             pointHitRadius:0,
-            pointHoverBackgroundColor	: '#29eaff',
+            pointHoverBackgroundColor	: '#324A51',
             hoverRadius: 0,
-            data: [0,0,0,0,0,0,0,0,57,78],
+            data: [0,0,0,0,0,0,0,0,70,70],
             fontSize: 12,
         }]
     },
@@ -165,7 +164,7 @@ var chart = new Chart(ctx, {
           },
           gridLines: {
               circular: true,
-              color: 'rgba(100, 77, 255, 1)',
+              color: '#232323',
               lineWidth: 0.1
           }
       }
