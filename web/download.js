@@ -21,7 +21,7 @@ function demoFromHTML() {
             top: 50,
             bottom: 50,
             left: 50,
-            right:50,
+            width: 612,
         };
         // all coords and widths are in jsPDF instance's declared units
         // 'inches' in this case
