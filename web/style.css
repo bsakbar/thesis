@@ -1,8 +1,9 @@
 body,
 html {
 	background-color: #e6e6e6;
-	/* background-color:#ffffff; */
 	overflow: hidden;
+	width: 1920px;
+  height: 1080px;
 }
 
 #chart1 {
@@ -45,7 +46,7 @@ html {
 	position: absolute;
 	display: flex;
 	margin-top: 218px;
-	left: 730px;
+	left: 680px;
 	width: 310px;
 	height: 310px;
 	background: transparent;
@@ -57,6 +58,62 @@ html {
 	font-weight: 300;
 	letter-spacing: normal;
 	color: #404040;
+	z-index: 1;
+}
+
+.yellowPoly{
+	position: absolute;
+	display: flex;
+	width: 150px;
+	margin-left: 82px;
+	margin-top: 102px;
+}
+.greenPoly{
+	position: absolute;
+	display: flex;
+	width: 130px;
+	margin-left: 88px;
+	margin-top: 103px;
+}
+.bluePoly{
+	position: absolute;
+	display: flex;
+	width: 150px;
+	margin-left: 74px;
+	margin-top: 88px;
+}
+.redPoly{
+	position: absolute;
+	display: flex;
+	width: 150px;
+	margin-left: 74px;
+	margin-top: 96px;
+}
+
+.card2 {
+	background: #e6e6e6;
+	position: fixed;
+	margin-top: 97px;
+	left: 680px;
+	width: 630px;
+	height: 630px;
+	border: 1px solid;
+	border-color: #232323;
+	border-radius: 8px;
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	letter-spacing: normal;
+	color: #404040;
+	display: none;
+}
+.card2content{
+	padding-top: 80px;
+	padding-left: 25px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 800;
+	font-size: 32px;
+
 }
 
 .card1 .about {
@@ -73,10 +130,6 @@ html {
 
 .card1 .about h3 {
 	font-size: 14px;
-}
-
-.card1 .about .lead {
-	color: #aaa;
 }
 
 .tooltip-placeholder {
@@ -264,6 +317,16 @@ html {
 	transform: scale(1);
 }
 
+.outputValue{
+	float:right;
+	position:absolute;
+	margin-top:-35px;
+	margin-left:173px;
+	font-size: 24px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 100;
+}
+
 .circles>a {
 	top: 91px;
 	left: 180px;
@@ -365,7 +428,14 @@ a:active {
 
 .downloadBtn {
 	top: 220px;
-	left: 1450px;
+	left: 1550px;
+	position: absolute;
+	display: flex;
+}
+
+.arrowBtn {
+	margin-top:10px;
+	margin-left: 255px;
 	position: absolute;
 	display: flex;
 }
