@@ -1,21 +1,7 @@
 
-// buttons
-var card2 = document.getElementById('card2');
-var arrowBtn1 = document.getElementById("arrowBtn1");
-
-arrowBtn1.onclick = function() {
-  card2.style.display = "block";
-
-}
-
-window.onclick = function(event) {
-  if (event.target == card2) {
-    card2.style.display = "none";
-  }
-}
 
 
-// sliders
+// sliders values
 //WBC
 var wbcslider = document.getElementById("WBCrange");
 var wbcoutput = document.getElementById("WBCoutput");
@@ -200,26 +186,11 @@ albslider.oninput = function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // charts
 var ctx = document.getElementById('chart1').getContext('2d');
-var chart = new Chart(ctx, {
+var chart1 = new Chart(ctx, {
 
     type: 'radar',
-
-
     data: {
 
         labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
@@ -233,9 +204,8 @@ var chart = new Chart(ctx, {
             pointHitRadius:0,
             pointHoverBackgroundColor	: '#FFB23B',
             hoverRadius: 0,
-            data: [52,55,42,58,61,45,54,58,64],
+            data: [60,60,60,60,60,60,60,60,60],
             fontSize: 10,
-
         }]
     },
     options: {
@@ -245,21 +215,60 @@ var chart = new Chart(ctx, {
       scale: {
               ticks: {
                   beginAtZero: true,
-
                   display: false,
+                  min:0,
+                  max:100,
               },
                gridLines: {
                   circular: true,
                   color: '#232323',
-                  lineWidth: 0.2
+                  lineWidth: 0.2,
               }
-      }
+      },
     },
-
 });
 
+//CBC
+function slider2data(){
+  chart1.data.datasets[0].data[0] = document.getElementById('RBCrange').value;
+  chart1.update();
+}
+function slider1data(){
+  chart1.data.datasets[0].data[1] = document.getElementById('WBCrange').value;
+  chart1.update();
+}
+function slider3data(){
+  chart1.data.datasets[0].data[2] = document.getElementById('HGBrange').value;
+  chart1.update();
+}
+function slider4data(){
+  chart1.data.datasets[0].data[3] = document.getElementById('HTrange').value;
+  chart1.update();
+}
+function slider5data(){
+  chart1.data.datasets[0].data[4] = document.getElementById('MCVrange').value;
+  chart1.update();
+}
+function slider6data(){
+  chart1.data.datasets[0].data[5] = document.getElementById('MCHrange').value;
+  chart1.update();
+}
+function slider7data(){
+  chart1.data.datasets[0].data[6] = document.getElementById('MCHCrange').value;
+  chart1.update();
+}
+function slider8data(){
+  chart1.data.datasets[0].data[7] = document.getElementById('PLrange').value;
+  chart1.update();
+}
+function slider9data(){
+  chart1.data.datasets[0].data[8] = document.getElementById('RDWrange').value;
+  chart1.update();
+}
+
+
 var ctx = document.getElementById('chart2').getContext('2d');
-var chart = new Chart(ctx, {
+var chart2 = new Chart(ctx, {
 
     type: 'radar',
 
@@ -276,7 +285,7 @@ var chart = new Chart(ctx, {
             pointHitRadius:0,
             pointHoverBackgroundColor	: '#A6C3BA',
             hoverRadius: 0,
-            data: [22,16,16,23,26],
+            data: [65,65,65,65,65],
             fontSize: 12,
 
         }]
@@ -290,6 +299,8 @@ var chart = new Chart(ctx, {
           ticks: {
               display: false,
               beginAtZero:true,
+              min:0,
+              max:100,
           },
           gridLines: {
               circular: true,
@@ -300,8 +311,31 @@ var chart = new Chart(ctx, {
     },
 });
 
+//DBC
+function slider10data(){
+  chart2.data.datasets[0].data[0] = document.getElementById('NEUrange').value;
+  chart2.update();
+}
+function slider11data(){
+  chart2.data.datasets[0].data[1] = document.getElementById('LYMrange').value;
+  chart2.update();
+}
+function slider12data(){
+  chart2.data.datasets[0].data[2] = document.getElementById('MONrange').value;
+  chart2.update();
+}
+function slider13data(){
+  chart2.data.datasets[0].data[3] = document.getElementById('EOSrange').value;
+  chart2.update();
+}
+function slider14data(){
+  chart2.data.datasets[0].data[3] = document.getElementById('BASrange').value;
+  chart2.update();
+}
+
+
 var ctx = document.getElementById('chart3').getContext('2d');
-var chart = new Chart(ctx, {
+var chart3 = new Chart(ctx, {
 
     type: 'radar',
 
@@ -319,7 +353,7 @@ var chart = new Chart(ctx, {
             pointHitRadius:0,
             pointHoverBackgroundColor	: '#4F76E2',
             hoverRadius: 0,
-            data: [30,33,37,44,33,46],
+            data: [62,62,62,62,62,62],
         }]
     },
     options: {
@@ -330,8 +364,9 @@ var chart = new Chart(ctx, {
 
           ticks: {
               display: false,
-
               beginAtZero: true,
+              min:0,
+              max:100,
           },
           gridLines: {
               circular: true,
@@ -342,8 +377,36 @@ var chart = new Chart(ctx, {
     },
 });
 
+//BMP
+
+function slider15data(){
+  chart3.data.datasets[0].data[0] = document.getElementById('GLUrange').value;
+  chart3.update();
+}
+function slider16data(){
+  chart3.data.datasets[0].data[1] = document.getElementById('CArange').value;
+  chart3.update();
+}
+function slider17data(){
+  chart3.data.datasets[0].data[2] = document.getElementById('NArange').value;
+  chart3.update();
+}
+function slider18data(){
+  chart3.data.datasets[0].data[3] = document.getElementById('Krange').value;
+  chart3.update();
+}
+function slider19data(){
+  chart3.data.datasets[0].data[4] = document.getElementById('BICrange').value;
+  chart3.update();
+}
+function slider20data(){
+  chart3.data.datasets[0].data[5] = document.getElementById('CHrange').value;
+  chart3.update();
+}
+
+
 var ctx = document.getElementById('chart4').getContext('2d');
-var chart = new Chart(ctx, {
+var chart4 = new Chart(ctx, {
 
     type: 'radar',
 
@@ -359,7 +422,7 @@ var chart = new Chart(ctx, {
             pointHitRadius:0,
             pointHoverBackgroundColor	: '#FF7651',
             hoverRadius: 0,
-            data: [45,55,67,60,45,40,40,60,50,50],
+            data: [65,65,65,65,65,65,65,65,65,65],
             fontSize: 12,
         }]
     },
@@ -372,6 +435,8 @@ var chart = new Chart(ctx, {
           ticks: {
             beginAtZero:true,
             display: false,
+            min:0,
+            max:100,
           },
           gridLines: {
               circular: true,
@@ -381,3 +446,68 @@ var chart = new Chart(ctx, {
       }
     },
 });
+
+function slider21data(){
+  chart4.data.datasets[0].data[0] = document.getElementById('ASTrange').value;
+  chart4.update();
+}
+function slider22data(){
+  chart4.data.datasets[0].data[1] = document.getElementById('ALTrange').value;
+  chart4.update();
+}
+function slider23data(){
+  chart4.data.datasets[0].data[2] = document.getElementById('BILrange').value;
+  chart4.update();
+}
+function slider24data(){
+  chart4.data.datasets[0].data[3] = document.getElementById('GGTrange').value;
+  chart4.update();
+}
+function slider25data(){
+  chart4.data.datasets[0].data[4] = document.getElementById('ALPrange').value;
+  chart4.update();
+}
+function slider26data(){
+  chart4.data.datasets[0].data[5] = document.getElementById('PTrange').value;
+  chart4.update();
+}
+function slider27data(){
+  chart4.data.datasets[0].data[6] = document.getElementById('PTTrange').value;
+  chart4.update();
+}
+function slider28data(){
+  chart4.data.datasets[0].data[7] = document.getElementById('ALBrange').value;
+  chart4.update();
+}
+function slider29data(){
+  chart4.data.datasets[0].data[8] = document.getElementById('BUNrange').value;
+  chart4.update();
+}
+function slider30data(){
+  chart4.data.datasets[0].data[9] = document.getElementById('CRrange').value;
+  chart4.update();
+}
+
+
+
+
+// buttons
+var card2 = document.getElementById('card2');
+var card1 = document.getElementById('card1');
+var arrowBtn1 = document.getElementById("arrowBtn1");
+var arrowleft = document.getElementById("arrowleft");
+
+arrowBtn1.onclick = function() {
+  card2.style.display = "block";
+}
+
+arrowleft.onclick = function() {
+  card2.style.display = "none";
+
+}
+
+window.onclick = function(event) {
+  if (event.target == card2) {
+    card2.style.display = "none";
+  }
+}

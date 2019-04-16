@@ -58,16 +58,14 @@
          <img class="redPoly" src="redPoly.svg">
          <canvas id="chart4"></canvas>
       </div>
-
-      <div style="margin-left: 180px; margin-top: 100px; position: relative; display: flex;">
-         <text class="subhead">LOGO</text>
-      </div>
+        <img class="logo" src="logo.svg">
 
       <div class="card2" id="card2">
         <a href="" >
-           <img style="margin-left:20px; margin-top:20px;"class="arrowBtn" width= 40px; src="arrowleft.svg" alt="arrow">
+           <img id="arrowleft" style="margin-left:40px; margin-top:30px;"class="arrowBtn" width= 40px; src="arrowleft.svg" alt="arrow">
         </a>
-         <div class="card2content">Test
+         <div class="card2content">
+           <img style="margin-left:20px; margin-top:20px; z-index:2;"width=530px; src="card2content.svg" alt="card2content">
          </div>
       </div>
          <!-- <canvas id="chart1"></canvas> -->
@@ -129,7 +127,7 @@
                   WBC
                   <h2 class="subsubhead">White Blood Cells</h2>
                   <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="WBCoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="WBCrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="WBCrange" onchange="slider1data()">
                   <br>
                   <br>
                   <br>
@@ -138,7 +136,7 @@
                   <br>
                   <h2 class="subsubhead">Red Blood Cells</h2>
                   <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="RBCoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="RBCrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="RBCrange" onchange="slider2data()">
                   <br>
                   <br>
                   <br>
@@ -147,7 +145,7 @@
                   <br>
                   <h2 class="subsubhead">Hemoglobin</h2>
                   <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="HGBoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="HGBrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="HGBrange" onchange="slider3data()">
                   <br>
                   <br>
                   <br>
@@ -156,14 +154,14 @@
                   <br>
                   <h2 class="subsubhead">Hematocrit </h2>
                   <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="HToutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="HTrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="HTrange" onchange="slider4data()">
                   <br>
                   <br>
                   <br>
                   <span class="subhead">MCV<br>
                   <h2 class="subsubhead">Mean Corpuscular Volume</h2>
                   <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="MCVoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="MCVrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="MCVrange"onchange="slider5data()">
                   <br>
                   <br>
                   <br>
@@ -172,28 +170,28 @@
                   <span class = "subhead">MCH<br>
                   <h2 class="subsubhead">Mean Corpuscular Hemoglobin</h2>
                   <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="MCHoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="MCHrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="MCHrange" onchange="slider6data()">
                   <br>
                   <br>
                   <br>
                   <span class = "subhead">MCHC<br>
                   <h2 class="subsubhead">MCH Concentration</h2>
                   <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="MCHCoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="MCHCrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="MCHCrange" onchange="slider7data()">
                   <br>
                   <br>
                   <br>
                   <span class = "subhead">Platelets<br>
                   <h2 class="subsubhead">–</h2>
                   <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="PLoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="PLrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="PLrange" onchange="slider8data()">
                   <br>
                   <br>
                   <br>
                   <span class = "subhead">RDW<br>
                   <h2 class="subsubhead">Red Cell Distribution Width</h2>
                   <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="RDWoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="RDWrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="RDWrange" onchange="slider9data()">
                   <br>
                   <br>
                   <br>
@@ -209,7 +207,7 @@
                   Neutrophils
                   <h2 class ="subsubhead">–</h2>
                   <span style="color: rgba(166, 195, 186, 0.5);" class="outputValue" id="NEUoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="NEUrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="NEUrange" onchange="slider10data()">
                   <br>
                   <br>
                   <br>
@@ -217,7 +215,7 @@
                   Lymphocytes<br>
                   <h2 class ="subsubhead">–</h2>
                   <span style="color: rgba(166, 195, 186, 0.5);" class="outputValue" id="LYMoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="LYMrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="LYMrange" onchange="slider11data()">
                   <br>
                   <br>
                   <br>
@@ -225,7 +223,7 @@
                   Monocytes<br>
                   <h2 class="subsubhead">–</h2>
                   <span style="color: rgba(166, 195, 186, 0.5);" class="outputValue" id="MONoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="MONrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="MONrange" onchange="slider12data()">
                   <br>
                   <br>
                   <br>
@@ -235,14 +233,14 @@
                   Eosinophils<br>
                   <h2 class="subsubhead">–</h2>
                   <span style="color: rgba(166, 195, 186, 0.5);" class="outputValue" id="EOSoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="EOSrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="EOSrange" onchange="slider13data()">
                   <br>
                   <br>
                   <br>
                   <span class = "subhead">Basophils<br>
                   <h2 class="subsubhead">–</h2>
                   <span style="color: rgba(166, 195, 186, 0.5);" class="outputValue" id="BASoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="BASrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="BASrange" onchange="slider14data()">
                   <br>
                   <br>
                   <br>
@@ -258,14 +256,14 @@
                   Glu
                   <h2 class ="subsubhead">Blood Glucose</h2>
                   <span style="color: rgba(79, 118, 226, 0.5);" class="outputValue" id="GLUoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="GLUrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="GLUrange" onchange="slider15data()">
                   <br>
                   <br>
                   <text class = "subhead">
                   <br>Ca
                   <h2 class ="subsubhead">Calcium</h2>
                   <span style="color: rgba(79, 118, 226, 0.5);" class="outputValue" id="CAoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="CArange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="CArange" onchange="slider16data()">
                   <br>
                   <br>
                   <br>
@@ -273,7 +271,7 @@
                   Na+<br>
                   <h2 class="subsubhead">Sodium</h2>
                   <span style="color: rgba(79, 118, 226, 0.5);" class="outputValue" id="NAoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="NArange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="NArange" onchange="slider17data()">
                   <br>
                   <br>
                   <br>
@@ -283,21 +281,21 @@
                   K+<br>
                   <h2 class="subsubhead">Potassium</h2>
                   <span style="color: rgba(79, 118, 226, 0.5);" class="outputValue" id="Koutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="Krange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="Krange" onchange="slider18data()">
                   <br>
                   <br>
                   <br>
                   <span class = "subhead">HCO3<br>
                   <h2 class="subsubhead">Bicarbonate</h2>
                   <span style="color: rgba(79, 118, 226, 0.5);" class="outputValue" id="BICoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="BICrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="BICrange" onchange="slider19data()">
                   <br>
                   <br>
                   <br>
                   <span class = "subhead">Cl<br>
                   <h2 class="subsubhead">Chloride</h2>
                   <span style="color: rgba(79, 118, 226, 0.5);" class="outputValue" id="CHoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="CHrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="CHrange" onchange="slider20data()">
                   <br>
                   <br>
                   <br>
@@ -313,7 +311,7 @@
                   BUN
                   <h2 class ="subsubhead">Blood Urea Nitrogen</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="BUNoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="BUNrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="BUNrange" onchange="slider29data()">
                   <br>
                   <br>
                   <br>
@@ -321,7 +319,7 @@
                   Cr<br>
                   <h2 class ="subsubhead">Creatinine</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="CRoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="CRrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="CRrange" onchange="slider30data()">
                   <br>
                   <br>
                   <br>
@@ -337,7 +335,7 @@
                   AST
                   <h2 class ="subsubhead">Aspartate Aminotransferase</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="ASToutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="ASTrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="ASTrange" onchange="slider21data()">
                   <br>
                   <br>
                   <br>
@@ -345,7 +343,7 @@
                   ALT<br>
                   <h2 class ="subsubhead">Alanine Aminotransferase</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="ALToutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="ALTrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="ALTrange" onchange="slider22data()">
                   <br>
                   <br>
                   <br>
@@ -353,7 +351,7 @@
                   Bilirubin<br>
                   <h2 class ="subsubhead">–</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="BILoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="BILrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="BILrange" onchange="slider23data()">
                   <br>
                   <br>
                   <br>
@@ -361,7 +359,7 @@
                   GGT<br>
                   <h2 class ="subsubhead">Gamma-Glutamyl Transferase</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="GGToutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="GGTrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="GGTrange" onchange="slider24data()">
                   <br>
                   <br>
                   <br>
@@ -371,7 +369,7 @@
                   ALP<br>
                   <h2 class ="subsubhead">Alkaline Phosphatase</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="ALPoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="ALPrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="ALPrange" onchange="slider25data()">
                   <br>
                   <br>
                   <br>
@@ -379,7 +377,7 @@
                   PT<br>
                   <h2 class ="subsubhead">Prothrombin Time</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="PToutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="PTrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="PTrange" onchange="slider26data()">
                   <br>
                   <br>
                   <br>
@@ -387,7 +385,7 @@
                   PTT<br>
                   <h2 class ="subsubhead">Partial Thromboplastin Time</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="PTToutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="PTTrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="PTTrange" onchange="slider27data()">
                   <br>
                   <br>
                   <br>
@@ -395,7 +393,7 @@
                   Albumin<br>
                   <h2 class ="subsubhead">–</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="ALBoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="ALBrange">
+                  <input type="range" min="1" max="100" value="50" class="slider" id="ALBrange" onchange="slider28data()">
                   <br>
                   <br>
                   <br>
