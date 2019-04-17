@@ -41,6 +41,14 @@ html {
 	margin-left: 25px;
 }
 
+#barChart {
+	display: flex;
+	width: 650px !important;
+	height: auto !important;
+	margin-top:200px;
+	margin-left:35px;
+}
+
 .card1 {
 	position: absolute;
 	display: flex;
@@ -57,7 +65,7 @@ html {
 	font-weight: 300;
 	letter-spacing: normal;
 	color: #404040;
-	z-index: 1;
+
 }
 
 .yellowPoly{
@@ -94,7 +102,7 @@ html {
 	position: fixed;
 	margin-top: 97px;
 	left: 680px;
-	width: 630px;
+	width: 790px;
 	height: 630px;
 	border: 1px solid;
 	border-color: #232323;
@@ -105,7 +113,7 @@ html {
 	letter-spacing: normal;
 	color: #404040;
 	z-index: 2;
-	display: none;
+	display: block;
 }
 .card2content{
 	padding-top: 80px;
@@ -266,7 +274,7 @@ html {
 .boxSlider {
 	width: 530px;
 	margin-left: 140px;
-	margin-top: 110px;
+	margin-top: 70px;
 	background: #f7f7f7;
 	border: 1px solid;
 	border-color: #232323;
@@ -277,14 +285,12 @@ html {
 
 .logo{
 	width:80px;
-	left: 175px;
-	top: 100px;
+	margin-left: 180px;
+	margin-top: 41px;
+	top:50px;
 	position: relative;
 	display: flex;
-	z-index: 2;
-
 }
-
 
 
 .slides {
@@ -340,7 +346,7 @@ html {
 }
 
 .circles>a {
-	top: 760px;
+	top: 91px;
 	left: 180px;
 	display: inline-block;
 	width: 13px;
@@ -445,7 +451,7 @@ a:active {
 	display: flex;
 }
 
-.arrowBtn {
+.arrowBtn{
 	margin-top:10px;
 	margin-left: 255px;
 	position: absolute;

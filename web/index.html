@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Pragati+Narrow:400,700" rel="stylesheet">
+
       <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="style.css">
       <title>Thesissss!!</title>
@@ -12,7 +13,7 @@
    <body>
 
       <div class="card1" id="card1">
-        <a href="">
+        <a href="javascript:arrowBtn1.onclick();">
            <img id="arrowBtn1" class="arrowBtn" width= 40px; src="arrow.svg" alt="arrow">
         </a>
          <div class="about">
@@ -23,9 +24,9 @@
          <canvas id="chart1"></canvas>
       </div>
 
-      <div class="card1" style="margin-top:538px;" >
-        <a href="">
-           <img class="arrowBtn" width= 40px; src="arrow.svg" alt="arrow">
+      <div class="card1" style="margin-top:538px;" id="card3">
+        <a href="javascript:arrowBtn2.onclick();">
+           <img id="arrowBtn2" class="arrowBtn" width= 40px; src="arrow.svg" alt="arrow">
         </a>
          <div class="about">
             <h3>Differential Blood Count</h3>
@@ -35,9 +36,9 @@
          <canvas id="chart2"></canvas>
       </div>
 
-      <div class="card1" style="margin-left:320px;" >
-        <a href="">
-           <img class="arrowBtn" width= 40px; src="arrow.svg" alt="arrow">
+      <div class="card1" style="margin-left:320px;" id="card4">
+        <a href="javascript:arrowBtn3.onclick();">
+           <img id="arrowBtn3" class="arrowBtn" width= 40px; src="arrow.svg" alt="arrow">
         </a>
          <div class="about">
             <h3>Basic Metabolic Panel</h3>
@@ -47,11 +48,11 @@
          <canvas id="chart3"></canvas>
       </div>
 
-      <div class="card1" style="margin-left:320px; margin-top:538px;" >
-        <a href="">
-           <img class="arrowBtn" width= 40px; src="arrow.svg" alt="arrow">
+      <div class="card1" style="margin-left:320px; margin-top:538px;" id="card5">
+        <a href="javascript:arrowBtn4.onclick();">
+           <img id="arrowBtn4" class="arrowBtn" width= 40px; src="arrow.svg" alt="arrow">
         </a>
-         <div class="about">
+         <div class ="about">
             <h3>Renal & Liver Function Tests</h3>
             <div id="tooltip" class="tooltip-placeholder"></div>
          </div>
@@ -60,15 +61,15 @@
       </div>
         <img class="logo" src="logo.svg">
 
+
       <div class="card2" id="card2">
-        <a href="" >
+        <a href="javascript:arrowleft.onclick();" >
            <img id="arrowleft" style="margin-left:40px; margin-top:30px;"class="arrowBtn" width= 40px; src="arrowleft.svg" alt="arrow">
         </a>
          <div class="card2content">
-           <img style="margin-left:20px; margin-top:20px; z-index:2;"width=530px; src="card2content.svg" alt="card2content">
+            <canvas id="barChart"></canvas>
          </div>
       </div>
-         <!-- <canvas id="chart1"></canvas> -->
 
 
       <div class="circles">
@@ -413,7 +414,6 @@
          display: flex;"
          width= 45px; src="home.svg" alt="home">
          </a>
-
 
          <div id="report">
            <iframe src="report.html"></iframe>

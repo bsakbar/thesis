@@ -491,23 +491,64 @@ function slider30data(){
 
 
 
+
 // buttons
 var card2 = document.getElementById('card2');
 var card1 = document.getElementById('card1');
-var arrowBtn1 = document.getElementById("arrowBtn1");
-var arrowleft = document.getElementById("arrowleft");
+var card3 = document.getElementById('card3');
+var card4 = document.getElementById('card4');
+var card5 = document.getElementById('card5');
+var arrowBtn1 = document.getElementById('arrowBtn1');
+var arrowBtn2 = document.getElementById('arrowBtn2');
+var arrowBtn3 = document.getElementById('arrowBtn3');
+var arrowBtn4 = document.getElementById('arrowBtn4');
+var arrowleft = document.getElementById('arrowleft');
 
 arrowBtn1.onclick = function() {
   card2.style.display = "block";
 }
-
+arrowBtn2.onclick = function() {
+  card2.style.display = "block";
+}
+arrowBtn3.onclick = function() {
+  card2.style.display = "block";
+}
+arrowBtn4.onclick = function() {
+  card2.style.display = "block";
+}
 arrowleft.onclick = function() {
   card2.style.display = "none";
 
 }
 
-window.onclick = function(event) {
-  if (event.target == card2) {
-    card2.style.display = "none";
-  }
-}
+
+// card 2 charts
+
+new Chart(document.getElementById("barChart"), {
+    type: "bar",
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [{
+            label: "My First Dataset",
+            data: [65, 59, 80, 81, 56, 55, 40],
+            fill: false,
+            backgroundColor: "rgba(230, 230, 230, 1)",
+            borderColor: "rgba(230, 230, 230, 0)",
+            borderWidth: 1
+        }]
+    },
+    options: {
+        legend: false,
+        scales: {
+            yAxes: [{
+                stacked: true,
+                ticks: {
+                    beginAtZero: true,
+                }
+            }],
+            xAxes: [{
+                stacked: true,
+            }],
+        }
+    }
+});
