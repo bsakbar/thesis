@@ -226,43 +226,82 @@ var chart1 = new Chart(ctx, {
               }
       },
     },
+
 });
+
+
 
 //CBC
 function slider2data(){
   chart1.data.datasets[0].data[0] = document.getElementById('RBCrange').value;
+  barChart.data.datasets[0].data[0] = document.getElementById('RBCrange').value;
+  chartCard2.data.datasets[0].data[0] = document.getElementById('RBCrange').value;
+  chartCard2.update();
+  barChart.update();
   chart1.update();
 }
 function slider1data(){
   chart1.data.datasets[0].data[1] = document.getElementById('WBCrange').value;
+  barChart.data.datasets[0].data[1] = document.getElementById('WBCrange').value;
+  chartCard2.data.datasets[0].data[1] = document.getElementById('WBCrange').value;
+  chartCard2.update();
+  barChart.update();
   chart1.update();
 }
 function slider3data(){
   chart1.data.datasets[0].data[2] = document.getElementById('HGBrange').value;
+  barChart.data.datasets[0].data[2] = document.getElementById('HGBrange').value;
+  chartCard2.data.datasets[0].data[2] = document.getElementById('HGBrange').value;
+  chartCard2.update();
+  barChart.update();
   chart1.update();
 }
 function slider4data(){
   chart1.data.datasets[0].data[3] = document.getElementById('HTrange').value;
+  barChart.data.datasets[0].data[3] = document.getElementById('HTrange').value;
+  chartCard2.data.datasets[0].data[3] = document.getElementById('HTrange').value;
+  chartCard2.update();
+  barChart.update();
   chart1.update();
 }
 function slider5data(){
   chart1.data.datasets[0].data[4] = document.getElementById('MCVrange').value;
+  barChart.data.datasets[0].data[4] = document.getElementById('MCVrange').value;
+  chartCard2.data.datasets[0].data[4] = document.getElementById('MCVrange').value;
+  chartCard2.update();
+  barChart.update();
   chart1.update();
 }
 function slider6data(){
   chart1.data.datasets[0].data[5] = document.getElementById('MCHrange').value;
+  barChart.data.datasets[0].data[5] = document.getElementById('MCHrange').value;
+  chartCard2.data.datasets[0].data[5] = document.getElementById('MCHrange').value;
+  chartCard2.update();
+  barChart.update();
   chart1.update();
 }
 function slider7data(){
   chart1.data.datasets[0].data[6] = document.getElementById('MCHCrange').value;
+  barChart.data.datasets[0].data[6] = document.getElementById('MCHCrange').value;
+  chartCard2.data.datasets[0].data[6] = document.getElementById('MCHCrange').value;
+  chartCard2.update();
+  barChart.update();
   chart1.update();
 }
 function slider8data(){
   chart1.data.datasets[0].data[7] = document.getElementById('PLrange').value;
+  barChart.data.datasets[0].data[7] = document.getElementById('PLrange').value;
+  chartCard2.data.datasets[0].data[7] = document.getElementById('PLrange').value;
+  chartCard2.update();
+  barChart.update();
   chart1.update();
 }
 function slider9data(){
   chart1.data.datasets[0].data[8] = document.getElementById('RDWrange').value;
+  barChart.data.datasets[0].data[8] = document.getElementById('RDWrange').value;
+  chartCard2.data.datasets[0].data[8] = document.getElementById('RDWrange').value;
+  chartCard2.update();
+  barChart.update();
   chart1.update();
 }
 
@@ -524,31 +563,97 @@ arrowleft.onclick = function() {
 
 // card 2 charts
 
-new Chart(document.getElementById("barChart"), {
-    type: "bar",
+
+
+var ctx = document.getElementById("barChart").getContext('2d');
+var barChart = new Chart(ctx, {
+
+    type: "horizontalBar",
     data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
         datasets: [{
-            label: "My First Dataset",
-            data: [65, 59, 80, 81, 56, 55, 40],
+
+            data: [-100, 59, -30, 81, -56, 55, 40,65,70],
             fill: false,
-            backgroundColor: "rgba(230, 230, 230, 1)",
+            backgroundColor: "rgba(198, 198, 198, 1)",
+            HoverBackgroundColor	: '#FF7651',
             borderColor: "rgba(230, 230, 230, 0)",
             borderWidth: 1
         }]
     },
     options: {
+
+        responsive: true,
+        maintainAspectRatio: false,
         legend: false,
         scales: {
+            lineWidth: 0.2,
             yAxes: [{
-                stacked: true,
+                gridLines: {
+                  display: false,
+                },
+                barPercentage: 1.25,
                 ticks: {
+                    display: false,
                     beginAtZero: true,
+                    min:-100,
+                    max:100,
+                    fontSize: 10
                 }
             }],
             xAxes: [{
+              ticks: {
+                  fontSize: 10
+              },
                 stacked: true,
+
             }],
+
         }
     }
+});
+
+var ctx = document.getElementById('chartCard2').getContext('2d');
+var chartCard2 = new Chart(ctx, {
+
+    type: 'radar',
+    data: {
+
+        labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
+
+        datasets: [{
+            backgroundColor:'rgba(255, 178, 59, 0)',
+            borderWidth: 0.5,
+            borderColor: '#232323',
+            pointBackgroundColor: 'rgba(255, 178, 59, 1)',
+            pointBorderWidth: 1,
+            pointHitRadius:0,
+            pointHoverBackgroundColor	: '#FFB23B',
+            hoverRadius: 0,
+            data: [60,60,60,60,60,60,60,60,60],
+            fontSize: 10,
+        }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: false,
+      scale: {
+              display: false,
+
+              ticks: {
+                  beginAtZero: true,
+                  display: false,
+                  min:0,
+                  max:100,
+              },
+               gridLines: {
+                  display: false,
+                  circular: false,
+                  color: '#232323',
+                  lineWidth: 0.2,
+              }
+      },
+    },
+
 });

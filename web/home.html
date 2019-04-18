@@ -10,7 +10,7 @@
       	font-family: 'Montserrat', sans-serif;
       	font-weight: 500;
         letter-spacing: -3px;
-        margin-left:800px;
+        margin-left:780px;
         margin-top:360px;
         line-height: 0.9;
         color: #e6e6e6;
@@ -22,16 +22,17 @@
       	font-family: 'Montserrat', sans-serif;
       	font-weight: 200;
         letter-spacing: -1px;
-        margin-left:800px;
+        margin-left:780px;
         margin-top:-50px;
       }
 
       .logoWhite{
+
         position: absolute;
-        width:500px;
+        width:360px;
         display: block;
-        left: 250px;
-        bottom:250px;
+        left: 400px;
+        bottom:320px;
       }
 
       a{
@@ -42,18 +43,30 @@
 
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Pragati+Narrow:400,700" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
       <title>Report</title>
    </head>
    <body>
-     <img class="logoWhite" src="logoWhite.svg">
+     <img class="logoWhite" src="logoWhite.svg" data-aos="fade-up">
      <h1>Home Page <br>Needs Content</h1>
      <br>
      <div class="options">
      <a href="narrative.html">Learn the Data</a>&emsp;&emsp;&emsp;
      <a href="index.html">Data Lab</a>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+       //https://github.com/michalsnik/aos
+       AOS.init({
+       duration: 1200,
+      });
+
+    </script>
 
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
       <script language="javascript" type="text/javascript" src="thesis.js"></script>

@@ -1,6 +1,6 @@
 body,
 html {
-	background-color: #f7f7f7;
+	background-color: #e6e6e6;
 	overflow: hidden;
 
 }
@@ -42,11 +42,9 @@ html {
 }
 
 #barChart {
-	display: flex;
-	width: 650px !important;
-	height: auto !important;
-	margin-top:200px;
-	margin-left:35px;
+
+
+
 }
 
 .card1 {
@@ -98,7 +96,7 @@ html {
 }
 
 .card2 {
-	background: #f7f7f7;
+	background: #e6e6e6;
 	position: fixed;
 	margin-top: 97px;
 	left: 680px;
@@ -107,20 +105,23 @@ html {
 	border: 1px solid;
 	border-color: #232323;
 	border-radius: 8px;
-	font-size: 18px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 300;
-	letter-spacing: normal;
-	color: #404040;
-	z-index: 2;
 	display: block;
+	overflow: scroll;
+
 }
 .card2content{
-	padding-top: 80px;
-	padding-left: 25px;
+	padding-top: 40px;
+	padding-left: 50px;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 800;
-	font-size: 32px;
+	font-size: 18px;
+	letter-spacing: -0.3px;
+	color: #404040;
+	width: 400px;
+	float:left;
+	text-align: justify;
+	text-justify: inter-word;
+	position: absolute;
 
 }
 
@@ -275,7 +276,7 @@ html {
 	width: 530px;
 	margin-left: 140px;
 	margin-top: 70px;
-	background: #f7f7f7;
+	background: #e6e6e6;
 	border: 1px solid;
 	border-color: #232323;
 	border-radius: 8px;
@@ -351,7 +352,7 @@ html {
 	display: inline-block;
 	width: 13px;
 	height: 13px;
-	background: #f7f7f7;
+	background: #e6e6e6;
 	text-decoration: none;
 	border-radius: 50%;
 	border: 1px solid;
@@ -383,7 +384,7 @@ a:active {
 	/* z-index: +1; */
 	border: 1px solid #232323;
 	border-radius: 5px;
-	background-color: #f7f7f7;
+	background-color: #e6e6e6;
 	width: 120px;
 }
 
@@ -460,4 +461,10 @@ a:active {
 
 #report {
 	display: none;
+}
+
+#chartCard2{
+width: 550px !important;
+display: flex;
+position: relative;
 }

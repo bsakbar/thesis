@@ -1,6 +1,8 @@
 // https://stackoverflow.com/questions/16858954/how-to-properly-use-jspdf-library
 
 function demoFromHTML() {
+        var report1 = document.getElementById('card2');
+
         var pdf = new jsPDF('p', 'pt', 'letter');
         // source can be HTML-formatted string, or a reference
         // to an actual DOM element from which the text will be scraped.
