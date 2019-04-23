@@ -1,6 +1,6 @@
 body,
 html {
-	background-color: #e6e6e6;
+	background-color: #ffffff;
 	overflow: hidden;
 
 }
@@ -96,7 +96,7 @@ html {
 }
 
 .card2 {
-	background: #e6e6e6;
+	background: #ffffff;
 	position: fixed;
 	margin-top: 97px;
 	left: 680px;
@@ -110,6 +110,7 @@ html {
 
 }
 .card2content{
+	display: block;
 	padding-top: 40px;
 	padding-left: 50px;
 	font-family: 'Montserrat', sans-serif;
@@ -276,7 +277,7 @@ html {
 	width: 530px;
 	margin-left: 140px;
 	margin-top: 70px;
-	background: #e6e6e6;
+	background: #ffffff;
 	border: 1px solid;
 	border-color: #232323;
 	border-radius: 8px;
@@ -285,12 +286,12 @@ html {
 }
 
 .logo{
-	width:80px;
+	width:50px;
 	margin-left: 180px;
-	margin-top: 41px;
+	margin-top: 71px;
 	top:50px;
 	position: relative;
-	display: flex;
+	display:  block;
 }
 
 
@@ -352,7 +353,7 @@ html {
 	display: inline-block;
 	width: 13px;
 	height: 13px;
-	background: #e6e6e6;
+	background: #ffffff;
 	text-decoration: none;
 	border-radius: 50%;
 	border: 1px solid;
@@ -384,7 +385,7 @@ a:active {
 	/* z-index: +1; */
 	border: 1px solid #232323;
 	border-radius: 5px;
-	background-color: #e6e6e6;
+	background-color: #ffffff;
 	width: 120px;
 }
 

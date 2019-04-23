@@ -1,6 +1,5 @@
 
 
-
 // sliders values
 //WBC
 var wbcslider = document.getElementById("WBCrange");

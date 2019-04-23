@@ -4,8 +4,6 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link href="https://fonts.googleapis.com/css?family=Pragati+Narrow:400,700" rel="stylesheet">
-
       <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="style.css">
       <title>Thesissss!!</title>
@@ -59,7 +57,7 @@
          <img class="redPoly" src="redPoly.svg">
          <canvas id="chart4"></canvas>
       </div>
-        <img class="logo" src="logo.svg">
+        <img class="logo" src="logoGif.gif">
 
 
       <div class="card2" id="card2">
@@ -99,6 +97,7 @@
          margin-right:100px;
          margin-left:40px;
          width: 700px;
+         display: block;
          ">
           <canvas id="barChart" ></canvas>
         </div>
@@ -162,7 +161,7 @@
                   WBC
                   <h2 class="subsubhead">White Blood Cells</h2>
                   <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="WBCoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="WBCrange" onchange="slider1data()">
+                  <input type="range" min="4500" max="11000" value="5000" class="slider" id="WBCrange" onchange="slider1data()">
                   <br>
                   <br>
                   <br>
@@ -461,6 +460,7 @@
       <script language="javascript" type="text/javascript" src="thesis.js"></script>
       <script language="javascript" type="text/javascript" src="download.js"></script>
       <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.0.min.js"></script>﻿
+      <script src="https://d3js.org/d3.v5.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

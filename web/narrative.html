@@ -3,25 +3,11 @@
    <head>
       <style>
         body {
-        background-color: #e6e6e6;
-        overflow-x: hidden;
-        }
-        * {
-          box-sizing: border-box;
+        background-color: #ffffff;
+
         }
 
-        .visualizations {
-          width: 200px;
-          height: 200px;
-          margin-bottom: 400px;
-          margin-top: 300px;
-          margin-left: 250px;
-          padding-top: 75px;
-          background: #ccc;
-          text-align: center;
-          color: #FFF;
-          font-size: 3em;
-        }
+
         .sideTxt{
           float: right;
           left: 780px;
@@ -36,11 +22,7 @@
         	font-weight: 300;
           text-align: justify;
           text-justify: inter-word;
-          /* border: 1px solid;
-          border-color: #232323;
-          border-radius: 8px; */
-          /* padding: 30px 30px 30px 30px;
-          overflow:auto; */
+
         }
 
 
@@ -65,6 +47,67 @@
           width: 45px;
         }
 
+         .visualizations {
+          width: 300px;
+          height: 300px;
+          margin-top: 400px;
+          margin-left: 200px;
+          background: #ccc;
+          text-align: center;
+          color: #FFF;
+          font-size: 3em;
+        }
+
+        .logo{
+          margin-top:200px;
+          margin-left:220px;
+          display: flex;
+
+
+        }
+
+
+        /* #sections > div{
+        	opacity: .3
+        }
+
+        #sections div.graph-scroll-active{
+        	opacity: 1;
+        }
+
+        #container{
+          position: absolute;
+        }
+
+        #sections{
+          float: right;
+          position: relative;
+          display: inline-block;
+          top: 180px;
+          left: 185px;
+  				width:680px;
+          font-size: 20px;
+          line-height: 1.8;
+        	font-family: 'Montserrat', sans-serif;
+        	font-weight: 300;
+          text-align: justify;
+          text-justify: inter-word;
+
+        }
+
+        #graph{
+          display: inline-block;
+          margin-left: 100px;
+          top: 200px;
+          width: 500px;
+          height: 500px;
+          position: sticky;
+          float: left;
+          border-radius:5px;
+          border: 1px solid;
+          border-color: #232323;
+        } */
+
       </style>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -73,7 +116,64 @@
       <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
       <title>Report</title>
    </head>
-   <body>
+   <div class="sideNav">
+  <a href="home.html">
+  <img src="home.svg" alt="home">
+  </a>
+  <a href="index.html">
+  <img  src="chartsPage.svg" alt="home">
+  </a>
+</div>
+<div class="sideTxt">
+  <span>
+    <h1>What is....</h1><h2>Start scrolling</h2>
+    <br>
+    <br>
+    <b>Problem</b><br>
+    Many of us go through the blood withdrawal procedure for different reasons. However, the results usually come in an unusual
+    format that sometimes can only be understood by professionals. Blood is a very important part of our bodies, aside from the
+    tranportation function, it stores important data about the body's performance. Therefore it's important that we
+    understand it and become participants in our own health and bodies.
+    <br>
+    <br>
+
+    Our blood consists of many elements, there are four main groups that most people get their blood tested on: Complete Blood Count (CBC),
+    Differential Blood Count (DBC), Basic Metabolic Panel, and Renal and Liver Function Tests. Each group represents blood elements. Every element
+    is different, it has a different function, different range, and different unit. This is why it's hard sometimes to make sense out of the test
+    results when each result looks different.
+
+    <br>
+    <br>
+    <b>Tool</b><br>
+    This tool allows you to experiment with the blood values and visualize it, the range sliders show the real value of the
+    blood element, however the visualization will show a different value. As mentioned before each element is different, therefore
+    all the input values will be normalized so they can fit together in one visualization. Furthermore, each blood component is represented
+    in a polygon shape, for example, Differential Blood Count is fitted in a pentagon because DBC hold 5 blood elements, and the pentagon has 5 corners.
+    These polygons are the guide to an ideal and normal score. The thickness of the polygon ring determines the normal range in that blood component.
+    <br>
+    <br>
+    More explaination is found in
+
+
+
+
+</div>
+<!-- <img class="logo" width=250px src="logoGrey.gif"> -->
+
+   <div class="visualizations" data-aos="fade-up">
+     1
+   </div>
+   <br>
+   <br>
+   <div class="visualizations" data-aos="fade-up"><img width=300px src="slidertest.gif"></div>
+   <div class="visualizations" data-aos="fade-up"><img width=300px src="test2.gif"></div>
+   <div class="visualizations" data-aos="fade-up"></div>
+   <div class="visualizations" data-aos="fade-up">4</div>
+   <div class="visualizations" data-aos="fade-up">5</div>
+   <div class="visualizations" data-aos="fade-up">6</div>
+
+
+   <!-- <body>
      <div class="sideNav">
        <a href="home.html">
        <img src="home.svg" alt="home">
@@ -82,27 +182,23 @@
        <img  src="chartsPage.svg" alt="home">
        </a>
      </div>
-     <div class="sideTxt">
-       <span>
-         <h1>What is....</h1><h2>Start scrolling</h2>
-         <br>
-         <br>
 
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam lacus suspendisse faucibus interdum posuere lorem. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare suspendisse. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Elementum facilisis leo vel fringilla est ullamcorper. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Varius vel pharetra vel turpis nunc eget lorem dolor sed. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Sit amet aliquam id diam maecenas ultricies mi eget. Facilisis mauris sit amet massa vitae tortor condimentum. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Interdum velit euismod in pellentesque massa placerat. Praesent semper feugiat nibh sed pulvinar. Sit amet nulla facilisi morbi. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Urna condimentum mattis pellentesque id nibh tortor id. Faucibus pulvinar elementum integer enim neque volutpat ac. Quisque non tellus orci ac auctor augue mauris augue neque.
-        Nunc mattis enim ut tellus elementum sagittis vitae et. Egestas diam in arcu cursus euismod quis. Cursus euismod quis viverra nibh cras pulvinar mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Nisi vitae suscipit tellus mauris a diam. Maecenas pharetra convallis posuere morbi. Sed odio morbi quis commodo odio aenean sed adipiscing diam. Euismod in pellentesque massa placerat duis. Lectus arcu bibendum at varius. At erat pellentesque adipiscing commodo elit. Accumsan tortor posuere ac ut consequat semper viverra. Tortor aliquam nulla facilisi cras fermentum odio eu. Sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum. Fermentum odio eu feugiat pretium nibh ipsum consequat. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Sem et tortor consequat id porta nibh venenatis.
-        Tortor condimentum lacinia quis vel eros donec ac. Turpis massa tincidunt dui ut ornare lectus sit. Eros in cursus turpis massa tincidunt dui. Morbi tristique senectus et netus et malesuada fames ac. Condimentum mattis pellentesque id nibh tortor id aliquet. Vitae justo eget magna fermentum iaculis eu non diam. Egestas quis ipsum suspendisse ultrices gravida. Eleifend quam adipiscing vitae proin. Id semper risus in hendrerit gravida rutrum quisque non. Sollicitudin nibh sit amet commodo nulla. Vitae elementum curabitur vitae nunc sed velit dignissim sodales ut. Nulla aliquet porttitor lacus luctus accumsan tortor. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Commodo sed egestas egestas fringilla phasellus faucibus. Egestas sed sed risus pretium quam vulputate. Pretium aenean pharetra magna ac placerat.
-        In nisl nisi scelerisque eu ultrices. Faucibus vitae aliquet nec ullamcorper sit amet risus. Lectus mauris ultrices eros in cursus turpis massa tincidunt dui. Tincidunt vitae semper quis lectus. Nunc faucibus a pellentesque sit amet porttitor eget. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Nisl condimentum id venenatis a. Interdum varius sit amet mattis. Scelerisque in dictum non consectetur a erat nam at lectus. Ipsum consequat nisl vel pretium lectus quam. Mauris a diam maecenas sed enim ut sem. Sollicitudin tempor id eu nisl.
-        In arcu cursus euismod quis viverra nibh cras. Nullam ac tortor vitae purus faucibus. Magna etiam tempor orci eu lobortis. Amet aliquam id diam maecenas ultricies mi eget mauris. Id cursus metus aliquam eleifend mi in nulla. Lacus suspendisse faucibus interdum posuere lorem. Orci sagittis eu volutpat odio facilisis mauris sit amet massa. A scelerisque purus semper eget duis at tellus at urna. Cras ornare arcu dui vivamus arcu felis bibendum ut. Quisque egestas diam in arcu cursus euismod. Integer feugiat scelerisque varius morbi enim nunc faucibus. Egestas diam in arcu cursus euismod. Gravida dictum fusce ut placerat. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. In fermentum posuere urna nec tincidunt. Massa tempor nec feugiat nisl. Purus ut faucibus pulvinar elementum. Faucibus nisl tincidunt eget nullam non nisi est sit amet. Augue mauris augue neque gravida in fermentum et.
-      </span>
-     </div>
 
-      <div class="visualizations" data-aos="fade-up">Logo</div>
-      <div class="visualizations" data-aos="fade-up">1</div>
-      <div class="visualizations" data-aos="fade-up">2</div>
-      <div class="visualizations" data-aos="fade-up">3</div>
-      <div class="visualizations" data-aos="fade-up">4</div>
-      <div class="visualizations" data-aos="fade-up">5</div>
-      <div class="visualizations" data-aos="fade-up">6</div>
+
+
+     <div id='container'>
+       <div id='graph'>
+         <p>test</p>
+         <p>test2</p>
+       </div>
+       <div id='sections'>
+
+         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam lacus suspendisse faucibus interdum posuere lorem. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare suspendisse. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Elementum facilisis leo vel fringilla est ullamcorper. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Varius vel pharetra vel turpis nunc eget lorem dolor sed. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Sit amet aliquam id diam maecenas ultricies mi eget. Facilisis mauris sit amet massa vitae tortor condimentum. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Interdum velit euismod in pellentesque massa placerat. Praesent semper feugiat nibh sed pulvinar. Sit amet nulla facilisi morbi. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Urna condimentum mattis pellentesque id nibh tortor id. Faucibus pulvinar elementum integer enim neque volutpat ac. Quisque non tellus orci ac auctor augue mauris augue neque.
+        </div>
+         <div>Nunc mattis enim ut tellus elementum sagittis vitae et. Egestas diam in arcu cursus euismod quis. Cursus euismod quis viverra nibh cras pulvinar mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Nisi vitae suscipit tellus mauris a diam. Maecenas pharetra convallis posuere morbi. Sed odio morbi quis commodo odio aenean sed adipiscing diam. Euismod in pellentesque massa placerat duis. Lectus arcu bibendum at varius. At erat pellentesque adipiscing commodo elit. Accumsan tortor posuere ac ut consequat semper viverra. Tortor aliquam nulla facilisi cras fermentum odio eu. Sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum. Fermentum odio eu feugiat pretium nibh ipsum consequat. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Sem et tortor consequat id porta nibh venenatis.
+         Tortor condimentum lacinia quis vel eros donec ac. Turpis massa tincidunt dui ut ornare lectus sit. Eros in cursus turpis massa tincidunt dui. Morbi tristique senectus et netus et malesuada fames ac. Condimentum mattis pellentesque id nibh tortor id aliquet. Vitae justo eget magna fermentum iaculis eu non diam. Egestas quis ipsum suspendisse ultrices gravida. Eleifend quam adipiscing vitae proin. Id semper risus in hendrerit gravida rutrum quisque non. Sollicitudin nibh sit amet commodo nulla. Vitae elementum curabitur vitae nunc sed velit dignissim sodales ut. Nulla aliquet porttitor lacus luctus accumsan tortor. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Commodo sed egestas egestas fringilla phasellus faucibus. Egestas sed sed risus pretium quam vulputate. Pretium aenean pharetra magna ac placerat.</div>
+
+     </div> -->
 
 
 
@@ -111,15 +207,30 @@
       <script>
          //https://github.com/michalsnik/aos
          AOS.init({
-         duration: 1200,
+         duration: 3000,
         });
+
+        // d3.graphScroll()
+        //     .sections(d3.selectAll('#sections > div'))
+        //     .on('active', function(i){ console.log(i + 'th section active') })
+        //
+        //     d3.graphScroll()
+        //     	.graph(d3.selectAll('#graph'))
+        //     	.container(d3.select('#container'))
+        //       .sections(d3.selectAll('#sections > div'))
+        //       .on('active', function(i){ console.log(i + 'th section active') })
+        //
+        // graphScroll.offset(300)
+        // graphScroll.eventId('uniqueId1')
+
 
       </script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-      <script language="javascript" type="text/javascript" src="download.js"></script>
+      <script language="javascript" type="text/javascript" src="narrative.js"></script>
       <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.0.min.js"></script>﻿
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://d3js.org/d3.v5.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
    </body>
 </html>
