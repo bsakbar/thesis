@@ -4,9 +4,7 @@
       <style>
         body {
         background-color: #ffffff;
-
         }
-
 
         .sideTxt{
           float: right;
@@ -22,9 +20,7 @@
         	font-weight: 300;
           text-align: justify;
           text-justify: inter-word;
-
         }
-
 
         h1{
           font-size: 72px;
@@ -50,11 +46,12 @@
          .visualizations {
           width: 300px;
           height: 300px;
-          margin-top: 400px;
+          margin-top: 300px;
           margin-left: 200px;
-          background: #ccc;
+          background: transparent;
           text-align: center;
-          color: #FFF;
+          align-items: center;
+          color: #000;
           font-size: 3em;
         }
 
@@ -62,51 +59,9 @@
           margin-top:200px;
           margin-left:220px;
           display: flex;
-
-
         }
 
 
-        /* #sections > div{
-        	opacity: .3
-        }
-
-        #sections div.graph-scroll-active{
-        	opacity: 1;
-        }
-
-        #container{
-          position: absolute;
-        }
-
-        #sections{
-          float: right;
-          position: relative;
-          display: inline-block;
-          top: 180px;
-          left: 185px;
-  				width:680px;
-          font-size: 20px;
-          line-height: 1.8;
-        	font-family: 'Montserrat', sans-serif;
-        	font-weight: 300;
-          text-align: justify;
-          text-justify: inter-word;
-
-        }
-
-        #graph{
-          display: inline-block;
-          margin-left: 100px;
-          top: 200px;
-          width: 500px;
-          height: 500px;
-          position: sticky;
-          float: left;
-          border-radius:5px;
-          border: 1px solid;
-          border-color: #232323;
-        } */
 
       </style>
       <meta charset="utf-8">
@@ -152,7 +107,11 @@
     These polygons are the guide to an ideal and normal score. The thickness of the polygon ring determines the normal range in that blood component.
     <br>
     <br>
-    More explaination is found in
+    The arrow button on the upper corner shows more explaination about the results. The first chart shows where the dots stand from the center of
+    the normal range without the scale. The second chart is a mirrored bar chart that measures the distance between the dot and the center
+    of the noraml range and convert it into a percentage, is the bar is -25% it means that the result is under average and it's 25% away from the
+    normal range.
+    </thead>
 
 
 
@@ -165,63 +124,51 @@
    </div>
    <br>
    <br>
-   <div class="visualizations" data-aos="fade-up"><img width=300px src="slidertest.gif"></div>
-   <div class="visualizations" data-aos="fade-up"><img width=300px src="test2.gif"></div>
+   <div class="visualizations" data-aos="fade-up"><img width=260px id="sliderGIF" src="slidertest.gif"></div>
+   <div class="visualizations" data-aos="fade-up"><img width=300px src="chartgif.gif"></div>
    <div class="visualizations" data-aos="fade-up"></div>
    <div class="visualizations" data-aos="fade-up">4</div>
    <div class="visualizations" data-aos="fade-up">5</div>
    <div class="visualizations" data-aos="fade-up">6</div>
 
 
-   <!-- <body>
-     <div class="sideNav">
-       <a href="home.html">
-       <img src="home.svg" alt="home">
-       </a>
-       <a href="index.html">
-       <img  src="chartsPage.svg" alt="home">
-       </a>
-     </div>
-
-
-
-
-     <div id='container'>
-       <div id='graph'>
-         <p>test</p>
-         <p>test2</p>
-       </div>
-       <div id='sections'>
-
-         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non quam lacus suspendisse faucibus interdum posuere lorem. Suspendisse potenti nullam ac tortor vitae purus faucibus ornare suspendisse. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Elementum facilisis leo vel fringilla est ullamcorper. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Varius vel pharetra vel turpis nunc eget lorem dolor sed. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Sit amet aliquam id diam maecenas ultricies mi eget. Facilisis mauris sit amet massa vitae tortor condimentum. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Accumsan sit amet nulla facilisi morbi tempus iaculis urna id. Interdum velit euismod in pellentesque massa placerat. Praesent semper feugiat nibh sed pulvinar. Sit amet nulla facilisi morbi. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Urna condimentum mattis pellentesque id nibh tortor id. Faucibus pulvinar elementum integer enim neque volutpat ac. Quisque non tellus orci ac auctor augue mauris augue neque.
-        </div>
-         <div>Nunc mattis enim ut tellus elementum sagittis vitae et. Egestas diam in arcu cursus euismod quis. Cursus euismod quis viverra nibh cras pulvinar mattis. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Nisi vitae suscipit tellus mauris a diam. Maecenas pharetra convallis posuere morbi. Sed odio morbi quis commodo odio aenean sed adipiscing diam. Euismod in pellentesque massa placerat duis. Lectus arcu bibendum at varius. At erat pellentesque adipiscing commodo elit. Accumsan tortor posuere ac ut consequat semper viverra. Tortor aliquam nulla facilisi cras fermentum odio eu. Sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum. Fermentum odio eu feugiat pretium nibh ipsum consequat. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Sem et tortor consequat id porta nibh venenatis.
-         Tortor condimentum lacinia quis vel eros donec ac. Turpis massa tincidunt dui ut ornare lectus sit. Eros in cursus turpis massa tincidunt dui. Morbi tristique senectus et netus et malesuada fames ac. Condimentum mattis pellentesque id nibh tortor id aliquet. Vitae justo eget magna fermentum iaculis eu non diam. Egestas quis ipsum suspendisse ultrices gravida. Eleifend quam adipiscing vitae proin. Id semper risus in hendrerit gravida rutrum quisque non. Sollicitudin nibh sit amet commodo nulla. Vitae elementum curabitur vitae nunc sed velit dignissim sodales ut. Nulla aliquet porttitor lacus luctus accumsan tortor. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Commodo sed egestas egestas fringilla phasellus faucibus. Egestas sed sed risus pretium quam vulputate. Pretium aenean pharetra magna ac placerat.</div>
-
-     </div> -->
-
-
-
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
+
+      // setTimeout(fade_out, 4000);
+      // function fade_out() {
+      //   $("#sliderGIF").fadeOut().empty();
+      // }
+
          //https://github.com/michalsnik/aos
          AOS.init({
          duration: 3000,
         });
 
-        // d3.graphScroll()
-        //     .sections(d3.selectAll('#sections > div'))
-        //     .on('active', function(i){ console.log(i + 'th section active') })
-        //
-        //     d3.graphScroll()
-        //     	.graph(d3.selectAll('#graph'))
-        //     	.container(d3.select('#container'))
-        //       .sections(d3.selectAll('#sections > div'))
-        //       .on('active', function(i){ console.log(i + 'th section active') })
-        //
-        // graphScroll.offset(300)
-        // graphScroll.eventId('uniqueId1')
+        //https://jsfiddle.net/4vm1sht5/3/
+
+        highlight();
+
+        $(window).on("scroll", function(){
+          highlight();
+        });
+
+        function highlight(){
+          var scroll = $(window).scrollTop();
+          var height = $(window).height();
+
+          $(".highlight").each(function(){
+            var pos = $(this).offset().top;
+            if (scroll+height >= pos) {
+              $(this).addClass("active");
+            }
+            console.log(pos);
+            console.log(scroll);
+          });
+        }
+
+
 
 
       </script>

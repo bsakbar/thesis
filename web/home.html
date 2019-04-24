@@ -3,18 +3,15 @@
    <head>
      <style>
 
+       body {
+        margin: 0;
+        font: normal 75% Arial, Helvetica, sans-serif;
+       }
 
-      html,body{
-        padding: 0;
-        margin:0;
-        overflow: hidden;
-
-        }
-
-      #myid{
-      	color: white;
-
-        }
+       canvas {
+        display: block;
+        vertical-align: bottom;
+       }
 
       h1{
         font-size: 66px;
@@ -33,24 +30,12 @@
         position: absolute;
         font-size: 18px;
       	font-family: 'Montserrat', sans-serif;
-      	font-weight: 200;
+      	font-weight: 500;
         letter-spacing: -1px;
-        top: 400px;
-        margin-right:20px;
-        margin-left:780px;
-        width: 300px;
-
-
-
-      }
-
-      .logoWhite{
-        position: absolute;
-        width:260px;
-        display: block;
-        left: 400px;
-        bottom:360px;
-
+        top: 450px;
+        margin-left:650px;
+        width: 500px;
+        z-index: 2;
       }
 
       a{
@@ -59,8 +44,59 @@
         color: #FF7651;
         position: absolute;
         display: flex;
-
       }
+
+
+        #particles-js {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         background-color: #ffffff;
+         background-image: url("");
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: 50% 50%;
+      }
+
+
+        /* ---- stats.js ---- */
+
+        .count-particles {
+         background: #000022;
+         position: absolute;
+         top: 48px;
+         left: 0;
+         width: 80px;
+         color: #13E8E9;
+         font-size: .8em;
+         text-align: left;
+         text-indent: 4px;
+         line-height: 14px;
+         padding-bottom: 2px;
+         font-family: Helvetica, Arial, sans-serif;
+         font-weight: bold;
+      }
+
+        .js-count-particles {
+         font-size: 1.1em;
+      }
+
+        #stats,
+        .count-particles {
+         -webkit-user-select: none;
+         margin-top: 5px;
+         margin-left: 5px;
+      }
+
+        #stats {
+         border-radius: 3px 3px 0 0;
+         overflow: hidden;
+      }
+
+        .count-particles {
+         border-radius: 0 0 3px 3px;
+      }
+
      </style>
 
       <meta charset="utf-8">
@@ -73,34 +109,21 @@
    </head>
    <body>
 
-     <!-- <img class="logoWhite" src="logoGifthin.gif" data-aos="fade-up"> -->
-     <!-- <h1>Home Page <br>Needs Content</h1>
-     <br> -->
      <div class="options">
      <a href="narrative.html">Learn the Data</a>&emsp;&emsp;&emsp;
-
-     <a style="margin-top:40px;" href="index.html">Data Lab</a>
+     <a style="margin-left:250px;" href="index.html">Data Lab</a>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-       //https://github.com/michalsnik/aos
-       AOS.init({
-       duration: 1200,
-      });
-
-    </script>
-
+      <!-- particlesJS: https://github.com/VincentGarreau/particles.js/ -->
+      <div id="particles-js"></div>
+      <script src="../assets/lib/particles.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
       <script language="javascript" type="text/javascript" src="thesis.js"></script>
-      <script language="javascript" type="text/javascript" src="homeBG.js"></script>
-
+      <script language="javascript" type="text/javascript" src="homeparticles.js"></script>
       <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.0.min.js"></script>﻿
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
       <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.0.min.js"></script>﻿
       <script src="https://d3js.org/d3.v5.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
    </body>
 </html>
