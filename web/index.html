@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="style.css">
       <title>Thesissss!!</title>
    </head>
@@ -130,10 +131,9 @@
                   <br>
                   <label class="nametext">Date Of Test
                   <input class="date" type="date">
-                  <br>
-                  <br>
-                  <br>
-                  <br> DOB
+                  </label>
+
+                  <label style="margin-left:80px;" class="nametext">DOB
                   <input class="date" type="date">
                   </label>
                   <div class="genderradio">
@@ -150,6 +150,24 @@
                      </label>
                      </div>
                   </div>
+
+
+
+                  <div class="bmi">
+                    <label> BMI <br>
+                      <input type="text" placeholder="cm" id="bheight" autocomplete="off">
+                      <input style="margin-left:50px;" type="text" placeholder="kg" id="bweight" autocomplete="off">
+                        <a href="javascript:arrowBtndown.onclick();">
+                       <img style="margin-left:90px; top:2px;" id="arrowBtndown" class="arrowBtn" width= 40px; src="arrowdown.svg" alt="arrow">
+                        </a>
+                        <div style="width:450px; margin-top:80px; margin-left:-7px;">
+                        <canvas id="bmiChart" ></canvas>
+                      </div>
+                  </div>
+
+
+
+
             </div>
             </form>
             <div id="slide-2">

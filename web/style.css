@@ -56,7 +56,7 @@ html {
 	border-color: #232323;
 	border-radius: 8px;
 	font-size: 18px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	font-weight: 300;
 	letter-spacing: normal;
 	color: #404040;
@@ -110,8 +110,8 @@ html {
 	display: block;
 	padding-top: 40px;
 	padding-left: 50px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 800;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 700;
 	font-size: 18px;
 	letter-spacing: -0.3px;
 	color: #404040;
@@ -143,7 +143,7 @@ html {
 	background-color: #fff;
 	border-radius: 3px;
 	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	color: #aaa;
 	position: relative;
 	/* z-index: 2; */
@@ -159,22 +159,23 @@ html {
 
 .subhead {
 	font-size: 14px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 500;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 400;
 	letter-spacing: auto;
 	color: #404040;
 }
 
 .subsubhead {
 	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	font-weight: 200;
 	letter-spacing: auto;
 	color: #404040;
 }
 
 .genderradio {
-	top: 60px;
+	left: 160px;
+	top: -115px;
 	position: relative;
 	cursor: pointer;
 }
@@ -210,11 +211,14 @@ html {
 
 .radioText {
 	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	font-weight: 200;
-	padding-top: 5px;
+	padding-top: 8px;
 	color: #404040;
 }
+
+
+
 
 .slidecontainer1 {
 	display: flex;
@@ -251,7 +255,7 @@ html {
 
 .smallhead {
 	font-size: 18px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	font-weight: 500;
 	letter-spacing: normal;
 	color: #404040;
@@ -340,8 +344,8 @@ html {
 	margin-top:-35px;
 	margin-left:173px;
 	font-size: 24px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 100;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
 }
 
 .circles>a {
@@ -374,8 +378,8 @@ a:active {
 
 .date {
 	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 200;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
 	letter-spacing: auto;
 	display: flex;
 	position: absolute;
@@ -417,7 +421,7 @@ a:active {
 
 .nametext {
 	font-size: 12px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	color: #404040;
 }
 
@@ -433,8 +437,8 @@ a:active {
 	-webkit-appearance: none;
 	padding: 3px 3px;
 	font-size: 12px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 500;
 	letter-spacing: auto;
 	display: inline-flex;
 	position: absolute;
@@ -442,6 +446,69 @@ a:active {
 	border: 1px solid #232323;
 	border-radius: 5px;
 }
+
+.bmi {
+	width: 600px;
+	top:240px;
+	margin-left:0px;
+	position: relative;
+	outline: none;
+	border: none;
+	-webkit-box-shadow: 0px 0px 0px;
+	box-shadow: 0px 0px 0px;
+	background-color: transparent;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	letter-spacing: auto;
+	display: inline-flex;
+	position: absolute;
+	z-index: +1;
+
+}
+
+#bheight{
+	width: 40px;
+	position: relative;
+	outline: none;
+	border: none;
+	-webkit-box-shadow: 0px 0px 0px;
+	box-shadow: 0px 0px 0px;
+	background-color: transparent;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	padding: 3px 3px;
+	font-size: 10px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
+	letter-spacing: auto;
+	display: inline-flex;
+	position: absolute;
+	z-index: +1;
+	border: 1px solid #232323;
+}
+#bweight{
+	width: 40px;
+	position: relative;
+	outline: none;
+	border: none;
+	-webkit-box-shadow: 0px 0px 0px;
+	box-shadow: 0px 0px 0px;
+	background-color: transparent;
+	border-radius: 5px;
+	-webkit-appearance: none;
+	padding: 3px 3px;
+	font-size: 10px;
+	font-family: 'Roboto Mono', monospace;
+	font-weight: 300;
+	letter-spacing: auto;
+	display: inline-flex;
+	position: absolute;
+	z-index: +1;
+	border: 1px solid #232323;
+}
+
+
+
 
 .downloadBtn {
 	top: 220px;

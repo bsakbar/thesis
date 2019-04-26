@@ -475,11 +475,14 @@ var chart4 = new Chart(ctx, {
             display: false,
             min:0,
             max:100,
+
           },
           gridLines: {
               circular: true,
               color: '#232323',
-              lineWidth: 0.2
+              lineWidth: 0.2,
+              fontFamily: "Roboto Mono",
+
           }
       }
     },
@@ -541,6 +544,7 @@ var arrowBtn2 = document.getElementById('arrowBtn2');
 var arrowBtn3 = document.getElementById('arrowBtn3');
 var arrowBtn4 = document.getElementById('arrowBtn4');
 var arrowleft = document.getElementById('arrowleft');
+var arrowBtndown = document.getElementById('arrowBtndown');
 
 arrowBtn1.onclick = function() {
   card2.style.display = "block";
@@ -557,6 +561,10 @@ arrowBtn4.onclick = function() {
 arrowleft.onclick = function() {
   card2.style.display = "none";
 
+}
+
+arrowBtndown.onclick = function() {
+  // card2.style.display = "none";
 }
 
 
@@ -602,7 +610,8 @@ var barChart = new Chart(ctx, {
             }],
             xAxes: [{
               ticks: {
-                  fontSize: 10
+                  fontSize: 10,
+                  fontFamily: "Roboto Mono",
               },
                 stacked: true,
 
@@ -654,5 +663,24 @@ var chartCard2 = new Chart(ctx, {
               }
       },
     },
+
+});
+
+// bmi chart
+
+var ctx = document.getElementById("bmiChart").getContext('2d');
+var bmiChart = new Chart(ctx, {
+
+    type: "bubble",
+    data: {
+        datasets: [{
+            labels:'BMI',
+            data:[{"x":20,"y":30}],
+            backgroundColor: "rgba(198, 198, 198, 1)"}],
+          },
+    options: {
+        legend: false,
+
+    }
 
 });
