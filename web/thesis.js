@@ -1,4 +1,6 @@
-
+Chart.defaults.global.defaultFontFamily = "Roboto Mono";
+Chart.defaults.global.defaultFontSize = "10";
+Chart.defaults.global.defaultFontStyle = "300";
 
 // sliders values
 //WBC
@@ -305,6 +307,7 @@ function slider9data(){
 }
 
 
+
 var ctx = document.getElementById('chart2').getContext('2d');
 var chart2 = new Chart(ctx, {
 
@@ -481,7 +484,6 @@ var chart4 = new Chart(ctx, {
               circular: true,
               color: '#232323',
               lineWidth: 0.2,
-              fontFamily: "Roboto Mono",
 
           }
       }
@@ -579,7 +581,7 @@ var barChart = new Chart(ctx, {
     data: {
         labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
         datasets: [{
-
+            // labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
             data: [-100, 59, -30, 81, -56, 55, 40,65,70],
             fill: false,
             backgroundColor: "rgba(198, 198, 198, 1)",
@@ -594,19 +596,22 @@ var barChart = new Chart(ctx, {
         maintainAspectRatio: false,
         legend: false,
         scales: {
+            scaleLabel:{
+              display: false,
+            },
             lineWidth: 0.2,
-            yAxes: [{
-                gridLines: {
-                  display: false,
-                },
-                barPercentage: 1.25,
-                ticks: {
+              yAxes: [{
+                  gridLines: {
                     display: false,
-                    beginAtZero: true,
-                    min:-100,
-                    max:100,
-                    fontSize: 10
-                }
+                  },
+                  barPercentage: 1.25,
+                  ticks: {
+                      display: false,
+                      beginAtZero: true,
+                      min:-100,
+                      max:100,
+                      fontSize: 10
+                  }
             }],
             xAxes: [{
               ticks: {
@@ -666,21 +671,11 @@ var chartCard2 = new Chart(ctx, {
 
 });
 
-// bmi chart
 
-var ctx = document.getElementById("bmiChart").getContext('2d');
-var bmiChart = new Chart(ctx, {
+// Blood Pressure
 
-    type: "bubble",
-    data: {
-        datasets: [{
-            labels:'BMI',
-            data:[{"x":20,"y":30}],
-            backgroundColor: "rgba(198, 198, 198, 1)"}],
-          },
-    options: {
-        legend: false,
-
-    }
-
-});
+var bpslider = document.getElementById("BPrange");
+var bpoutput = document.getElementById("BPoutput");
+bpslider.oninput = function() {
+  bpoutput.innerHTML = this.value;
+}

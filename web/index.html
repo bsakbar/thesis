@@ -133,7 +133,7 @@
                   <input class="date" type="date">
                   </label>
 
-                  <label style="margin-left:80px;" class="nametext">DOB
+                  <label style="margin-left:65px;" class="nametext">DOB
                   <input class="date" type="date">
                   </label>
                   <div class="genderradio">
@@ -152,6 +152,9 @@
                   </div>
 
 
+                  <label>Blood Pressure<br><br>
+                  <span style="margin-top:35px; margin-left:0px; font-size:40px;" class="outputValue" id="BPoutput"></span>
+                  <input style="width:250px;"type="range" min="1" max="250" value="50" class="slider" id="BPrange" onchange="">
 
                   <div class="bmi">
                     <label> BMI <br>
@@ -160,8 +163,62 @@
                         <a href="javascript:arrowBtndown.onclick();">
                        <img style="margin-left:90px; top:2px;" id="arrowBtndown" class="arrowBtn" width= 40px; src="arrowdown.svg" alt="arrow">
                         </a>
-                        <div style="width:450px; margin-top:80px; margin-left:-7px;">
-                        <canvas id="bmiChart" ></canvas>
+                        <br>
+                        <div style="width:450px; margin-top:40px; margin-left:-4px;">
+
+                          <svg id="bmiChart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 531.4 92.8">
+                           <defs>
+                              <style>
+                              .cls-1 {
+                              fill: none;
+                              stroke: #1a1a1a;
+                              stroke-miterlimit: 10;
+                              stroke-width: 1px;
+                              }
+
+                              .cls-2,
+                              .cls-3 {
+                              font-size: 12px;
+                              font-family: RobotoMono-Light, Roboto Mono Light;
+                              font-weight: 300;
+                              }
+
+                              .cls-2 {
+                              fill: #404040;
+                              }
+
+                              .cls-3 {
+                              fill: #232323;
+                              }
+
+                              </style>
+                           </defs>
+
+                           <path class="cls-1" d="M207,913H317V847H217a10,10,0,0,0-10,10v64" transform="translate(-201 -846.75)"/>
+                           <rect class="cls-1" x="116" y="0.25" width="84" height="66"/>
+                           <rect class="cls-1" x="200" y="0.25" width="64" height="66"/>
+                           <path class="cls-1" d="M723,921V857a10,10,0,0,0-10-10H465v66H723" transform="translate(-201 -846.75)"/>
+                           <line class="cls-1" x1="457.5" y1="74.06" x2="457.5" y2="66.37"/>
+                           <line class="cls-1" x1="393.08" y1="74.06" x2="393.08" y2="66.37"/>
+                           <line class="cls-1" x1="328.67" y1="74.06" x2="328.67" y2="66.37"/>
+                           <line class="cls-1" x1="264.25" y1="74.06" x2="264.25" y2="66.37"/>
+                           <line class="cls-1" x1="199.83" y1="74.06" x2="199.83" y2="66.37"/>
+                           <line class="cls-1" x1="135.42" y1="74.06" x2="135.42" y2="66.37"/>
+                           <line class="cls-1" x1="71" y1="74.06" x2="71" y2="66.37"/>
+                           <text class="cls-2" transform="translate(0 87.54)">10</text>
+                           <text class="cls-2" transform="translate(65 87.54)">15</text>
+                           <text class="cls-2" transform="translate(129 87.54)">20</text>
+                           <text class="cls-2" transform="translate(193 87.54)">25</text>
+                           <text class="cls-2" transform="translate(258 87.54)">30</text>
+                           <text class="cls-2" transform="translate(323 87.54)">35</text>
+                           <text class="cls-2" transform="translate(388 87.54)">40</text>
+                           <text class="cls-2" transform="translate(453 87.54)">45</text>
+                           <text class="cls-2" transform="translate(517 89.54)">50</text>
+                           <text class="cls-3" transform="translate(21.01 38.85)">Underweight</text>
+                           <text class="cls-3" transform="translate(136.01 38.85)">Normal</text>
+                           <text class="cls-3" transform="translate(218.01 38.85)">Over</text>
+                           <text class="cls-3" transform="translate(372.01 38.85)">Obese</text>
+                        </svg>
                       </div>
                   </div>
 
