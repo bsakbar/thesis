@@ -4,15 +4,17 @@
       <style>
         body {
         background-color: #ffffff;
+
         }
 
-        .sideTxt{
+        .container{
           float: right;
           left: 780px;
-          top: 130px;;
+          top: 130px;
+          padding-right:100px;
           position:absolute;
   				-webkit-appearance: none;
-          display: flex;
+          display: block;
   				width:680px;
           font-size: 18px;
           line-height: 1.8;
@@ -64,6 +66,26 @@
           display: flex;
         }
 
+        .highlight{
+            display:block;
+            background-size: 200% auto;
+            background-image: linear-gradient(to right,#fff 50%,#ffbdbd 50%);
+            background-position: 0% 0;
+            animation-duration: 3s;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            width: max-content;
+            animation-fill-mode: forwards;
+
+        }
+        .highlight.active{
+           animation-name: highlight;
+        }
+
+        @keyframes highlight {
+            from {background-position: 0% 0;}
+            to {background-position: -100% 0;}
+        }
 
 
       </style>
@@ -74,16 +96,18 @@
       <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700" rel="stylesheet">
       <title>Report</title>
-   </head>
-   <div class="sideNav">
-  <a href="home.html">
-  <img src="home.svg" alt="home">
-  </a>
-  <a href="index.html">
-  <img  src="chartsPage.svg" alt="home">
-  </a>
-</div>
-<div class="sideTxt">
+      </head>
+
+    <div class="sideNav">
+      <a href="home.html">
+        <img src="home.svg" alt="home">
+      </a>
+      <a href="index.html">
+        <img  src="chartsPage.svg" alt="home">
+      </a>
+    </div>
+
+<div class="container">
   <span>
     <h1>What is....</h1>
     <br>
@@ -91,8 +115,8 @@
     <b>Problem</b><br>
     Many of us go through the blood withdrawal procedure for different reasons. However, the results usually come in an unusual
     format that sometimes can only be understood by professionals. Blood is a very important part of our bodies, aside from the
-    tranportation function, it stores important data about the body's performance. Therefore it's important that we
-    understand it and become participants in our own health and bodies.
+    tranportation function, it stores important data about the body's performance. Therefore <span class="highlight"> it's important that we
+    understand it and become participants<br> in our own health and bodies.</span>
     <br>
     <br>
     <br>
@@ -125,10 +149,10 @@
 
 
 </div>
-<!-- <img class="logo" width=250px src="logoGrey.gif"> -->
+
 
    <div class="visualizations" data-aos="fade-up">
-     <img width=370px id="sliderGIF" src="bloodCircles2.gif">
+     <img width=400px id="sliderGIF" src="bloodCircle4.gif">
    </div>
    <br>
    <br>
@@ -143,6 +167,8 @@
 
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script src="../assets/lib/jquery.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
       <script>
 
       // setTimeout(fade_in, 4000);
@@ -178,12 +204,9 @@
         }
 
 
-
-
       </script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-      <script language="javascript" type="text/javascript" src="narrative.js"></script>
-      <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.0.min.js"></script>﻿
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
       <script src="https://d3js.org/d3.v5.min.js"></script>
