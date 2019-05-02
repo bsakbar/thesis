@@ -2,7 +2,7 @@ body,
 html {
 	background-color: #ffffff;
 	overflow: hidden;
-
+	width: 100%;
 }
 
 #chart1 {
@@ -68,6 +68,7 @@ html {
 	position: absolute;
 	display: block;
 	width: 147px;
+	/* margin-left: 81px; */
 	margin-left: 91px;
 	margin-top: 103px;
 }
@@ -443,7 +444,7 @@ a:active {
 
 .bmi {
 	width: 600px;
-	top:415px;
+	top:410px;
 	margin-left:0px;
 	position: relative;
 	outline: none;
