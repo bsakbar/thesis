@@ -2,8 +2,8 @@ body,
 html {
 	background-color: #ffffff;
 	overflow: hidden;
-	width: 1080px;
-	height:auto;
+	position: relative;
+	width: 100%;
 }
 
 #chart1 {
