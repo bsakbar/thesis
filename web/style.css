@@ -63,33 +63,36 @@ html {
 
 }
 
+
+
+
 .yellowPoly{
-	position: absolute;
-	display: flex;
-	width: 150px;
-	margin-left: 82px;
-	margin-top: 102px;
+	position: fixed;
+	display: block;
+	width: 147px;
+	margin-left: 91px;
+	margin-top: 103px;
 }
 .greenPoly{
 	position: absolute;
-	display: flex;
-	width: 130px;
-	margin-left: 88px;
-	margin-top: 103px;
+	display: block;
+	width: 115px;
+	margin-left: 97px;
+	margin-top: 112px;
 }
 .bluePoly{
 	position: absolute;
-	display: flex;
+	display: block;
 	width: 150px;
 	margin-left: 74px;
 	margin-top: 88px;
 }
 .redPoly{
 	position: absolute;
-	display: flex;
-	width: 150px;
-	margin-left: 74px;
-	margin-top: 96px;
+	display: block;
+	width: 130px;
+	margin-left: 80px;
+	margin-top: 107px;
 }
 
 .card2 {
@@ -332,7 +335,7 @@ html {
 }
 
 .outputValue{
-	float:right;
+
 	position:absolute;
 	margin-top:-35px;
 	margin-left:173px;
@@ -442,7 +445,7 @@ a:active {
 
 .bmi {
 	width: 600px;
-	top:400px;
+	top:415px;
 	margin-left:0px;
 	position: relative;
 	outline: none;
@@ -525,4 +528,16 @@ a:active {
 width: 550px !important;
 display: flex;
 position: relative;
+}
+
+
+.BPS{
+margin-top: 0px;
+float: left;
+}
+
+.BPD{
+margin-top: 36px;
+margin-left: 30px;
+float: right;
 }

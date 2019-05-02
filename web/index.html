@@ -20,6 +20,23 @@
             <div id="tooltip" class="tooltip-placeholder"></div>
          </div>
           <img class="yellowPoly" src="yellowPoly.svg">
+          <!-- <div class="yellowPoly">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.21 143.99"><defs>
+            <style>
+
+            .cls-1{
+              fill:none;
+              stroke:#d8093a;
+              stroke-miterlimit:10;
+              stroke-width:26px;
+              z-index: +2;
+              }
+
+            </style>
+          </defs>
+          <polygon class="cls-1" points="73.1 13.83 34.28 27.96 13.62 63.74 20.8 104.43 52.45 130.99 93.76 130.99 125.41 104.43 132.58 63.74 111.92 27.96 73.1 13.83"/>
+        </svg>
+      </div> -->
          <canvas id="chart1"></canvas>
       </div>
 
@@ -151,10 +168,22 @@
                      </div>
                   </div>
 
-
+                  <div class="BPS">
                   <label>Blood Pressure<br><br>
-                  <span style="margin-top:35px; margin-left:0px; font-size:40px;" class="outputValue" id="BPoutput"></span>
-                  <input style="width:250px;"type="range" min="1" max="250" value="50" class="slider" id="BPrange" onchange="">
+
+                  <label class="radioText">Systolic</label><br>
+                  <input style="width:120px;"type="range" min="40" max="180" value="40" class="slider" id="BPrange1" onchange="">
+                    <br>
+                  </div>
+
+                <div class="BPD">
+                  <label class="radioText">Diastolic</label><br>
+                  <input style="width:120px;"type="range" min="40" max="250" value="40" class="slider" id="BPrange2" onchange="">
+                    <br>
+                </div>
+
+                <span style="margin-top:100px; margin-left:0px; font-size:40px;" class="outputValue" id="BPoutput1"></span>
+                <span style="margin-top:100px; margin-left:155px; font-size:40px;" class="outputValue" id="BPoutput2"></span>
 
                   <div class="bmi">
                     <label> BMI <br>
@@ -164,7 +193,7 @@
                        <img style="margin-left:90px; top:2px;" id="arrowBtndown" class="arrowBtn" width= 40px; src="arrowdown.svg" alt="arrow">
                         </a>
                         <br>
-                        <div style="width:450px; margin-top:40px; margin-left:-4px;">
+                        <div style="width:450px; margin-top:30px; margin-left:-4px;">
 
                           <svg id="bmiChart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 531.4 92.8">
                            <defs>
@@ -227,6 +256,8 @@
 
             </div>
             </form>
+
+
             <div id="slide-2">
                <text class="smallhead" style="color:#FFB23B">
                Complete Blood Count (CBC)
@@ -236,8 +267,8 @@
                   <text class="subhead">
                   WBC
                   <h2 class="subsubhead">White Blood Cells</h2>
-                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="WBCoutput">50</span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="WBCrange" onchange="slider1data()">
+                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="WBCoutput">––</span>
+                  <input type="range" min="10" max="150" value="80" class="slider" id="WBCrange" onchange="slider1data()">
                   <br>
                   <br>
                   <br>
@@ -245,8 +276,8 @@
                   RBC
                   <br>
                   <h2 class="subsubhead">Red Blood Cells</h2>
-                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="RBCoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="RBCrange" onchange="slider2data()">
+                  <span style="color: rgba(255, 178, 59, 0.5); margin-left:160px" class="outputValue" id="RBCoutput">–––</span>
+                  <input type="range" min="100" max="700" value="400" class="slider" id="RBCrange" onchange="slider2data()">
                   <br>
                   <br>
                   <br>
@@ -254,8 +285,8 @@
                   HGB
                   <br>
                   <h2 class="subsubhead">Hemoglobin</h2>
-                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="HGBoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="HGBrange" onchange="slider3data()">
+                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="HGBoutput">––</span>
+                  <input type="range" min="0" max="20" value="10" class="slider" id="HGBrange" onchange="slider3data()">
                   <br>
                   <br>
                   <br>
@@ -263,45 +294,45 @@
                   HT
                   <br>
                   <h2 class="subsubhead">Hematocrit </h2>
-                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="HToutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="HTrange" onchange="slider4data()">
+                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="HToutput">––</span>
+                  <input type="range" min="0" max="100" value="50" class="slider" id="HTrange" onchange="slider4data()">
                   <br>
                   <br>
                   <br>
                   <span class="subhead">MCV<br>
                   <h2 class="subsubhead">Mean Corpuscular Volume</h2>
-                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="MCVoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="MCVrange"onchange="slider5data()">
+                  <span style="color: rgba(255, 178, 59, 0.5); margin-left:160px" class="outputValue" id="MCVoutput">–––</span>
+                  <input type="range" min="30" max="150" value="90" class="slider" id="MCVrange"onchange="slider5data()">
                   <br>
                   <br>
                   <br>
                </div>
                <div class="slidecontainer2">
                   <span class = "subhead">MCH<br>
-                  <h2 class="subsubhead">Mean Corpuscular Hemoglobin</h2>
-                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="MCHoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="MCHrange" onchange="slider6data()">
+                  <h2 class="subsubhead">Mean Corpuscular HGB</h2>
+                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="MCHoutput">––</span>
+                  <input type="range" min="0" max="700" value="350" class="slider" id="MCHrange" onchange="slider6data()">
                   <br>
                   <br>
                   <br>
                   <span class = "subhead">MCHC<br>
                   <h2 class="subsubhead">MCH Concentration</h2>
-                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="MCHCoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="MCHCrange" onchange="slider7data()">
+                  <span style="color: rgba(255, 178, 59, 0.5);margin-left:160px" class="outputValue" id="MCHCoutput">–––</span>
+                  <input type="range" min="0" max="100" value="50" class="slider" id="MCHCrange" onchange="slider7data()">
                   <br>
                   <br>
                   <br>
                   <span class = "subhead">Platelets<br>
                   <h2 class="subsubhead">–</h2>
-                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="PLoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="PLrange" onchange="slider8data()">
+                  <span style="color: rgba(255, 178, 59, 0.5); margin-left:160px" class="outputValue" id="PLoutput">–––</span>
+                  <input type="range" min="10" max="900" value="450" class="slider" id="PLrange" onchange="slider8data()">
                   <br>
                   <br>
                   <br>
                   <span class = "subhead">RDW<br>
-                  <h2 class="subsubhead">Red Cell Distribution Width</h2>
-                  <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="RDWoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="RDWrange" onchange="slider9data()">
+                  <h2 class="subsubhead">Red Cell Distr Width</h2>
+                  <span style="color: rgba(255, 178, 59, 0.5);margin-left:160px" class="outputValue" id="RDWoutput">–––</span>
+                  <input type="range" min="0" max="250" value="125" class="slider" id="RDWrange" onchange="slider9data()">
                   <br>
                   <br>
                   <br>

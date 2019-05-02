@@ -1,13 +1,32 @@
 Chart.defaults.global.defaultFontFamily = "Roboto Mono";
-Chart.defaults.global.defaultFontSize = "10";
-Chart.defaults.global.defaultFontStyle = "300";
+Chart.defaults.global.defaultFontSize = "12px";
+Chart.defaults.global.defaultFontStyle = "400";
+
+const scale = (num, in_min, in_max, out_min, out_max) => {
+  return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+function rescaling(input, min, avg_min, avg_max, max){
+	if (input >= min &&  input < avg_min){
+		return scale(input, min, avg_min, 0, 50)
+
+	} else if (input >= avg_min &&  input <= avg_max){
+		return scale(input, avg_min, avg_max, 50, 80)
+
+	} else if (input > avg_max &&  input <= max){
+		return scale(input, avg_max, max, 80, 100)
+
+	} else {
+		return 0;
+	}
+}
 
 // sliders values
 //WBC
 var wbcslider = document.getElementById("WBCrange");
 var wbcoutput = document.getElementById("WBCoutput");
 wbcslider.oninput = function() {
-  wbcoutput.innerHTML = this.value;
+  wbcoutput.innerHTML = this.value
 }
 //RBC
 var rbcslider = document.getElementById("RBCrange");
@@ -37,7 +56,7 @@ mcvslider.oninput = function() {
 var mchslider = document.getElementById("MCHrange");
 var mchoutput = document.getElementById("MCHoutput");
 mchslider.oninput = function() {
-  mchoutput.innerHTML = this.value;
+  mchoutput.innerHTML = this.value/10;
 }
 //MCHC
 var mchcslider = document.getElementById("MCHCrange");
@@ -55,7 +74,7 @@ plslider.oninput = function() {
 var rdwslider = document.getElementById("RDWrange");
 var rdwoutput = document.getElementById("RDWoutput");
 rdwslider.oninput = function() {
-  rdwoutput.innerHTML = this.value;
+  rdwoutput.innerHTML = this.value/10;
 }
 //Neutrophils
 var neuslider = document.getElementById("NEUrange");
@@ -205,7 +224,7 @@ var chart1 = new Chart(ctx, {
             pointHitRadius:0,
             pointHoverBackgroundColor	: '#FFB23B',
             hoverRadius: 0,
-            data: [60,60,60,60,60,60,60,60,60],
+            data: [65,65,65,65,65,65,65,65,65],
             fontSize: 10,
         }]
     },
@@ -233,74 +252,86 @@ var chart1 = new Chart(ctx, {
 
 
 //CBC
-function slider2data(){
-  chart1.data.datasets[0].data[0] = document.getElementById('RBCrange').value;
-  barChart.data.datasets[0].data[0] = document.getElementById('RBCrange').value;
-  chartCard2.data.datasets[0].data[0] = document.getElementById('RBCrange').value;
-  chartCard2.update();
-  barChart.update();
-  chart1.update();
-}
+
 function slider1data(){
-  chart1.data.datasets[0].data[1] = document.getElementById('WBCrange').value;
-  barChart.data.datasets[0].data[1] = document.getElementById('WBCrange').value;
-  chartCard2.data.datasets[0].data[1] = document.getElementById('WBCrange').value;
+  var norm_value = rescaling(document.getElementById('WBCrange').value, 10, 50, 60, 150)
+  chart1.data.datasets[0].data[1] = norm_value;
+  barChart.data.datasets[0].data[1] = norm_value;
+  chartCard2.data.datasets[0].data[1] = norm_value;
   chartCard2.update();
   barChart.update();
   chart1.update();
 }
+
+function slider2data(){
+  var norm_value = rescaling(document.getElementById('RBCrange').value, 100, 350, 550, 700);
+  chart1.data.datasets[0].data[0] = norm_value;
+  barChart.data.datasets[0].data[0] = norm_value;
+  chartCard2.data.datasets[0].data[0] = norm_value;
+  chartCard2.update();
+  barChart.update();
+  chart1.update();
+}
+
 function slider3data(){
-  chart1.data.datasets[0].data[2] = document.getElementById('HGBrange').value;
-  barChart.data.datasets[0].data[2] = document.getElementById('HGBrange').value;
-  chartCard2.data.datasets[0].data[2] = document.getElementById('HGBrange').value;
+  var norm_value = rescaling(document.getElementById('HGBrange').value, 0, 12, 16, 20);
+  chart1.data.datasets[0].data[2] = norm_value;
+  barChart.data.datasets[0].data[2] = norm_value;
+  chartCard2.data.datasets[0].data[2] = norm_value ;
   chartCard2.update();
   barChart.update();
   chart1.update();
 }
 function slider4data(){
-  chart1.data.datasets[0].data[3] = document.getElementById('HTrange').value;
-  barChart.data.datasets[0].data[3] = document.getElementById('HTrange').value;
-  chartCard2.data.datasets[0].data[3] = document.getElementById('HTrange').value;
+  var norm_value = rescaling(document.getElementById('HTrange').value, 0, 36, 46, 100);
+  chart1.data.datasets[0].data[3] = norm_value;
+  barChart.data.datasets[0].data[3] = norm_value;
+  chartCard2.data.datasets[0].data[3] = norm_value;
   chartCard2.update();
   barChart.update();
   chart1.update();
 }
 function slider5data(){
-  chart1.data.datasets[0].data[4] = document.getElementById('MCVrange').value;
-  barChart.data.datasets[0].data[4] = document.getElementById('MCVrange').value;
-  chartCard2.data.datasets[0].data[4] = document.getElementById('MCVrange').value;
+  var norm_value = rescaling(document.getElementById('MCVrange').value, 30, 80, 100, 150);
+  chart1.data.datasets[0].data[4] = norm_value;
+  barChart.data.datasets[0].data[4] = norm_value;
+  chartCard2.data.datasets[0].data[4] = norm_value;
   chartCard2.update();
   barChart.update();
   chart1.update();
 }
 function slider6data(){
-  chart1.data.datasets[0].data[5] = document.getElementById('MCHrange').value;
-  barChart.data.datasets[0].data[5] = document.getElementById('MCHrange').value;
-  chartCard2.data.datasets[0].data[5] = document.getElementById('MCHrange').value;
+  var norm_value = rescaling(document.getElementById('MCHrange').value, 0, 254, 346, 700);
+  chart1.data.datasets[0].data[5] = norm_value;
+  barChart.data.datasets[0].data[5] = norm_value;
+  chartCard2.data.datasets[0].data[5] = norm_value;
   chartCard2.update();
   barChart.update();
   chart1.update();
 }
 function slider7data(){
-  chart1.data.datasets[0].data[6] = document.getElementById('MCHCrange').value;
-  barChart.data.datasets[0].data[6] = document.getElementById('MCHCrange').value;
-  chartCard2.data.datasets[0].data[6] = document.getElementById('MCHCrange').value;
+  var norm_value = rescaling(document.getElementById('MCHCrange').value, 0, 31, 36, 100);
+  chart1.data.datasets[0].data[6] = norm_value;
+  barChart.data.datasets[0].data[6] = norm_value;
+  chartCard2.data.datasets[0].data[6] = norm_value;
   chartCard2.update();
   barChart.update();
   chart1.update();
 }
 function slider8data(){
-  chart1.data.datasets[0].data[7] = document.getElementById('PLrange').value;
-  barChart.data.datasets[0].data[7] = document.getElementById('PLrange').value;
-  chartCard2.data.datasets[0].data[7] = document.getElementById('PLrange').value;
+  var norm_value = rescaling(document.getElementById('PLrange').value, 10, 150, 400, 900);
+  chart1.data.datasets[0].data[7] = norm_value;
+  barChart.data.datasets[0].data[7] = norm_value;
+  chartCard2.data.datasets[0].data[7] = norm_value;
   chartCard2.update();
   barChart.update();
   chart1.update();
 }
 function slider9data(){
-  chart1.data.datasets[0].data[8] = document.getElementById('RDWrange').value;
-  barChart.data.datasets[0].data[8] = document.getElementById('RDWrange').value;
-  chartCard2.data.datasets[0].data[8] = document.getElementById('RDWrange').value;
+  var norm_value = rescaling(document.getElementById('RDWrange').value, 0, 118, 156, 250);
+  chart1.data.datasets[0].data[8] = norm_value;
+  barChart.data.datasets[0].data[8] = norm_value;
+  chartCard2.data.datasets[0].data[8] = norm_value;
   chartCard2.update();
   barChart.update();
   chart1.update();
@@ -674,8 +705,14 @@ var chartCard2 = new Chart(ctx, {
 
 // Blood Pressure
 
-var bpslider = document.getElementById("BPrange");
-var bpoutput = document.getElementById("BPoutput");
-bpslider.oninput = function() {
-  bpoutput.innerHTML = this.value;
+var bpslider1 = document.getElementById("BPrange1");
+var bpoutput1 = document.getElementById("BPoutput1");
+bpslider1.oninput = function() {
+  bpoutput1.innerHTML = this.value;
+}
+
+var bpslider2 = document.getElementById("BPrange2");
+var bpoutput2 = document.getElementById("BPoutput2");
+bpslider2.oninput = function() {
+  bpoutput2.innerHTML = this.value;
 }

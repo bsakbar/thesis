@@ -51,7 +51,7 @@
          .visualizations {
           width: 300px;
           height: 300px;
-          margin-top: 400px;
+          margin-top: 200px;
           margin-left: 120px;
           background: transparent;
           text-align: center;
@@ -60,11 +60,6 @@
           font-size: 3em;
         }
 
-        .logo{
-          margin-top:200px;
-          margin-left:220px;
-          display: flex;
-        }
 
         .highlight{
             display:block;
@@ -72,9 +67,10 @@
             background-image: linear-gradient(to right,#fff 50%,#e0e0e0 50%);
             background-position: 0% 0;
             animation-duration: 3s;
-            animation-delay: 0s;
+            animation-delay: 1s;
             animation-iteration-count: 1;
-            width: max-content;
+            /* max-width: fit-content; */
+            max-width: fit-content;
             animation-fill-mode: forwards;
 
         }
@@ -85,6 +81,13 @@
         @keyframes highlight {
             from {background-position: 0% 0;}
             to {background-position: -100% 0;}
+        }
+
+
+
+        #sliderGIF2{
+
+          transition-delay: 9s;
         }
 
 
@@ -115,15 +118,15 @@
     <b>Problem</b><br>
     Many of us go through the blood withdrawal procedure for different reasons. However, the results usually come in an unusual
     format that sometimes can only be understood by professionals. Blood is a very important part of our bodies, aside from the
-    tranportation function, it stores important data about the body's performance. Therefore <span class="highlight"> it's important that we
-    understand it and become participants<br> in our own health and bodies.</span>
+    tranportation function, it stores important data about the body's performance. Therefore it's important that we
+    understand it and become participants in our own health and bodies.
     <br>
     <br>
     <br>
 
 
-    Our blood consists of many elements, there are four main groups that most people get their blood tested on: Complete Blood Count (CBC),
-    Differential Blood Count (DBC), Basic Metabolic Panel, and Renal and Liver Function Tests. Each group represents blood elements. Every element
+    Our blood consists of different elements, there are four main groups that most people get their blood tested on: <span class="highlight">Complete Blood Count (CBC),
+    Differential Blood Count (DBC),<br> Basic Metabolic Panel, and Renal and Liver Function Tests.</span> Each group represents blood elements. Every element
     is different, it has a different function, different range, and different unit. This is why it's hard sometimes to make sense out of the test
     results when each result looks different.
 
@@ -152,13 +155,14 @@
 
 
    <div class="visualizations" data-aos="fade-up">
-     <img width=430px id="sliderGIF" src="bloodCircle4.gif">
+     <img width=430px id="sliderGIF1" src="bloodCircle5.gif">
    </div>
    <br>
    <br>
-   <div class="visualizations" data-aos="fade-up"><img width=430px src="bloodGroups.gif"></div>
-   <div class="visualizations" data-aos="fade-up"><img width=300px src="chartgif.gif"></div>
-   <div class="visualizations" data-aos="fade-up"></div>
+
+   <div class="visualizations" data-aos="fade-up" id="sliderGIF2" style="margin-left: 100px;"><img width=520px src="bloodGroups3.gif"></div>
+   <div class="visualizations" data-aos="fade-up">2</div>
+   <div class="visualizations" data-aos="fade-up">3</div>
    <div class="visualizations" data-aos="fade-up">4</div>
    <div class="visualizations" data-aos="fade-up">5</div>
    <div class="visualizations" data-aos="fade-up">6</div>
@@ -180,6 +184,7 @@
          duration: 3000,
         });
 
+
         //https://jsfiddle.net/4vm1sht5/3/
 
         highlight();
@@ -197,10 +202,9 @@
             if (scroll+height >= pos) {
               $(this).addClass("active");
             }
-            console.log(pos);
-            console.log(scroll);
           });
         }
+
 
 
       </script>

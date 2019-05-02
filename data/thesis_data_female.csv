@@ -1,0 +1,34 @@
+Complete Blood Count,Min,Max,Unit,High
+White Blood Cells,4500,"11,000",mm3,Infection or inflammation
+Red Blood Cells,3500000,5500000,mm3,"Dehydration,Lung disease, Smoking, Genetic causes"
+Hemoglobin,12,16,g/dL,"COPD, Dehydration, Anabolic steroid use, Slepp apnea"
+Hematocrit ,36,46,%,
+Mean Corpuscular Volume,80,100,µm3,"Vit B12 def., Folate def."
+Mean Corpuscular Hemoglobin,25.4,34.6,pg/cell,
+Mean Corpuscular Hemoglobin Concentration,31%,36%,Hb/cell,
+Platelets,"150,000","400,000",mm3,
+Red Cell Distribution Width,,,,"Iron def. anemia, pernicious anemia"
+Differential Blood Count,,,,
+Neutrophils,40,80,%,"Infections, smoking"
+Lymphocytes,20,40,%,"Viral infections, Stress"
+Monocytes,2,10,%,"TB, Fungal infections"
+Eosinophils,1,6,%,"Allergies, parasitic infections"
+Basophils,0.5,1,%,"Food allergy, some types of inflammation"
+Basic Metabolic Panel,,,,
+Blood Glucose,0,140,mg/dL,"Diabetes mellitus, pancreatic tumors, hyperthyroidism"
+Calcium,8.5,10.9,mg/dL,"Hyperparathyroidism, Vit D excess, Vit. A intoxication, some types of malignancies, sarcoidosis, multiple myeloma"
+Sodium,135,147,mmol/L,"Inadequate water intake, dehydration,  excessive sweating"
+Potassium,3.7,5.2,mEq/L,"Acute kidney injury, CHF,  insulin defeciency, acidosis, digoxin toxicity"
+Bicarbonate,23,30,mEq/L,
+Chloride,98,106,mmol/L,"Renal failure, dehydrarion, hyperparathyroidism, diabetes insipidus"
+Renal and Liver Function Tests,,,,
+Blood Urea Nitrogen,6,20,mg/dL,"Renal disease, dehydration, upper gastrointestinal bleeding, high protien diets"
+Serum Creatinine,0.4,1.1,mg/dL,"Renal disease, dehydration, high protien diets"
+Aspartate Aminotransferase,8,48,U/L,"Liver disease, cirrhosis, heart damage, kidnet damage, alcohol abuse, muscle injury"
+Alanine Aminotransferase,7,55,U/L,"Liver disease, cirrhosis, heart damage, kidnet damage, alcohol abuse, muscle injury"
+Bilirubin,0.1,1.2,mg/dL,"Liver dysfunction, biliary obstruction, increased hemolysis"
+Gamma-Glutamyl Transferase,9,48,U/L,"Alcoholism, smoking, CHF, liver diseases, cirrhosis, some types of cancer, pancreatitis"
+Alkaline Phosphatase,45,115,U/L,"Biliary obstruction, bone condistions, liver disease, cirrhosis, lymphoma, sarcoidosis, hyperthyroidism, hyperparathyroidism, pregnancy"
+Prothrombin Time,9.5,13.8,sec,"Warfarin use, Vit K deficiency, liver disease, disseminated intravascular coagulation DIC, "
+Partial thromboplastin Time,60,70,sec,"Deficiencies in clotting factors, liver cirrhosis, vit k deficiency, DIC, heparin therapy,"
+Albumin,3.5,5,g/dL,Dehydration
