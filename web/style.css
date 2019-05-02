@@ -60,14 +60,12 @@ html {
 	font-weight: 300;
 	letter-spacing: normal;
 	color: #404040;
+	overflow: hidden;
 
 }
 
-
-
-
 .yellowPoly{
-	position: fixed;
+	position: absolute;
 	display: block;
 	width: 147px;
 	margin-left: 91px;
@@ -106,7 +104,7 @@ html {
 	border-color: #232323;
 	border-radius: 8px;
 	display: block;
-	overflow: scroll;
+	overflow: hidden;
 
 }
 .card2content{
