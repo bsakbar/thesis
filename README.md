@@ -6,7 +6,7 @@ Blood is the most important component of the human body, with few drops of blood
 
 
 
-![alt text](https://bsakbar.github.io/thesis/preview.png)
+![alt text](https://github.com/bsakbar/thesis/blob/master/preview.png)
 
 
 [Launch Project](https://bsakbar.github.io/thesis/web/home.html)
