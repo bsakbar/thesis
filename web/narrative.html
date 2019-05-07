@@ -225,13 +225,43 @@
 
 
       <div class="visualizations" >
-      <img width=300px src="testNorm.gif">
+      <img width=430px src="normProcess.gif">
       </div>
       <div class="text1">
         <h2>3.</h2>
         <span class="underline">Normalization</span> is the process of converting irregular values to more standardized
-        values by using simple math equations. In our case, to make the test results easier to read, we need to <span class="highlight">normalize the values and
+        values by using simple math equations. [See example below] that explains the concept of normalization, each bar has a different
+        length, weight, and unique characteristics. Imagine fitting these bars in one template, it's not possible without using normalization.
+        After normalization, they all have the same length and weight with maintaining the characteristics.
+        <br>
+        <img style="margin-left:-23px;" width=250px  src="normConcept.gif">
+        <br>
+        In our case, to make the test results easier to read, we need to <span class="highlight">normalize the values and
         the units.</span>
+
+        <h2>Why is it necessary?</h2>
+      </div>
+
+      <div class="visualizations" >
+      <img width=400px src="polygons.gif">
+      </div>
+      <div class="text1">
+        <h2>4.</h2>
+         To understand the results, we normalized blood elements to have a standard range and to remove the units. To make it more
+         accessible, they will be fitted in <span class="highlight">polygons</span>, each blood component is represented in a different polygon, we're using <span class="highlight">nonagon</span>
+         in the CBC example because it contains 9 elements. <span class="underline">Normalization is an important step to make it possible for the
+         elements to be fitted in one polygon.</span>
+
+      </div>
+
+
+      <div class="visualizations" >
+      <img width=450px src="polyRange.gif">
+      </div>
+      <div class="text1">
+        <h2>5.</h2>
+         As a result of normalization, all the elements now share the same <span class="highlight">normal range</span>, the thickness of the polygon
+         determines the noraml range for that blood component, any value outside the ring is considered <span class="underline">above normal </span>or<span class="underline"> under normal</span>.
 
       </div>
 
