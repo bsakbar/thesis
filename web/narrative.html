@@ -74,10 +74,12 @@
         }
 
 
-        .slides1 {
+        /* .slides1 {
         	display: block;
           position: relative;
-        }
+
+
+        } */
 
 
         .boxSlider::-webkit-scrollbar {
@@ -98,7 +100,6 @@
           float: right;
           margin-right:80px;
           margin-top: -650px;
-
           display: block;
           letter-spacing: -0.8px;
           word-spacing: -1;
@@ -113,14 +114,11 @@
           text-justify: inter-word;
         }
 
-
-
-
         .visualizations {
-         width: 500px;
+         margin-bottom:170px;
+         width: 550px;
          height: 550px;
-         margin-top:140px;
-         display: flex;
+         display: inline-flex;
          position: relative;
          float: left;
          background: transparent;
@@ -145,13 +143,10 @@
 
        }
        .underline{
-         /* text-decoration: underline; */
          border-bottom: solid 2px #ff7a7a;
          display: inline;
          padding-bottom: 3px;
        }
-
-
 
 
 
@@ -180,71 +175,65 @@
 
 
 <div class="boxSlider">
-    <div class="slides1" id="section1">
+
       <div style="margin-left:50px;" class="visualizations" data-aos="fade-up">
-      <img width=410px id="bloodCircle6" src="bloodCircle7.gif">
+      <img style="margin-top:130px;" width=440px id="bloodCircle6" src="bloodCircle7.gif">
 
       </div>
-      <div class="text2" data-aos="fade-up">
-        <span>
-        <h1>What is....</h1>
+      <div  class="text1" data-aos="fade-up">
+      <span>
+      <h1>What is....</h1>
       Many of us go through the blood withdrawal procedure for different reasons. However, the results usually come in an <span class="highlight">unusual
       format</span> that sometimes can only be understood by professionals. Blood is a very important part of our bodies, aside from transporting oxygen, it stores important data about the body's performance. Therefore it's important that we
       understand it and become participants in our own health and bodies.
-      <br>
-      <br>
       <h2>How can we make it <span class="underline">simpler</span> and <span class="underline">more accessible?</span></h2>
       <br>
       Start Scrolling
       <img style="margin-right:355px; margin-top:-8px; float:right; " width= 50px; src="arrowdown.svg" alt="arrow">
-    </span>
-    <br>
-    <br>
-    <br>
-
+      </span>
       </div>
 
-    </div>
 
-
-    <div class="slides1" id="section2" data-aos="fade-up">
       <div  class="visualizations" >
       <img  width=520px src="bloodGroups4.gif" >
       </div>
       <div class="text1">
+      <h2>1.</h2>
       Blood consists of different elements, there are <span class="highlight">four main groups</span> that most people get their blood tested on: Complete Blood Count (CBC),
-      Differential Blood Count (DBC), Basic Metabolic Panel, and Renal and Liver Function Tests. Each group represents blood elements. <br><span class="highlight">Every element
+      Differential Blood Count (DBC), Basic Metabolic Panel, and Renal and Liver Function Tests. Each group represents blood elements.<span class="highlight">Every element
       is different, it has a different function, different range, and different unit.</span> This is why it's hard sometimes to make sense out of the test
       results when each result looks different.
+      <br>
+      <br>
+      <h2>Let's use the <span class="underline">Complete Blood Count </span>as an example.</h2>
       </div>
-    </div>
 
-    <div  class="slides1" id="section3" data-aos="fade-up">
+
       <div class="visualizations" >
-      <!-- <img width=520px src="bloodGroups3.gif"> -->
+      <img width=520px src="unitsTree.gif">
       </div>
       <div class="text1">
-        The arrow button on the upper corner shows more explaination about the results. The first chart shows where the dots stand from the center of
-        the normal range without the scale. The second chart is a mirrored bar chart that measures the distance between the dot and the center
-        of the noraml range and convert it into a percentage, is the bar is -25% it means that the result is under average and it's 25% away from the
-        normal range.
-      </div>
-    </div>
-
-
-    <div style="margin-top:-250px;" class="slides1" id="section4" data-aos="fade-up">
-      <div class="visualizations" >
-      <!-- <img width=520px src="bloodGroups3.gif"> -->
-      </div>
-      <div class="text1">
-        This tool allows you to experiment with the blood values and visualize it, the range sliders show the real value of the
-        blood element, however the visualization will show a different value. As mentioned before each element is different, therefore
-        all the input values will be normalized so they can fit together in one visualization. Furthermore, each blood component is represented
-        in a polygon shape, for example, Differential Blood Count is fitted in a pentagon because DBC hold 5 blood elements, and the pentagon has 5 corners.
-        These polygons are the guide to an ideal and normal score. The thickness of the polygon ring determines the normal range in that blood component.
+        <h2>2.</h2>
+        The Complete Blood Count contains 9 blood elements, each element has a differentrange and value [See example below]
+        and they all have different measurment units. Therefore <span class="highlight">normalization</span> is an important step for the visualization.
         <br>
+        <br>
+        <br>
+        <img width=350px  src="unitTable.gif">
+        <h2>What is <span class="underline">normalization</span>?</h2>
       </div>
-    </div>
+
+
+      <div class="visualizations" >
+      <img width=300px src="testNorm.gif">
+      </div>
+      <div class="text1">
+        <h2>3.</h2>
+        <span class="underline">Normalization</span> is the process of converting irregular values to more standardized
+        values by using simple math equations. In our case, to make the test results easier to read, we need to <span class="highlight">normalize the values and
+        the units.</span>
+
+      </div>
 
 </div>
 
