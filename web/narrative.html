@@ -4,29 +4,11 @@
       <style>
         body {
         background-color: #ffffff;
-
-        }
-
-        .container{
-          float: right;
-          left: 780px;
-          top: 130px;
-          padding-right:100px;
-          position:absolute;
-  				-webkit-appearance: none;
-          display: block;
-  				width:680px;
-          font-size: 18px;
-          line-height: 1.8;
-        	font-family: 'Roboto Mono', monospace;
-        	font-weight: 300;
-          text-align: left;
-          color: #404040;
-          text-justify: inter-word;
+        overflow: scroll;
         }
 
         h1{
-          font-size: 72px;
+          font-size: 60px;
           line-height: 1.8;
         	font-family: 'Roboto Mono', monospace;
           color: #232323;
@@ -48,17 +30,6 @@
 
         }
 
-         .visualizations {
-          width: 300px;
-          height: 300px;
-          margin-top: 200px;
-          margin-left: 120px;
-          background: transparent;
-          text-align: center;
-          align-items: center;
-          color: #000;
-          font-size: 3em;
-        }
 
 
         .highlight{
@@ -85,10 +56,90 @@
 
 
 
-        #sliderGIF2{
+        .boxSlider {
+          width: 1300px;
+          height: 700px;
+          margin-left: 180px;
+          margin-top: 150px;
+          background: #ffffff;
+          display: block;
+          overflow: auto;
+          border: 1px solid;
+          border-color: #232323;
+          border-radius: 8px;
 
-          transition-delay: 9s;
         }
+
+
+        .slides1 {
+        	display: block;
+          position: relative;
+        }
+
+
+        .boxSlider::-webkit-scrollbar {
+        	width: 5px;
+        	height: 5px;
+        }
+
+        .boxSlider::-webkit-scrollbar-thumb {
+        	background: transparent;
+        	border-radius: 20px;
+        }
+
+        .boxSlider::-webkit-scrollbar-track {
+        	background: transparent;
+        }
+
+        .text1{
+          float: right;
+          margin-right:80px;
+          margin-top: -500px;
+  				-webkit-appearance: none;
+          display: block;
+
+  				width:550px;
+          font-size: 16px;
+          line-height: 1.8;
+        	font-family: 'Roboto Mono', monospace;
+        	font-weight: 300;
+          text-align: left;
+          color: #404040;
+          margin-left: 500px;
+          text-justify: inter-word;
+        }
+
+        .visualizations {
+         width: 300px;
+         height: 350px;
+         margin-top:200px;
+         display: flex;
+         position: relative;
+         float: left;
+         background: transparent;
+         text-align: center;
+         align-items: center;
+         color: #000;
+         font-size: 3em;
+       }
+
+       .arrowUp{
+         cursor: pointer;
+       }
+       .arrows{
+         margin-left: 1545px;
+         width: 40px;
+         margin-top: -290px;
+       }
+
+       #section2{
+
+
+       }
+
+
+
+
 
 
       </style>
@@ -101,6 +152,7 @@
       <title>Report</title>
       </head>
 
+
     <div class="sideNav">
       <a href="home.html">
         <img src="home.svg" alt="home">
@@ -110,62 +162,75 @@
       </a>
     </div>
 
-<div class="container">
-  <span>
-    <h1>What is....</h1>
-    <br>
-    <br>
-    <b>Problem</b><br>
-    Many of us go through the blood withdrawal procedure for different reasons. However, the results usually come in an unusual
-    format that sometimes can only be understood by professionals. Blood is a very important part of our bodies, aside from the
-    tranportation function, it stores important data about the body's performance. Therefore it's important that we
-    understand it and become participants in our own health and bodies.
-    <br>
-    <br>
-    <br>
-
-
-    Our blood consists of different elements, there are four main groups that most people get their blood tested on: <span class="highlight">Complete Blood Count (CBC),
-    Differential Blood Count (DBC),<br> Basic Metabolic Panel, and Renal and Liver Function Tests.</span> Each group represents blood elements. Every element
-    is different, it has a different function, different range, and different unit. This is why it's hard sometimes to make sense out of the test
-    results when each result looks different.
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <b>Tool</b><br>
-    This tool allows you to experiment with the blood values and visualize it, the range sliders show the real value of the
-    blood element, however the visualization will show a different value. As mentioned before each element is different, therefore
-    all the input values will be normalized so they can fit together in one visualization. Furthermore, each blood component is represented
-    in a polygon shape, for example, Differential Blood Count is fitted in a pentagon because DBC hold 5 blood elements, and the pentagon has 5 corners.
-    These polygons are the guide to an ideal and normal score. The thickness of the polygon ring determines the normal range in that blood component.
-    <br>
-    <br>
-    The arrow button on the upper corner shows more explaination about the results. The first chart shows where the dots stand from the center of
-    the normal range without the scale. The second chart is a mirrored bar chart that measures the distance between the dot and the center
-    of the noraml range and convert it into a percentage, is the bar is -25% it means that the result is under average and it's 25% away from the
-    normal range.
-    </thead>
 
 
 
+<div class="boxSlider">
+    <div class="slides1" id="section1">
+      <div style="margin-left:50px;" class="visualizations" data-aos="fade-up">
+      <img width=430px id="bloodCircle6" src="bloodCircle6.gif">
+
+      </div>
+      <div class="text1" data-aos="fade-up">
+        <h1>What is....</h1>
+      Many of us go through the blood withdrawal procedure for different reasons. However, the results usually come in an unusual
+      format that sometimes can only be understood by professionals. Blood is a very important part of our bodies, aside from the
+      tranportation function, it stores important data about the body's performance. Therefore it's important that we
+      understand it and become participants in our own health and bodies.
+      </div>
+    </div>
+
+
+    <div class="slides1" id="section2" data-aos="fade-up">
+      <div class="visualizations" >
+      <img width=520px src="bloodGroups3.gif" >
+      </div>
+      <div class="text1">
+      Blood consists of different elements, there are four main groups that most people get their blood tested on: Complete Blood Count (CBC),
+      Differential Blood Count (DBC), Basic Metabolic Panel, and Renal and Liver Function Tests. Each group represents blood elements. Every element
+      is different, it has a different function, different range, and different unit. This is why it's hard sometimes to make sense out of the test
+      results when each result looks different.
+      </div>
+    </div>
+
+    <div  class="slides1" id="section3" data-aos="fade-up">
+      <div class="visualizations" >
+      <!-- <img width=520px src="bloodGroups3.gif"> -->
+      </div>
+      <div class="text1">
+        The arrow button on the upper corner shows more explaination about the results. The first chart shows where the dots stand from the center of
+        the normal range without the scale. The second chart is a mirrored bar chart that measures the distance between the dot and the center
+        of the noraml range and convert it into a percentage, is the bar is -25% it means that the result is under average and it's 25% away from the
+        normal range.
+      </div>
+    </div>
+
+
+    <div style="margin-top:-250px;" class="slides1" id="section4" data-aos="fade-up">
+      <div class="visualizations" >
+      <!-- <img width=520px src="bloodGroups3.gif"> -->
+      </div>
+      <div class="text1">
+        This tool allows you to experiment with the blood values and visualize it, the range sliders show the real value of the
+        blood element, however the visualization will show a different value. As mentioned before each element is different, therefore
+        all the input values will be normalized so they can fit together in one visualization. Furthermore, each blood component is represented
+        in a polygon shape, for example, Differential Blood Count is fitted in a pentagon because DBC hold 5 blood elements, and the pentagon has 5 corners.
+        These polygons are the guide to an ideal and normal score. The thickness of the polygon ring determines the normal range in that blood component.
+        <br>
+      </div>
+    </div>
 
 </div>
 
+<!-- <div class="arrows">
+<a onclick="plusDivs(-1)">
+   <img id="arrowUp" class="arrowUp" width= 40px; src="upArrow.svg" alt="arrow">
+</a>
+<a onclick="plusDivs(1)">
+   <img id="arrowDown" class="arrowUp" width= 40px; src="downArrow.svg" alt="arrow">
+</a>
+</div> -->
 
-   <div class="visualizations" data-aos="fade-up">
-     <img width=430px id="sliderGIF1" src="bloodCircle5.gif">
-   </div>
-   <br>
-   <br>
-
-   <div class="visualizations" data-aos="fade-up" id="sliderGIF2" style="margin-left: 100px;"><img width=520px src="bloodGroups3.gif"></div>
-   <div class="visualizations" data-aos="fade-up">2</div>
-   <div class="visualizations" data-aos="fade-up">3</div>
-   <div class="visualizations" data-aos="fade-up">4</div>
-   <div class="visualizations" data-aos="fade-up">5</div>
-   <div class="visualizations" data-aos="fade-up">6</div>
 
 
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -174,10 +239,30 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
       <script>
 
-      // setTimeout(fade_in, 4000);
+
+      // setTimeout(fade_out, 14000);
       // function fade_out() {
-      //   $("#sliderGIF").fadeOut().empty();
+      //   $("#bloodCircle6").fadeOut().empty();
       // }
+      //
+      // var slideIndex = 1;
+      // showDivs(slideIndex);
+      //
+      // function plusDivs(n) {
+      //   showDivs(slideIndex += n);
+      // }
+      //
+      // function showDivs(n) {
+      //   var i;
+      //   var x = document.getElementsByClassName("slides1");
+      //   if (n > x.length) {slideIndex = 1}
+      //   if (n < 1) {slideIndex = x.length}
+      //   for (i = 0; i < x.length; i++) {
+      //     x[i].style.display = "none";
+      //   }
+      //   x[slideIndex-1].style.display = "block";
+      // }
+
 
          //https://github.com/michalsnik/aos
          AOS.init({
@@ -204,7 +289,6 @@
             }
           });
         }
-
 
 
       </script>
