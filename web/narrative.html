@@ -35,30 +35,6 @@
         }
 
 
-
-        /* .highlight{
-            display:block;
-            background-size: 200% auto;
-            background-image: linear-gradient(to right,#fff 50%,#e0e0e0 50%);
-            background-position: 0% 0;
-            animation-duration: 3s;
-            animation-delay: 1s;
-            animation-iteration-count: 1;
-            max-width: fit-content;
-            animation-fill-mode: forwards;
-
-        }
-        .highlight.active{
-           animation-name: highlight;
-        }
-
-        @keyframes highlight {
-            from {background-position: 0% 0;}
-            to {background-position: -100% 0;}
-        } */
-
-
-
         .boxSlider {
           width: 1300px;
           height: 700px;
@@ -72,14 +48,6 @@
           border-radius: 8px; */
 
         }
-
-
-        /* .slides1 {
-        	display: block;
-          position: relative;
-
-
-        } */
 
 
         .boxSlider::-webkit-scrollbar {
@@ -148,8 +116,20 @@
          padding-bottom: 3px;
        }
 
+       .readyBtn{
+         text-decoration: none !important;
+         position: relative;
+         display: block;
+         margin-top: 300px;
+         font-size: 22;
+         font-family: 'Roboto Mono', monospace;
+         font-weight: 500;
+         color: #232323;
+       }
+        .readyBtn:hover{
+        color: #ff7a7a;
 
-
+        }
 
       </style>
       <meta charset="utf-8">
@@ -177,7 +157,10 @@
 <div class="boxSlider">
 
       <div style="margin-left:50px;" class="visualizations" data-aos="fade-up">
-      <img style="margin-top:130px;" width=440px id="bloodCircle6" src="bloodCircle7.gif">
+      <img style="
+      margin-top: 150px !important;
+
+      " width=440px id="bloodCircle6" src="bloodCircle7.gif">
 
       </div>
       <div  class="text1" data-aos="fade-up">
@@ -195,7 +178,10 @@
 
 
       <div  class="visualizations" >
-      <img  width=520px src="bloodGroups4.gif" >
+      <img  style="
+      margin-top: 150px !important;
+
+      " width=520px src="bloodGroups4.gif" >
       </div>
       <div class="text1">
       <h2>1.</h2>
@@ -225,25 +211,30 @@
 
 
       <div class="visualizations" >
-      <img width=430px src="normProcess.gif">
+        <br>
+      <img style="
+      margin-top: 250px !important;
+
+      " width=450px src="normProcess.gif">
       </div>
       <div class="text1">
         <h2>3.</h2>
         <span class="underline">Normalization</span> is the process of converting irregular values to more standardized
         values by using simple math equations. [See example below] that explains the concept of normalization, each bar has a different
         length, weight, and unique characteristics. Imagine fitting these bars in one template, it's not possible without using normalization.
-        After normalization, they all have the same length and weight with maintaining the characteristics.
-
-        <img style="margin-left:-23px;" width=400px  src="normConcept2.gif">
-        <br>
-        In our case, to make the test results easier to read, we need to <span class="highlight">normalize the values and
+        After normalization, they all have the same length and weight with maintaining the characteristics. In our case, to make the test results easier to read, we need to <span class="highlight">normalize the values and
         the units.</span>
-
+        <br>
+        <br>
+        <img style="margin-left:-23px;" width=400px  src="normConcept3.gif">
         <h2>Why is it necessary?</h2>
       </div>
 
       <div class="visualizations" >
-      <img width=400px src="polygons.gif">
+      <img style="
+      margin-top: 100px !important;
+
+      " width=450px src="polygons.gif">
       </div>
       <div class="text1">
         <h2>4.</h2>
@@ -251,19 +242,28 @@
          accessible, they will be fitted in <span class="highlight">polygons</span>, each blood component is represented in a different polygon, we're using <span class="highlight">nonagon</span>
          in the CBC example because it contains 9 elements. <span class="underline">Normalization is an important step to make it possible for the
          elements to be fitted in one polygon.</span>
+         <br>
+         <br>
+         <h2>How are the polygons going to show the test results?</h2>
 
       </div>
 
 
       <div class="visualizations" >
-      <img width=450px src="polyRange2.gif">
+      <img style="
+      margin-top: -80px !important;
+
+      " width=500px src="polyRange2.gif">
       </div>
       <div class="text1">
         <h2>5.</h2>
          As a result of normalization, all the elements now share the same <span class="highlight">normal range</span>, the thickness of the polygon
-         determines the noraml range for that blood component, any value outside the ring is considered <span class="underline">above normal </span>or<span class="underline"> under normal</span>.
+         determines the noraml range for that blood component, any value outside the ring is considered <span class="underline">above normal </span>or<span class="underline"> under normal</span>
 
+        <a class="readyBtn" href="index.html">I'm Ready</a>
       </div>
+
+
 
 </div>
 
