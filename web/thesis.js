@@ -2,6 +2,7 @@ Chart.defaults.global.defaultFontFamily = "Roboto Mono";
 Chart.defaults.global.defaultFontSize = "12px";
 Chart.defaults.global.defaultFontStyle = "400";
 
+
 const scale = (num, in_min, in_max, out_min, out_max) => {
   return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
@@ -208,6 +209,8 @@ albslider.oninput = function() {
 
 // charts
 var ctx = document.getElementById('chart1').getContext('2d');
+
+
 var chart1 = new Chart(ctx, {
 
     type: 'radar',
@@ -218,14 +221,14 @@ var chart1 = new Chart(ctx, {
         datasets: [{
             backgroundColor:'rgba(255, 178, 59, 0)',
             borderWidth: 0.5,
-            borderColor: '#232323',
+            borderColor: '#1a1a1a',
             pointBackgroundColor: 'rgba(255, 178, 59, 1)',
             pointBorderWidth: 1,
             pointHitRadius:0,
-            pointHoverBackgroundColor	: '#FFB23B',
-            hoverRadius: 0,
+            pointHoverBackgroundColor	: '#232323',
+            hoverRadius: 4,
             data: [65,65,65,65,65,65,65,65,65],
-            fontSize: 10,
+            fontSize: 14,
         }]
     },
     options: {
@@ -256,8 +259,8 @@ var chart1 = new Chart(ctx, {
 function slider1data(){
   var norm_value = rescaling(document.getElementById('WBCrange').value, 10, 50, 60, 150)
   chart1.data.datasets[0].data[1] = norm_value;
-  barChart.data.datasets[0].data[1] = norm_value;
   chartCard2.data.datasets[0].data[1] = norm_value;
+  barChart.data.datasets[0].data[1]= (norm_value-55)/55*100;
   chartCard2.update();
   barChart.update();
   chart1.update();
@@ -645,6 +648,7 @@ var barChart = new Chart(ctx, {
                   }
             }],
             xAxes: [{
+              // display: false,
               ticks: {
                   fontSize: 10,
                   fontFamily: "Roboto Mono",
@@ -716,3 +720,25 @@ var bpoutput2 = document.getElementById("BPoutput2");
 bpslider2.oninput = function() {
   bpoutput2.innerHTML = this.value;
 }
+
+var ctx = document.getElementById('bpchart').getContext('2d');
+var bpchart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+        datasets: [{
+            label: 'Scatter Dataset',
+            data: [{
+                x: -10,
+                y: 0
+            }]
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+            }]
+        }
+    }
+});

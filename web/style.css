@@ -542,3 +542,11 @@ margin-top: 36px;
 margin-left: 30px;
 float: right;
 }
+
+#bpchart {
+	display: block;
+	position: absolute;
+	width: 300px !important;
+	height: 300px !important;
+
+}
