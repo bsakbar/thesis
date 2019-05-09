@@ -96,10 +96,10 @@
          </div>
 
          <img style="
-           width: 200px;
-           margin-left: 492px;
-           margin-top: 106px;"
-           class="yellowPoly" src="yellowPoly2.svg">
+           width: 205px;
+           margin-left: 489px;
+           margin-top: 109px;"
+           class="yellowPoly" src="yellowPoly=.svg">
 
          <div style="
          margin-top:70px;
@@ -193,11 +193,12 @@
                     <label> BMI <br>
                       <input type="text" placeholder="cm" id="bheight" autocomplete="off">
                       <input style="margin-left:50px;" type="text" placeholder="kg" id="bweight" autocomplete="off">
-                        <a href="javascript:arrowBtndown.onclick();">
+                        <a id='bmi_button' href="javascript:arrowBtndown.onclick();">
                        <img style="margin-left:90px; top:2px;" id="arrowBtndown" class="arrowBtn" width= 40px; src="arrowdown.svg" alt="arrow">
                         </a>
                         <br>
                         <div style="width:450px; margin-top:30px; margin-left:-4px;">
+                          <span id="dot"></span>
 
                           <svg id="bmiChart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 531.4 92.8">
                            <defs>
@@ -224,10 +225,12 @@
                               fill: #232323;
                               }
 
+
                               </style>
 
 
                            </defs>
+
 
                            <path class="cls-1" d="M207,913H317V847H217a10,10,0,0,0-10,10v64" transform="translate(-201 -846.75)"/>
                            <rect class="cls-1" x="116" y="0.25" width="84" height="66"/>
@@ -292,7 +295,7 @@
                   <br>
                   <h2 class="subsubhead">Hemoglobin</h2>
                   <span style="color: rgba(255, 178, 59, 0.5);" class="outputValue" id="HGBoutput">––</span>
-                  <input type="range" min="0" max="20" value="10" class="slider" id="HGBrange" onchange="slider3data()">
+                  <input type="range" min="0" max="200" value="100" class="slider" id="HGBrange" onchange="slider3data()">
                   <br>
                   <br>
                   <br>

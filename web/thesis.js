@@ -39,7 +39,7 @@ rbcslider.oninput = function() {
 var hgbslider = document.getElementById("HGBrange");
 var hgboutput = document.getElementById("HGBoutput");
 hgbslider.oninput = function() {
-  hgboutput.innerHTML = this.value;
+  hgboutput.innerHTML = this.value/10;
 }
 //HT
 var htslider = document.getElementById("HTrange");
@@ -258,46 +258,52 @@ var chart1 = new Chart(ctx, {
 
 function slider1data(){
   var norm_value = rescaling(document.getElementById('WBCrange').value, 10, 50, 60, 150)
+  var mid_norm_value = rescaling(55, 10, 50, 60, 150)
   chart1.data.datasets[0].data[1] = norm_value;
   chartCard2.data.datasets[0].data[1] = norm_value;
-  barChart.data.datasets[0].data[1]= (norm_value-55)/55*100;
+  barChart.data.datasets[0].data[1]= (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.update();
   barChart.update();
   chart1.update();
 }
 
+
 function slider2data(){
   var norm_value = rescaling(document.getElementById('RBCrange').value, 100, 350, 550, 700);
+  var mid_norm_value = rescaling(450, 100, 350, 550, 700)
   chart1.data.datasets[0].data[0] = norm_value;
-  barChart.data.datasets[0].data[0] = norm_value;
   chartCard2.data.datasets[0].data[0] = norm_value;
-  chartCard2.update();
+  barChart.data.datasets[0].data[0]= (norm_value-mid_norm_value)/mid_norm_value*100;
+  chartCard2.update();5
   barChart.update();
   chart1.update();
 }
 
 function slider3data(){
-  var norm_value = rescaling(document.getElementById('HGBrange').value, 0, 12, 16, 20);
+  var norm_value = rescaling(document.getElementById('HGBrange').value, 0, 120, 160, 200);
+  var mid_norm_value = rescaling(140,  0, 120, 160, 200)
   chart1.data.datasets[0].data[2] = norm_value;
-  barChart.data.datasets[0].data[2] = norm_value;
   chartCard2.data.datasets[0].data[2] = norm_value ;
+  barChart.data.datasets[0].data[2]= (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.update();
   barChart.update();
   chart1.update();
 }
 function slider4data(){
   var norm_value = rescaling(document.getElementById('HTrange').value, 0, 36, 46, 100);
+  var mid_norm_value = rescaling(41,  0, 36, 46, 100)
   chart1.data.datasets[0].data[3] = norm_value;
-  barChart.data.datasets[0].data[3] = norm_value;
   chartCard2.data.datasets[0].data[3] = norm_value;
+  barChart.data.datasets[0].data[3]= (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.update();
   barChart.update();
   chart1.update();
 }
 function slider5data(){
   var norm_value = rescaling(document.getElementById('MCVrange').value, 30, 80, 100, 150);
+  var mid_norm_value = rescaling(90, 30, 80, 100, 150)
   chart1.data.datasets[0].data[4] = norm_value;
-  barChart.data.datasets[0].data[4] = norm_value;
+  barChart.data.datasets[0].data[4] = (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.data.datasets[0].data[4] = norm_value;
   chartCard2.update();
   barChart.update();
@@ -305,8 +311,9 @@ function slider5data(){
 }
 function slider6data(){
   var norm_value = rescaling(document.getElementById('MCHrange').value, 0, 254, 346, 700);
+  var mid_norm_value = rescaling(300, 0, 254, 346, 700)
   chart1.data.datasets[0].data[5] = norm_value;
-  barChart.data.datasets[0].data[5] = norm_value;
+  barChart.data.datasets[0].data[5] = (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.data.datasets[0].data[5] = norm_value;
   chartCard2.update();
   barChart.update();
@@ -314,8 +321,9 @@ function slider6data(){
 }
 function slider7data(){
   var norm_value = rescaling(document.getElementById('MCHCrange').value, 0, 31, 36, 100);
+  var mid_norm_value = rescaling(33.5, 0, 31, 36, 100)
   chart1.data.datasets[0].data[6] = norm_value;
-  barChart.data.datasets[0].data[6] = norm_value;
+  barChart.data.datasets[0].data[6] = (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.data.datasets[0].data[6] = norm_value;
   chartCard2.update();
   barChart.update();
@@ -323,8 +331,9 @@ function slider7data(){
 }
 function slider8data(){
   var norm_value = rescaling(document.getElementById('PLrange').value, 10, 150, 400, 900);
+  var mid_norm_value = rescaling(275, 10, 150, 400, 900)
   chart1.data.datasets[0].data[7] = norm_value;
-  barChart.data.datasets[0].data[7] = norm_value;
+  barChart.data.datasets[0].data[7] = (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.data.datasets[0].data[7] = norm_value;
   chartCard2.update();
   barChart.update();
@@ -332,8 +341,9 @@ function slider8data(){
 }
 function slider9data(){
   var norm_value = rescaling(document.getElementById('RDWrange').value, 0, 118, 156, 250);
+  var mid_norm_value = rescaling(137, 0, 118, 156, 250)
   chart1.data.datasets[0].data[8] = norm_value;
-  barChart.data.datasets[0].data[8] = norm_value;
+  barChart.data.datasets[0].data[8] = (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.data.datasets[0].data[8] = norm_value;
   chartCard2.update();
   barChart.update();
@@ -495,8 +505,8 @@ var chart4 = new Chart(ctx, {
             pointBackgroundColor: 'rgba(255, 118, 81,1)',
             pointBorderWidth: 1,
             pointHitRadius:0,
-            pointHoverBackgroundColor	: '#FF7651',
-            hoverRadius: 0,
+            pointHoverBackgroundColor	: '#232323',
+            hoverRadius: 4,
             data: [65,65,65,65,65,65,65,65,65,65],
             fontSize: 12,
         }]
@@ -600,7 +610,17 @@ arrowleft.onclick = function() {
 }
 
 arrowBtndown.onclick = function() {
-  // card2.style.display = "none";
+  height = document.getElementById("bheight").value;
+  weight = document.getElementById("bweight").value;
+  // console.log(height,weight)
+  bmi = weight / Math.pow((height/100),2)
+  console.log(bmi)
+  // if (bmi >= 15 && bmi <= 50){
+  var newLeftMargin = parseInt(55 + 11 * (bmi -15));
+  console.log(newLeftMargin)
+  target = document.getElementById("dot").setAttribute('style','margin-left:'+newLeftMargin+'px;')
+  // document.getElementById("dot").style.marginLeft= 0;
+  // }
 }
 
 
@@ -616,8 +636,10 @@ var barChart = new Chart(ctx, {
         labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
         datasets: [{
             // labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
-            data: [-100, 59, -30, 81, -56, 55, 40,65,70],
+            data: [0,0,0,0,0,0,0,0,0],
             fill: false,
+            borderWidth: 0.5,
+            borderColor: '#232323',
             backgroundColor: "rgba(198, 198, 198, 1)",
             HoverBackgroundColor	: '#FF7651',
             borderColor: "rgba(230, 230, 230, 0)",
@@ -630,10 +652,16 @@ var barChart = new Chart(ctx, {
         maintainAspectRatio: false,
         legend: false,
         scales: {
+          ticks: {
+              display: false,
+              beginAtZero: true,
+              min:-100,
+              max:100,
+          },
             scaleLabel:{
               display: false,
             },
-            lineWidth: 0.2,
+            lineWidth: 0.5,
               yAxes: [{
                   gridLines: {
                     display: false,
@@ -676,10 +704,10 @@ var chartCard2 = new Chart(ctx, {
             pointBackgroundColor: 'rgba(255, 178, 59, 1)',
             pointBorderWidth: 1,
             pointHitRadius:0,
-            pointHoverBackgroundColor	: '#FFB23B',
-            hoverRadius: 0,
-            data: [60,60,60,60,60,60,60,60,60],
-            fontSize: 10,
+            pointHoverBackgroundColor	: '#232323',
+            hoverRadius: 4,
+            data: [65,65,65,65,65,65,65,65,65],
+            fontSize: 8,
         }]
     },
     options: {
@@ -687,7 +715,7 @@ var chartCard2 = new Chart(ctx, {
       maintainAspectRatio: false,
       legend: false,
       scale: {
-              display: false,
+              display: true,
 
               ticks: {
                   beginAtZero: true,

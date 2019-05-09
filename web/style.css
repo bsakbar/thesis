@@ -112,13 +112,13 @@ html {
 .card2content{
 	display: block;
 	padding-top: 40px;
-	padding-left: 50px;
+	padding-left: 52px;
 	font-family: 'Roboto Mono', monospace;
 	font-weight: 700;
 	font-size: 18px;
 	letter-spacing: -0.3px;
 	color: #404040;
-	width: 400px;
+	width: 390px;
 	float:left;
 	text-align: justify;
 	text-justify: inter-word;
@@ -359,9 +359,10 @@ html {
 	position: relative;
 }
 
-a:active {
-	background: #c7c7c7;
+a:focus {
+	background: #c7c7c7 !important;
 }
+
 
 
 
@@ -548,5 +549,16 @@ float: right;
 	position: absolute;
 	width: 300px !important;
 	height: 300px !important;
+}
 
+#dot{
+	margin-left:165px;
+	margin-top: 52px;
+	height: 10px;
+	width: 10px;
+	background-color: #404040;
+	border-radius: 50%;
+	display: flex;
+	position: absolute;
+	z-index: +1;
 }
