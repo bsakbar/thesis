@@ -257,8 +257,8 @@ var chart1 = new Chart(ctx, {
 //CBC
 
 function slider1data(){
-  var norm_value = rescaling(document.getElementById('WBCrange').value, 10, 50, 60, 150)
-  var mid_norm_value = rescaling(55, 10, 50, 60, 150)
+  var norm_value = rescaling(document.getElementById('WBCrange').value, 10, 45, 110, 150)
+  var mid_norm_value = rescaling(55, 10, 45, 110, 150)
   chart1.data.datasets[0].data[1] = norm_value;
   chartCard2.data.datasets[0].data[1] = norm_value;
   barChart.data.datasets[0].data[1]= (norm_value-mid_norm_value)/mid_norm_value*100;
