@@ -633,7 +633,7 @@ var barChart = new Chart(ctx, {
 
     type: "horizontalBar",
     data: {
-        labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
+        labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','PT','RDW'],
         datasets: [{
             // labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
             data: [0,0,0,0,0,0,0,0,0],
@@ -666,13 +666,15 @@ var barChart = new Chart(ctx, {
                   gridLines: {
                     display: false,
                   },
-                  barPercentage: 1.25,
+                  barPercentage: 0.6,
                   ticks: {
-                      display: false,
+                      display: true,
                       beginAtZero: true,
                       min:-100,
                       max:100,
-                      fontSize: 10
+                      fontSize: 8,
+                      fontFamily: "Roboto Mono",
+                      defaultFontStyle: 200,
                   }
             }],
             xAxes: [{
@@ -695,7 +697,7 @@ var chartCard2 = new Chart(ctx, {
     type: 'radar',
     data: {
 
-        labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
+        labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','PT','RDW'],
 
         datasets: [{
             backgroundColor:'rgba(255, 178, 59, 0)',
