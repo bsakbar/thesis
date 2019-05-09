@@ -105,7 +105,7 @@ eosslider.oninput = function() {
 var basslider = document.getElementById("BASrange");
 var basoutput = document.getElementById("BASoutput");
 basslider.oninput = function() {
-  basoutput.innerHTML = this.value;
+  basoutput.innerHTML = this.value/10;
 }
 
 //Glucose
@@ -118,7 +118,7 @@ gluslider.oninput = function() {
 var caslider = document.getElementById("CArange");
 var caoutput = document.getElementById("CAoutput");
 caslider.oninput = function() {
-  caoutput.innerHTML = this.value;
+  caoutput.innerHTML = this.value/10;
 }
 //Sodium
 var naslider = document.getElementById("NArange");
@@ -130,13 +130,13 @@ naslider.oninput = function() {
 var kslider = document.getElementById("Krange");
 var koutput = document.getElementById("Koutput");
 kslider.oninput = function() {
-  koutput.innerHTML = this.value;
+  koutput.innerHTML = this.value/10;
 }
 //HCO3
 var bicslider = document.getElementById("BICrange");
 var bicoutput = document.getElementById("BICoutput");
 bicslider.oninput = function() {
-  bicoutput.innerHTML = this.value;
+  bicoutput.innerHTML = this.value/10;
 }
 //Chloride
 var chslider = document.getElementById("CHrange");
@@ -396,25 +396,37 @@ var chart2 = new Chart(ctx, {
     },
 });
 
+
+
 //DBC
 function slider10data(){
-  chart2.data.datasets[0].data[0] = document.getElementById('NEUrange').value;
+  var norm_value = rescaling(document.getElementById('NEUrange').value, 0,40, 80, 100);
+  var mid_norm_value = rescaling(60, 0,40, 80, 100);
+  chart2.data.datasets[0].data[0] = norm_value;
   chart2.update();
 }
 function slider11data(){
-  chart2.data.datasets[0].data[1] = document.getElementById('LYMrange').value;
+  var norm_value = rescaling(document.getElementById('LYMrange').value, 0,20, 40, 100);
+  var mid_norm_value = rescaling(30, 0,20, 40, 100);
+  chart2.data.datasets[0].data[1] = norm_value;
   chart2.update();
 }
 function slider12data(){
-  chart2.data.datasets[0].data[2] = document.getElementById('MONrange').value;
+  var norm_value = rescaling(document.getElementById('MONrange').value, 0,2, 10, 20);
+  var mid_norm_value = rescaling(6, 0,2, 10, 20);
+  chart2.data.datasets[0].data[2] = norm_value;
   chart2.update();
 }
 function slider13data(){
-  chart2.data.datasets[0].data[3] = document.getElementById('EOSrange').value;
+  var norm_value = rescaling(document.getElementById('EOSrange').value, 0,1, 6, 10);
+  var mid_norm_value = rescaling(3.5, 0,1, 6, 10);
+  chart2.data.datasets[0].data[3] = norm_value;
   chart2.update();
 }
 function slider14data(){
-  chart2.data.datasets[0].data[3] = document.getElementById('BASrange').value;
+  var norm_value = rescaling(document.getElementById('BASrange').value, 0, 5, 10, 20);
+  var mid_norm_value = rescaling(7.5, 0, 5, 10, 20);
+  chart2.data.datasets[0].data[4] = norm_value;
   chart2.update();
 }
 
@@ -462,30 +474,43 @@ var chart3 = new Chart(ctx, {
     },
 });
 
+
 //BMP
 
 function slider15data(){
-  chart3.data.datasets[0].data[0] = document.getElementById('GLUrange').value;
+  var norm_value = rescaling(document.getElementById('GLUrange').value, 0, 0, 140, 200);
+  var mid_norm_value = rescaling(70, 0, 0, 140, 200);
+  chart3.data.datasets[0].data[0] = norm_value;
   chart3.update();
 }
 function slider16data(){
-  chart3.data.datasets[0].data[1] = document.getElementById('CArange').value;
+  var norm_value = rescaling(document.getElementById('CArange').value, 0, 85, 109, 200);
+  var mid_norm_value = rescaling(97, 0, 85, 109, 200);
+  chart3.data.datasets[0].data[1] = norm_value;
   chart3.update();
 }
 function slider17data(){
-  chart3.data.datasets[0].data[2] = document.getElementById('NArange').value;
+  var norm_value = rescaling(document.getElementById('NArange').value, 0, 135, 147, 250);
+  var mid_norm_value = rescaling(141, 0, 135, 147, 250);
+  chart3.data.datasets[0].data[2] = norm_value;
   chart3.update();
 }
 function slider18data(){
-  chart3.data.datasets[0].data[3] = document.getElementById('Krange').value;
+  var norm_value = rescaling(document.getElementById('Krange').value, 0, 37, 52, 100);
+  var mid_norm_value = rescaling(44.5, 0, 37, 52, 100);
+  chart3.data.datasets[0].data[3] = norm_value;
   chart3.update();
 }
 function slider19data(){
-  chart3.data.datasets[0].data[4] = document.getElementById('BICrange').value;
+  var norm_value = rescaling(document.getElementById('BICrange').value, 0, 230, 300, 1000);
+  var mid_norm_value = rescaling(265, 0, 230, 300, 1000);
+  chart3.data.datasets[0].data[4] = norm_value;
   chart3.update();
 }
 function slider20data(){
-  chart3.data.datasets[0].data[5] = document.getElementById('CHrange').value;
+  var norm_value = rescaling(document.getElementById('CHrange').value, 0, 98, 106, 150);
+  var mid_norm_value = rescaling(102, 0, 98, 106, 150);
+  chart3.data.datasets[0].data[5] = norm_value;
   chart3.update();
 }
 
