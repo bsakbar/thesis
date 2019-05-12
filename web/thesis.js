@@ -684,7 +684,7 @@ var barChart = new Chart(ctx, {
               max:100,
           },
             scaleLabel:{
-              display: false,
+              display: true,
             },
             lineWidth: 0.5,
               yAxes: [{
