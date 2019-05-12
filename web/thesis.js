@@ -220,11 +220,12 @@ var chart1 = new Chart(ctx, {
 
         datasets: [{
             backgroundColor:'rgba(255, 178, 59, 0)',
-            borderWidth: 0.5,
+            borderWidth: 0.7,
             borderColor: '#1a1a1a',
-            pointBackgroundColor: 'rgba(255, 178, 59, 1)',
+            pointBackgroundColor: ['rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)'],
             pointBorderWidth: 1,
-            pointHitRadius:0,
+            pointHitRadius:2,
+            pointRadius: 3.4,
             pointHoverBackgroundColor	: '#232323',
             hoverRadius: 4,
             data: [65,65,65,65,65,65,65,65,65],
@@ -253,7 +254,6 @@ var chart1 = new Chart(ctx, {
 });
 
 
-
 //CBC
 
 function slider1data(){
@@ -262,10 +262,27 @@ function slider1data(){
   chart1.data.datasets[0].data[1] = norm_value;
   chartCard2.data.datasets[0].data[1] = norm_value;
   barChart.data.datasets[0].data[1]= (norm_value-mid_norm_value)/mid_norm_value*100;
+
+  if (norm_value > 80 || norm_value < 50){
+  chart1.data.datasets[0].pointBackgroundColor[1]= "#232323";
+
+  }else{
+  chart1.data.datasets[0].pointBackgroundColor[1]= "#FFB23B";
+  }
+
+  if (norm_value > 80 || norm_value < 50){
+  chartCard2.data.datasets[0].pointBackgroundColor[1]= "#ff7a7a";
+
+  }else{
+  chartCard2.data.datasets[0].pointBackgroundColor[1]= "#FFB23B";
+  }
+
   chartCard2.update();
   barChart.update();
   chart1.update();
+  console.log(norm_value);
 }
+
 
 
 function slider2data(){
@@ -274,7 +291,21 @@ function slider2data(){
   chart1.data.datasets[0].data[0] = norm_value;
   chartCard2.data.datasets[0].data[0] = norm_value;
   barChart.data.datasets[0].data[0]= (norm_value-mid_norm_value)/mid_norm_value*100;
-  chartCard2.update();5
+  if (norm_value > 80 || norm_value < 50){
+  chart1.data.datasets[0].pointBackgroundColor[0]= "#232323";
+
+  }else{
+  chart1.data.datasets[0].pointBackgroundColor[0]= "#FFB23B";
+  }
+
+  if (norm_value > 80 || norm_value < 50){
+  chartCard2.data.datasets[0].pointBackgroundColor[0]= "#ff7a7a";
+
+  }else{
+  chartCard2.data.datasets[0].pointBackgroundColor[0]= "#FFB23B";
+  }
+
+  chartCard2.update();
   barChart.update();
   chart1.update();
 }
@@ -285,6 +316,20 @@ function slider3data(){
   chart1.data.datasets[0].data[2] = norm_value;
   chartCard2.data.datasets[0].data[2] = norm_value ;
   barChart.data.datasets[0].data[2]= (norm_value-mid_norm_value)/mid_norm_value*100;
+  if (norm_value > 80 || norm_value < 50){
+  chart1.data.datasets[0].pointBackgroundColor[2]= "#232323";
+
+  }else{
+  chart1.data.datasets[0].pointBackgroundColor[2]= "#FFB23B";
+  }
+
+  if (norm_value > 80 || norm_value < 50){
+  chartCard2.data.datasets[0].pointBackgroundColor[2]= "#ff7a7a";
+
+  }else{
+  chartCard2.data.datasets[0].pointBackgroundColor[2]= "#FFB23B";
+  }
+
   chartCard2.update();
   barChart.update();
   chart1.update();
@@ -295,6 +340,20 @@ function slider4data(){
   chart1.data.datasets[0].data[3] = norm_value;
   chartCard2.data.datasets[0].data[3] = norm_value;
   barChart.data.datasets[0].data[3]= (norm_value-mid_norm_value)/mid_norm_value*100;
+  if (norm_value > 80 || norm_value < 50){
+  chart1.data.datasets[0].pointBackgroundColor[3]= "#232323";
+
+  }else{
+  chart1.data.datasets[0].pointBackgroundColor[3]= "#FFB23B";
+  }
+
+  if (norm_value > 80 || norm_value < 50){
+  chartCard2.data.datasets[0].pointBackgroundColor[3]= "#ff7a7a";
+
+  }else{
+  chartCard2.data.datasets[0].pointBackgroundColor[3]= "#FFB23B";
+  }
+
   chartCard2.update();
   barChart.update();
   chart1.update();
@@ -305,6 +364,20 @@ function slider5data(){
   chart1.data.datasets[0].data[4] = norm_value;
   barChart.data.datasets[0].data[4] = (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.data.datasets[0].data[4] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart1.data.datasets[0].pointBackgroundColor[4]= "#232323";
+
+  }else{
+  chart1.data.datasets[0].pointBackgroundColor[4]= "#FFB23B";
+  }
+
+  if (norm_value > 80 || norm_value < 50){
+  chartCard2.data.datasets[0].pointBackgroundColor[4]= "#ff7a7a";
+
+  }else{
+  chartCard2.data.datasets[0].pointBackgroundColor[4]= "#FFB23B";
+  }
+
   chartCard2.update();
   barChart.update();
   chart1.update();
@@ -315,6 +388,19 @@ function slider6data(){
   chart1.data.datasets[0].data[5] = norm_value;
   barChart.data.datasets[0].data[5] = (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.data.datasets[0].data[5] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart1.data.datasets[0].pointBackgroundColor[5]= "#232323";
+
+  }else{
+  chart1.data.datasets[0].pointBackgroundColor[5]= "#FFB23B";
+  }
+  if (norm_value > 80 || norm_value < 50){
+  chartCard2.data.datasets[0].pointBackgroundColor[5]= "#ff7a7a";
+
+  }else{
+  chartCard2.data.datasets[0].pointBackgroundColor[5]= "#FFB23B";
+  }
+
   chartCard2.update();
   barChart.update();
   chart1.update();
@@ -325,6 +411,19 @@ function slider7data(){
   chart1.data.datasets[0].data[6] = norm_value;
   barChart.data.datasets[0].data[6] = (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.data.datasets[0].data[6] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart1.data.datasets[0].pointBackgroundColor[6]= "#232323";
+
+  }else{
+  chart1.data.datasets[0].pointBackgroundColor[6]= "#FFB23B";
+  }
+  if (norm_value > 80 || norm_value < 50){
+  chartCard2.data.datasets[0].pointBackgroundColor[6]= "#ff7a7a";
+
+  }else{
+  chartCard2.data.datasets[0].pointBackgroundColor[6]= "#FFB23B";
+  }
+
   chartCard2.update();
   barChart.update();
   chart1.update();
@@ -335,6 +434,19 @@ function slider8data(){
   chart1.data.datasets[0].data[7] = norm_value;
   barChart.data.datasets[0].data[7] = (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.data.datasets[0].data[7] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart1.data.datasets[0].pointBackgroundColor[7]= "#232323";
+
+  }else{
+  chart1.data.datasets[0].pointBackgroundColor[7]= "#FFB23B";
+  }
+  if (norm_value > 80 || norm_value < 50){
+  chartCard2.data.datasets[0].pointBackgroundColor[7]= "#ff7a7a";
+
+  }else{
+  chartCard2.data.datasets[0].pointBackgroundColor[7]= "#FFB23B";
+  }
+
   chartCard2.update();
   barChart.update();
   chart1.update();
@@ -345,6 +457,19 @@ function slider9data(){
   chart1.data.datasets[0].data[8] = norm_value;
   barChart.data.datasets[0].data[8] = (norm_value-mid_norm_value)/mid_norm_value*100;
   chartCard2.data.datasets[0].data[8] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart1.data.datasets[0].pointBackgroundColor[8]= "#232323";
+
+  }else{
+  chart1.data.datasets[0].pointBackgroundColor[8]= "#FFB23B";
+  }
+  if (norm_value > 80 || norm_value < 50){
+  chartCard2.data.datasets[0].pointBackgroundColor[8]= "#ff7a7a";
+
+  }else{
+  chartCard2.data.datasets[0].pointBackgroundColor[8]= "#FFB23B";
+  }
+
   chartCard2.update();
   barChart.update();
   chart1.update();
@@ -363,13 +488,14 @@ var chart2 = new Chart(ctx, {
         datasets: [{
             // label: '#',
             backgroundColor:'rgba(166, 195, 186, 0)',
-            borderWidth: 0.5,
+            borderWidth: 0.7,
             borderColor: '#232323',
-            pointBackgroundColor: 'rgba(166, 195, 186, 1)',
+            pointBackgroundColor: ['rgba(166, 195, 186, 1)','rgba(166, 195, 186, 1)','rgba(166, 195, 186, 1)','rgba(166, 195, 186, 1)','rgba(166, 195, 186, 1)'],
             pointBorderWidth: 1,
-            pointHitRadius:0,
-            pointHoverBackgroundColor	: '#A6C3BA',
-            hoverRadius: 0,
+            pointHitRadius:2,
+            pointRadius: 3.4,
+            pointHoverBackgroundColor	: '#232323',
+            hoverRadius: 4,
             data: [65,65,65,65,65],
             fontSize: 12,
 
@@ -403,29 +529,61 @@ function slider10data(){
   var norm_value = rescaling(document.getElementById('NEUrange').value, 0,40, 80, 100);
   var mid_norm_value = rescaling(60, 0,40, 80, 100);
   chart2.data.datasets[0].data[0] = norm_value;
+
+  if (norm_value > 80 || norm_value < 50){
+  chart2.data.datasets[0].pointBackgroundColor[0]= "#232323";
+
+  }else{
+  chart2.data.datasets[0].pointBackgroundColor[0]= "#A6C3BA";
+  }
   chart2.update();
 }
+
 function slider11data(){
   var norm_value = rescaling(document.getElementById('LYMrange').value, 0,20, 40, 100);
   var mid_norm_value = rescaling(30, 0,20, 40, 100);
   chart2.data.datasets[0].data[1] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart2.data.datasets[0].pointBackgroundColor[1]= "#232323";
+
+  }else{
+  chart2.data.datasets[0].pointBackgroundColor[1]= "#A6C3BA";
+  }
   chart2.update();
 }
 function slider12data(){
   var norm_value = rescaling(document.getElementById('MONrange').value, 0,2, 10, 20);
   var mid_norm_value = rescaling(6, 0,2, 10, 20);
   chart2.data.datasets[0].data[2] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart2.data.datasets[0].pointBackgroundColor[2]= "#232323";
+
+  }else{
+  chart2.data.datasets[0].pointBackgroundColor[2]= "#A6C3BA";
+  }
   chart2.update();
 }
 function slider13data(){
   var norm_value = rescaling(document.getElementById('EOSrange').value, 0,1, 6, 10);
   var mid_norm_value = rescaling(3.5, 0,1, 6, 10);
   chart2.data.datasets[0].data[3] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart2.data.datasets[0].pointBackgroundColor[3]= "#232323";
+
+  }else{
+  chart2.data.datasets[0].pointBackgroundColor[3]= "#A6C3BA";
+  }
   chart2.update();
 }
 function slider14data(){
   var norm_value = rescaling(document.getElementById('BASrange').value, 0, 5, 10, 20);
   var mid_norm_value = rescaling(7.5, 0, 5, 10, 20);
+  if (norm_value > 80 || norm_value < 50){
+  chart2.data.datasets[0].pointBackgroundColor[4]= "#232323";
+
+  }else{
+  chart2.data.datasets[0].pointBackgroundColor[4]= "#A6C3BA";
+  }
   chart2.data.datasets[0].data[4] = norm_value;
   chart2.update();
 }
@@ -443,13 +601,14 @@ var chart3 = new Chart(ctx, {
         datasets: [{
             // label: '#',
             backgroundColor:'rgba(79, 118, 226, 0)',
-            borderWidth: 0.5,
+            borderWidth: 0.8,
             borderColor: '#232323',
-            pointBackgroundColor: 'rgba(79, 118, 226, 1)',
+            pointBackgroundColor: ['rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)'],
             pointBorderWidth: 1,
             pointHitRadius:0,
-            pointHoverBackgroundColor	: '#4F76E2',
-            hoverRadius: 0,
+            pointHoverBackgroundColor	: '#232323',
+            pointRadius: 3.4,
+            hoverRadius: 4,
             data: [65,65,65,65,65,65],
         }]
     },
@@ -481,36 +640,73 @@ function slider15data(){
   var norm_value = rescaling(document.getElementById('GLUrange').value, 0, 0, 140, 200);
   var mid_norm_value = rescaling(70, 0, 0, 140, 200);
   chart3.data.datasets[0].data[0] = norm_value;
+
+  if (norm_value > 80 || norm_value < 50){
+  chart3.data.datasets[0].pointBackgroundColor[0]= "#232323";
+
+  }else{
+  chart3.data.datasets[0].pointBackgroundColor[0]= "#4F76E2";
+  }
   chart3.update();
 }
 function slider16data(){
   var norm_value = rescaling(document.getElementById('CArange').value, 0, 85, 109, 200);
   var mid_norm_value = rescaling(97, 0, 85, 109, 200);
   chart3.data.datasets[0].data[1] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart3.data.datasets[0].pointBackgroundColor[1]= "#232323";
+
+  }else{
+  chart3.data.datasets[0].pointBackgroundColor[1]= "#4F76E2";
+  }
   chart3.update();
 }
 function slider17data(){
   var norm_value = rescaling(document.getElementById('NArange').value, 0, 135, 147, 250);
   var mid_norm_value = rescaling(141, 0, 135, 147, 250);
   chart3.data.datasets[0].data[2] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart3.data.datasets[0].pointBackgroundColor[2]= "#232323";
+
+  }else{
+  chart3.data.datasets[0].pointBackgroundColor[2]= "#4F76E2";
+  }
   chart3.update();
 }
 function slider18data(){
   var norm_value = rescaling(document.getElementById('Krange').value, 0, 37, 52, 100);
   var mid_norm_value = rescaling(44.5, 0, 37, 52, 100);
   chart3.data.datasets[0].data[3] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart3.data.datasets[0].pointBackgroundColor[3]= "#232323";
+
+  }else{
+  chart3.data.datasets[0].pointBackgroundColor[3]= "#4F76E2";
+  }
   chart3.update();
 }
 function slider19data(){
   var norm_value = rescaling(document.getElementById('BICrange').value, 0, 230, 300, 1000);
   var mid_norm_value = rescaling(265, 0, 230, 300, 1000);
   chart3.data.datasets[0].data[4] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart3.data.datasets[0].pointBackgroundColor[4]= "#232323";
+
+  }else{
+  chart3.data.datasets[0].pointBackgroundColor[4]= "#4F76E2";
+  }
   chart3.update();
 }
 function slider20data(){
   var norm_value = rescaling(document.getElementById('CHrange').value, 0, 98, 106, 150);
   var mid_norm_value = rescaling(102, 0, 98, 106, 150);
   chart3.data.datasets[0].data[5] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart3.data.datasets[0].pointBackgroundColor[5]= "#232323";
+
+  }else{
+  chart3.data.datasets[0].pointBackgroundColor[5]= "#4F76E2";
+  }
   chart3.update();
 }
 
@@ -525,11 +721,12 @@ var chart4 = new Chart(ctx, {
         labels: ['AST','ALT','Bilirubin','GGT','ALP','PT','PTT','Albumin','Cr','BUN'],
         datasets: [{
             backgroundColor:'rgba(255, 118, 81, 0)',
-            borderWidth: 0.5,
+            borderWidth: 0.7,
             borderColor: '#232323',
-            pointBackgroundColor: 'rgba(255, 118, 81,1)',
+            pointBackgroundColor: ['rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)'],
             pointBorderWidth: 1,
-            pointHitRadius:0,
+            pointHitRadius:2,
+            pointRadius: 3.4,
             pointHoverBackgroundColor	: '#232323',
             hoverRadius: 4,
             data: [65,65,65,65,65,65,65,65,65,65],
@@ -564,48 +761,96 @@ function slider21data(){
   var norm_value = rescaling(document.getElementById('ASTrange').value, 0, 8, 48, 100);
   var mid_norm_value = rescaling(28, 0, 8, 48, 70);
   chart4.data.datasets[0].data[0] =norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart4.data.datasets[0].pointBackgroundColor[0]= "#232323";
+
+  }else{
+  chart4.data.datasets[0].pointBackgroundColor[0]= "#FF7651";
+  }
   chart4.update();
 }
 function slider22data(){
   var norm_value = rescaling(document.getElementById('ALTrange').value, 0, 7, 55, 100);
   var mid_norm_value = rescaling(31, 0, 7, 55, 100);
   chart4.data.datasets[0].data[1] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart4.data.datasets[0].pointBackgroundColor[1]= "#232323";
+
+  }else{
+  chart4.data.datasets[0].pointBackgroundColor[1]= "#FF7651";
+  }
   chart4.update();
 }
 function slider23data(){
   var norm_value = rescaling(document.getElementById('BILrange').value, 0, 1, 12, 100);
   var mid_norm_value = rescaling(6.5, 0, 1, 12, 100);
   chart4.data.datasets[0].data[2] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart4.data.datasets[0].pointBackgroundColor[2]= "#232323";
+
+  }else{
+  chart4.data.datasets[0].pointBackgroundColor[2]= "#FF7651";
+  }
   chart4.update();
 }
 function slider24data(){
   var norm_value = rescaling(document.getElementById('GGTrange').value, 0, 9, 48, 100);
   var mid_norm_value = rescaling(28.5,  0, 9, 48, 100);
   chart4.data.datasets[0].data[3] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart4.data.datasets[0].pointBackgroundColor[3]= "#232323";
+
+  }else{
+  chart4.data.datasets[0].pointBackgroundColor[3]= "#FF7651";
+  }
   chart4.update();
 }
 function slider25data(){
   var norm_value = rescaling(document.getElementById('ALPrange').value, 0, 45, 115, 150);
   var mid_norm_value = rescaling(80, 0, 45, 115, 150);
   chart4.data.datasets[0].data[4] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart4.data.datasets[0].pointBackgroundColor[4]= "#232323";
+
+  }else{
+  chart4.data.datasets[0].pointBackgroundColor[4]= "#FF7651";
+  }
   chart4.update();
 }
 function slider26data(){
   var norm_value = rescaling(document.getElementById('PTrange').value, 0, 95, 138, 200);
   var mid_norm_value = rescaling(116.5, 0, 95, 138, 200);
   chart4.data.datasets[0].data[5] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart4.data.datasets[0].pointBackgroundColor[5]= "#232323";
+
+  }else{
+  chart4.data.datasets[0].pointBackgroundColor[5]= "#FF7651";
+  }
   chart4.update();
 }
 function slider27data(){
   var norm_value = rescaling(document.getElementById('PTTrange').value, 0, 60, 70, 100);
   var mid_norm_value = rescaling(65, 0, 60, 70, 100);
   chart4.data.datasets[0].data[6] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart4.data.datasets[0].pointBackgroundColor[6]= "#232323";
+
+  }else{
+  chart4.data.datasets[0].pointBackgroundColor[6]= "#FF7651";
+  }
   chart4.update();
 }
 function slider28data(){
   var norm_value = rescaling(document.getElementById('ALBrange').value, 0, 35, 50, 100);
   var mid_norm_value = rescaling(42.5, 0, 35, 50, 100);
   chart4.data.datasets[0].data[7] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart4.data.datasets[0].pointBackgroundColor[7]= "#232323";
+
+  }else{
+  chart4.data.datasets[0].pointBackgroundColor[7]= "#FF7651";
+  }
   chart4.update();
 }
 
@@ -613,12 +858,24 @@ function slider30data(){
   var norm_value = rescaling(document.getElementById('CRrange').value, 0, 5, 12, 100);
   var mid_norm_value = rescaling(8.5, 0, 5, 12, 100);
   chart4.data.datasets[0].data[8] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart4.data.datasets[0].pointBackgroundColor[8]= "#232323";
+
+  }else{
+  chart4.data.datasets[0].pointBackgroundColor[8]= "#FF7651";
+  }
   chart4.update();
 }
 function slider29data(){
   var norm_value = rescaling(document.getElementById('BUNrange').value, 0, 6, 20, 100);
   var mid_norm_value = rescaling(13, 0, 6, 20, 100);
   chart4.data.datasets[0].data[9] = norm_value;
+  if (norm_value > 80 || norm_value < 50){
+  chart4.data.datasets[0].pointBackgroundColor[9]= "#232323";
+
+  }else{
+  chart4.data.datasets[0].pointBackgroundColor[9]= "#FF7651";
+  }
   chart4.update();
 }
 
@@ -682,7 +939,7 @@ var barChart = new Chart(ctx, {
     data: {
         labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','PT','RDW'],
         datasets: [{
-            // labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
+            labels: "My First Dataset",
             data: [0,0,0,0,0,0,0,0,0],
             fill: false,
             borderWidth: 0.5,
@@ -729,6 +986,7 @@ var barChart = new Chart(ctx, {
               ticks: {
                   fontSize: 10,
                   fontFamily: "Roboto Mono",
+                  beginAtZero: true,
               },
                 stacked: true,
 
@@ -750,10 +1008,11 @@ var chartCard2 = new Chart(ctx, {
             backgroundColor:'rgba(255, 178, 59, 0)',
             borderWidth: 0.5,
             borderColor: '#232323',
-            pointBackgroundColor: 'rgba(255, 178, 59, 1)',
+            pointBackgroundColor: ['rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)'],
             pointBorderWidth: 1,
             pointHitRadius:0,
             pointHoverBackgroundColor	: '#232323',
+            pointRadius: 3.5,
             hoverRadius: 4,
             data: [65,65,65,65,65,65,65,65,65],
             fontSize: 8,
@@ -798,27 +1057,6 @@ bpslider2.oninput = function() {
   bpoutput2.innerHTML = this.value;
 }
 
-var ctx = document.getElementById('bpchart').getContext('2d');
-var bpchart = new Chart(ctx, {
-    type: 'scatter',
-    data: {
-        datasets: [{
-            label: 'Scatter Dataset',
-            data: [{
-                x: -10,
-                y: 0
-            }]
-        }]
-    },
-    options: {
-        scales: {
-            xAxes: [{
-                type: 'linear',
-                position: 'bottom'
-            }]
-        }
-    }
-});
 arrowBtndown.onclick = function() {
   height = document.getElementById("bheight").value;
   weight = document.getElementById("bweight").value;

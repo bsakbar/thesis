@@ -43,6 +43,8 @@ html {
 }
 
 #barChart {
+	display: flex;
+	position: relative;
 }
 
 .card1 {
@@ -105,7 +107,7 @@ html {
 	border: 1px solid;
 	border-color: #232323;
 	border-radius: 8px;
-	display: none;
+	display: block;
 	overflow: hidden;
 
 }
