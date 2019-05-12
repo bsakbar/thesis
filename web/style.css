@@ -76,23 +76,23 @@ html {
 .greenPoly{
 	position: absolute;
 	display: block;
-	width: 115px;
-	margin-left: 97px;
-	margin-top: 112px;
+	width: 147px;
+	margin-left: 80px;
+	margin-top: 98px;
 }
 .bluePoly{
 	position: absolute;
 	display: block;
-	width: 150px;
-	margin-left: 74px;
-	margin-top: 88px;
+	width: 154px;
+	margin-left: 71px;
+	margin-top: 86px;
 }
 .redPoly{
 	position: absolute;
 	display: block;
-	width: 130px;
-	margin-left: 80px;
-	margin-top: 107px;
+	width: 147px;
+	margin-left: 70px;
+	margin-top: 102px;
 }
 
 .card2 {
@@ -105,7 +105,7 @@ html {
 	border: 1px solid;
 	border-color: #232323;
 	border-radius: 8px;
-	display: block;
+	display: none;
 	overflow: hidden;
 
 }
@@ -338,7 +338,6 @@ html {
 }
 
 .outputValue{
-
 	position:absolute;
 	margin-top:-35px;
 	margin-left:173px;
@@ -348,12 +347,12 @@ html {
 }
 
 .circles>a {
+	background: #ffffff;
 	top: 91px;
 	left: 200px;
 	display: inline-block;
-	width: 13px;
-	height: 13px;
-	background: #ffffff;
+	width: 12px;
+	height: 12px;
 	text-decoration: none;
 	border-radius: 50%;
 	border: 1px solid;
@@ -362,20 +361,11 @@ html {
 	position: relative;
 }
 
-a:focus {
-	background: #c7c7c7 !important;
+a:focus{
+	background: #ff7a7a !important;
 }
 
 
-
-
-/* Don't need button navigation */
-
-@supports (scroll-snap-type) {
-	.boxSlider>a {
-		display: none;
-	}
-}
 
 .date {
 	font-size: 10px;
@@ -554,17 +544,6 @@ float: right;
 	height: 300px !important;
 }
 
-/* #dot{
-	margin-left:127px;
-	margin-top: 52px;
-	height: 10px;
-	width: 10px;
-	background-color: #404040;
-	border-radius: 50%;
-	display: flex;
-	position: absolute;
-	z-index: +1;
-} */
 
 #dot{
 	margin-left:0px;

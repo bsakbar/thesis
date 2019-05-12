@@ -20,23 +20,7 @@
             <div id="tooltip" class="tooltip-placeholder"></div>
          </div>
           <img class="yellowPoly" src="yellowPoly.svg">
-          <!-- <div class="yellowPoly">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.21 143.99"><defs>
-            <style>
 
-            .cls-1{
-              fill:none;
-              stroke:#d8093a;
-              stroke-miterlimit:10;
-              stroke-width:26px;
-              z-index: +2;
-              }
-
-            </style>
-          </defs>
-          <polygon class="cls-1" points="73.1 13.83 34.28 27.96 13.62 63.74 20.8 104.43 52.45 130.99 93.76 130.99 125.41 104.43 132.58 63.74 111.92 27.96 73.1 13.83"/>
-        </svg>
-      </div> -->
          <canvas id="chart1"></canvas>
       </div>
 
@@ -48,7 +32,7 @@
             <h3>Differential Blood Count</h3>
             <div id="tooltip" class="tooltip-placeholder"></div>
          </div>
-         <img class="greenPoly" src="greenPoly.svg">
+         <img class="greenPoly" src="greenPoly2.svg">
          <canvas id="chart2"></canvas>
       </div>
 
@@ -124,12 +108,12 @@
 
 
       <div class="circles">
-         <a href="#slide-1"></a>
-         <a href="#slide-2"></a>
-         <a href="#slide-3"></a>
-         <a href="#slide-4"></a>
-         <a href="#slide-5"></a>
-         <a href="#slide-6"></a>
+         <a id="slide1" href="#slide-1"></a>
+         <a id="slide2"  href="#slide-2"></a>
+         <a id="slide3"  href="#slide-3"></a>
+         <a id="slide4"  href="#slide-4"></a>
+         <a id="slide5" href="#slide-5"></a>
+         <a id="slide6"  href="#slide-6"></a>
       </div>
       <div class="boxSlider">
          <div class="slides">
@@ -461,7 +445,7 @@
                   BUN
                   <h2 class ="subsubhead">Blood Urea Nitrogen</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="BUNoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="BUNrange" onchange="slider29data()">
+                  <input type="range" min="0" max="100" value="50" class="slider" id="BUNrange" onchange="slider29data()">
                   <span class="units">mg/dL</span>
                   <br>
 
@@ -469,7 +453,7 @@
                   Cr<br>
                   <h2 class ="subsubhead">Creatinine</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="CRoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="CRrange" onchange="slider30data()">
+                  <input type="range" min="0" max="100" value="50" class="slider" id="CRrange" onchange="slider30data()">
                   <span class="units">mg/dL</span>
 
 
@@ -485,14 +469,14 @@
                   AST
                   <h2 class ="subsubhead">Aspartate Aminotransferase</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="ASToutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="ASTrange" onchange="slider21data()">
+                  <input type="range" min="0" max="100" value="50" class="slider" id="ASTrange" onchange="slider21data()">
                   <span class="units">U/L</span>
                   <br>
                   <text class = "subhead">
                   ALT<br>
                   <h2 class ="subsubhead">Alanine Aminotransferase</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="ALToutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="ALTrange" onchange="slider22data()">
+                  <input type="range" min="0" max="100" value="50" class="slider" id="ALTrange" onchange="slider22data()">
                   <span class="units">U/L</span>
                   <br>
                   <text class = "subhead">
@@ -506,7 +490,7 @@
                   GGT<br>
                   <h2 class ="subsubhead">Gamma-Glutamyl Transferase</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="GGToutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="GGTrange" onchange="slider24data()">
+                  <input type="range" min="0" max="100" value="50" class="slider" id="GGTrange" onchange="slider24data()">
                   <span class="units">U/L</span>
                   <br>
                </div>
@@ -515,28 +499,28 @@
                   ALP<br>
                   <h2 class ="subsubhead">Alkaline Phosphatase</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="ALPoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="ALPrange" onchange="slider25data()">
+                  <input type="range" min="0" max="150" value="75" class="slider" id="ALPrange" onchange="slider25data()">
                   <span class="units">U/L</span>
                   <br>
                   <text class = "subhead">
                   PT<br>
                   <h2 class ="subsubhead">Prothrombin Time</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="PToutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="PTrange" onchange="slider26data()">
+                  <input type="range" min="0" max="200" value="100" class="slider" id="PTrange" onchange="slider26data()">
                   <span class="units">sec</span>
                   <br>
                   <text class = "subhead">
                   PTT<br>
                   <h2 class ="subsubhead">Partial Thromboplastin Time</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="PTToutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="PTTrange" onchange="slider27data()">
+                  <input type="range" min="0" max="100" value="50" class="slider" id="PTTrange" onchange="slider27data()">
                   <span class="units">sec</span>
                   <br>
                   <text class = "subhead">
                   Albumin<br>
                   <h2 class ="subsubhead">–</h2>
                   <span style="color: rgba(255, 118, 81, 0.5);" class="outputValue" id="ALBoutput"></span>
-                  <input type="range" min="1" max="100" value="50" class="slider" id="ALBrange" onchange="slider28data()">
+                  <input type="range" min="0" max="100" value="50" class="slider" id="ALBrange" onchange="slider28data()">
                   <span class="units">g/dL</span>
                   <br>
                   <br>

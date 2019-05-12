@@ -154,7 +154,7 @@ bunslider.oninput = function() {
 var crslider = document.getElementById("CRrange");
 var croutput = document.getElementById("CRoutput");
 crslider.oninput = function() {
-  croutput.innerHTML = this.value;
+  croutput.innerHTML = this.value/10;
 }
 //AST
 var astslider = document.getElementById("ASTrange");
@@ -172,7 +172,7 @@ altslider.oninput = function() {
 var bilslider = document.getElementById("BILrange");
 var biloutput = document.getElementById("BILoutput");
 bilslider.oninput = function() {
-  biloutput.innerHTML = this.value;
+  biloutput.innerHTML = this.value/10;
 }
 //GGT
 var ggtslider = document.getElementById("GGTrange");
@@ -190,7 +190,7 @@ alpslider.oninput = function() {
 var ptslider = document.getElementById("PTrange");
 var ptoutput = document.getElementById("PToutput");
 ptslider.oninput = function() {
-  ptoutput.innerHTML = this.value;
+  ptoutput.innerHTML = this.value/10;
 }
 //PTT
 var pttslider = document.getElementById("PTTrange");
@@ -202,7 +202,7 @@ pttslider.oninput = function() {
 var albslider = document.getElementById("ALBrange");
 var alboutput = document.getElementById("ALBoutput");
 albslider.oninput = function() {
-  alboutput.innerHTML = this.value;
+  alboutput.innerHTML = this.value/10;
 }
 
 
@@ -450,7 +450,7 @@ var chart3 = new Chart(ctx, {
             pointHitRadius:0,
             pointHoverBackgroundColor	: '#4F76E2',
             hoverRadius: 0,
-            data: [62,62,62,62,62,62],
+            data: [65,65,65,65,65,65],
         }]
     },
     options: {
@@ -559,47 +559,68 @@ var chart4 = new Chart(ctx, {
     },
 });
 
+
 function slider21data(){
-  chart4.data.datasets[0].data[0] = document.getElementById('ASTrange').value;
+  var norm_value = rescaling(document.getElementById('ASTrange').value, 0, 8, 48, 100);
+  var mid_norm_value = rescaling(28, 0, 8, 48, 70);
+  chart4.data.datasets[0].data[0] =norm_value;
   chart4.update();
 }
 function slider22data(){
-  chart4.data.datasets[0].data[1] = document.getElementById('ALTrange').value;
+  var norm_value = rescaling(document.getElementById('ALTrange').value, 0, 7, 55, 100);
+  var mid_norm_value = rescaling(31, 0, 7, 55, 100);
+  chart4.data.datasets[0].data[1] = norm_value;
   chart4.update();
 }
 function slider23data(){
-  chart4.data.datasets[0].data[2] = document.getElementById('BILrange').value;
+  var norm_value = rescaling(document.getElementById('BILrange').value, 0, 1, 12, 100);
+  var mid_norm_value = rescaling(6.5, 0, 1, 12, 100);
+  chart4.data.datasets[0].data[2] = norm_value;
   chart4.update();
 }
 function slider24data(){
-  chart4.data.datasets[0].data[3] = document.getElementById('GGTrange').value;
+  var norm_value = rescaling(document.getElementById('GGTrange').value, 0, 9, 48, 100);
+  var mid_norm_value = rescaling(28.5,  0, 9, 48, 100);
+  chart4.data.datasets[0].data[3] = norm_value;
   chart4.update();
 }
 function slider25data(){
-  chart4.data.datasets[0].data[4] = document.getElementById('ALPrange').value;
+  var norm_value = rescaling(document.getElementById('ALPrange').value, 0, 45, 115, 150);
+  var mid_norm_value = rescaling(80, 0, 45, 115, 150);
+  chart4.data.datasets[0].data[4] = norm_value;
   chart4.update();
 }
 function slider26data(){
-  chart4.data.datasets[0].data[5] = document.getElementById('PTrange').value;
+  var norm_value = rescaling(document.getElementById('PTrange').value, 0, 95, 138, 200);
+  var mid_norm_value = rescaling(116.5, 0, 95, 138, 200);
+  chart4.data.datasets[0].data[5] = norm_value;
   chart4.update();
 }
 function slider27data(){
-  chart4.data.datasets[0].data[6] = document.getElementById('PTTrange').value;
+  var norm_value = rescaling(document.getElementById('PTTrange').value, 0, 60, 70, 100);
+  var mid_norm_value = rescaling(65, 0, 60, 70, 100);
+  chart4.data.datasets[0].data[6] = norm_value;
   chart4.update();
 }
 function slider28data(){
-  chart4.data.datasets[0].data[7] = document.getElementById('ALBrange').value;
-  chart4.update();
-}
-function slider29data(){
-  chart4.data.datasets[0].data[8] = document.getElementById('BUNrange').value;
-  chart4.update();
-}
-function slider30data(){
-  chart4.data.datasets[0].data[9] = document.getElementById('CRrange').value;
+  var norm_value = rescaling(document.getElementById('ALBrange').value, 0, 35, 50, 100);
+  var mid_norm_value = rescaling(42.5, 0, 35, 50, 100);
+  chart4.data.datasets[0].data[7] = norm_value;
   chart4.update();
 }
 
+function slider30data(){
+  var norm_value = rescaling(document.getElementById('CRrange').value, 0, 5, 12, 100);
+  var mid_norm_value = rescaling(8.5, 0, 5, 12, 100);
+  chart4.data.datasets[0].data[8] = norm_value;
+  chart4.update();
+}
+function slider29data(){
+  var norm_value = rescaling(document.getElementById('BUNrange').value, 0, 6, 20, 100);
+  var mid_norm_value = rescaling(13, 0, 6, 20, 100);
+  chart4.data.datasets[0].data[9] = norm_value;
+  chart4.update();
+}
 
 
 
@@ -647,6 +668,7 @@ arrowBtndown.onclick = function() {
   // document.getElementById("dot").style.marginLeft= 0;
   // }
 }
+
 
 
 // card 2 charts
@@ -797,3 +819,13 @@ var bpchart = new Chart(ctx, {
         }
     }
 });
+arrowBtndown.onclick = function() {
+  height = document.getElementById("bheight").value;
+  weight = document.getElementById("bweight").value;
+  bmi = weight / Math.pow((height/100),2)
+  console.log(bmi)
+  var newLeftMargin = parseInt(55 + 11 * (bmi -15));
+  console.log(newLeftMargin)
+  target = document.getElementById("dot").setAttribute('style','margin-left:'+newLeftMargin+'px;')
+
+}
