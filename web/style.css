@@ -42,11 +42,6 @@ html {
 	margin-left: 25px;
 }
 
-#barChart {
-	display: flex;
-	position: relative;
-}
-
 .card1 {
 	position: absolute;
 	display: flex;

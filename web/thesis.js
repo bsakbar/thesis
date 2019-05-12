@@ -1,6 +1,5 @@
 Chart.defaults.global.defaultFontFamily = "Roboto Mono";
-Chart.defaults.global.defaultFontSize = "12px";
-Chart.defaults.global.defaultFontStyle = "400";
+
 
 
 const scale = (num, in_min, in_max, out_min, out_max) => {
@@ -219,10 +218,13 @@ var chart1 = new Chart(ctx, {
         labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
 
         datasets: [{
+
             backgroundColor:'rgba(255, 178, 59, 0)',
             borderWidth: 0.7,
             borderColor: '#1a1a1a',
-            pointBackgroundColor: ['rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)'],
+            pointBackgroundColor: ['rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)',
+            'rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)',
+            'rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)'],
             pointBorderWidth: 1,
             pointHitRadius:2,
             pointRadius: 3.4,
@@ -233,6 +235,7 @@ var chart1 = new Chart(ctx, {
         }]
     },
     options: {
+      tooltips: {enabled: false},
       responsive: true,
       maintainAspectRatio: false,
       legend: false,
@@ -490,7 +493,8 @@ var chart2 = new Chart(ctx, {
             backgroundColor:'rgba(166, 195, 186, 0)',
             borderWidth: 0.7,
             borderColor: '#232323',
-            pointBackgroundColor: ['rgba(166, 195, 186, 1)','rgba(166, 195, 186, 1)','rgba(166, 195, 186, 1)','rgba(166, 195, 186, 1)','rgba(166, 195, 186, 1)'],
+            pointBackgroundColor: ['rgba(166, 195, 186, 1)','rgba(166, 195, 186, 1)','rgba(166, 195, 186, 1)',
+            'rgba(166, 195, 186, 1)','rgba(166, 195, 186, 1)'],
             pointBorderWidth: 1,
             pointHitRadius:2,
             pointRadius: 3.4,
@@ -502,6 +506,7 @@ var chart2 = new Chart(ctx, {
         }]
     },
     options: {
+      tooltips: {enabled: false},
       responsive: true,
       maintainAspectRatio: false,
       legend: false,
@@ -603,7 +608,8 @@ var chart3 = new Chart(ctx, {
             backgroundColor:'rgba(79, 118, 226, 0)',
             borderWidth: 0.8,
             borderColor: '#232323',
-            pointBackgroundColor: ['rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)'],
+            pointBackgroundColor: ['rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)',
+            'rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)','rgba(79, 118, 226, 1)'],
             pointBorderWidth: 1,
             pointHitRadius:0,
             pointHoverBackgroundColor	: '#232323',
@@ -613,6 +619,7 @@ var chart3 = new Chart(ctx, {
         }]
     },
     options: {
+      tooltips: {enabled: false},
       responsive: true,
       maintainAspectRatio: false,
       legend: false,
@@ -723,7 +730,9 @@ var chart4 = new Chart(ctx, {
             backgroundColor:'rgba(255, 118, 81, 0)',
             borderWidth: 0.7,
             borderColor: '#232323',
-            pointBackgroundColor: ['rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)'],
+            pointBackgroundColor: ['rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)',
+            'rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)',
+            'rgba(255, 118, 81,1)','rgba(255, 118, 81,1)','rgba(255, 118, 81,1)'],
             pointBorderWidth: 1,
             pointHitRadius:2,
             pointRadius: 3.4,
@@ -734,6 +743,7 @@ var chart4 = new Chart(ctx, {
         }]
     },
     options: {
+      tooltips: {enabled: false},
       responsive: true,
       maintainAspectRatio: false,
       legend: false,
@@ -931,7 +941,6 @@ arrowBtndown.onclick = function() {
 // card 2 charts
 
 
-
 var ctx = document.getElementById("barChart").getContext('2d');
 var barChart = new Chart(ctx, {
 
@@ -939,18 +948,38 @@ var barChart = new Chart(ctx, {
     data: {
         labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','PT','RDW'],
         datasets: [{
-            labels: "My First Dataset",
+            labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','PT','RDW'],
             data: [0,0,0,0,0,0,0,0,0],
-            fill: false,
+            fill: true,
             borderWidth: 0.5,
             borderColor: '#232323',
             backgroundColor: "rgba(198, 198, 198, 1)",
-            HoverBackgroundColor	: '#FF7651',
+            hoverBackgroundColor	: 'rgba(255, 178, 59, 1)',
             borderColor: "rgba(230, 230, 230, 0)",
             borderWidth: 1
         }]
     },
     options: {
+
+      tooltips: {
+            callbacks: {
+                label: function(tooltipItem, data) {
+                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                    if (label) {
+                        label += ': ';
+                    }
+                    label += Math.round(tooltipItem.xLabel * 100) / 100;
+                    return label;
+                }
+            },
+            custom: function(tooltip) {
+                    if (!tooltip) return;
+                    // disable displaying the color box;
+                    tooltip.displayColors = false;
+                  },
+        },
+
 
         responsive: true,
         maintainAspectRatio: false,
@@ -978,7 +1007,7 @@ var barChart = new Chart(ctx, {
                       max:100,
                       fontSize: 8,
                       fontFamily: "Roboto Mono",
-                      defaultFontStyle: 200,
+                      fontStyle: 200,
                   }
             }],
             xAxes: [{
@@ -987,14 +1016,16 @@ var barChart = new Chart(ctx, {
                   fontSize: 10,
                   fontFamily: "Roboto Mono",
                   beginAtZero: true,
+                  fontStyle: 400,
               },
-                stacked: true,
+              stacked: true,
 
             }],
 
         }
     }
 });
+
 
 var ctx = document.getElementById('chartCard2').getContext('2d');
 var chartCard2 = new Chart(ctx, {
@@ -1008,7 +1039,9 @@ var chartCard2 = new Chart(ctx, {
             backgroundColor:'rgba(255, 178, 59, 0)',
             borderWidth: 0.5,
             borderColor: '#232323',
-            pointBackgroundColor: ['rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)'],
+            pointBackgroundColor: ['rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)',
+            'rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)',
+            'rgba(255, 178, 59, 1)','rgba(255, 178, 59, 1)'],
             pointBorderWidth: 1,
             pointHitRadius:0,
             pointHoverBackgroundColor	: '#232323',
@@ -1019,6 +1052,7 @@ var chartCard2 = new Chart(ctx, {
         }]
     },
     options: {
+      tooltips: {enabled: false},
       responsive: true,
       maintainAspectRatio: false,
       legend: false,
