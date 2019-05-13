@@ -552,3 +552,25 @@ float: right;
 	position: absolute;
 	z-index: +1;
 }
+
+#barline1{
+	margin-left:312px;
+	margin-top: 448px;
+	border-left: 1.5px dashed;
+	color:#ff7a7a;
+  height: 135px;
+	display: flex;
+	position: absolute;
+	z-index: +1;
+}
+
+#barline2{
+	margin-left:469px;
+	margin-top: 448px;
+	border-left: 1.5px dashed;
+	color:#ff7a7a;
+  height: 135px;
+	display: flex;
+	position: absolute;
+	z-index: +1;
+}

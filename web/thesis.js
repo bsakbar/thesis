@@ -261,7 +261,7 @@ var chart1 = new Chart(ctx, {
 
 function slider1data(){
   var norm_value = rescaling(document.getElementById('WBCrange').value, 10, 45, 110, 150)
-  var mid_norm_value = rescaling(55, 10, 45, 110, 150)
+  var mid_norm_value = rescaling(77.5, 10, 45, 110, 150)
   chart1.data.datasets[0].data[1] = norm_value;
   chartCard2.data.datasets[0].data[1] = norm_value;
   barChart.data.datasets[0].data[1]= (norm_value-mid_norm_value)/mid_norm_value*100;
@@ -279,6 +279,14 @@ function slider1data(){
   }else{
   chartCard2.data.datasets[0].pointBackgroundColor[1]= "#FFB23B";
   }
+
+  if (norm_value > 80 || norm_value < 50){
+  barChart.data.datasets[0].backgroundColor[1]= "#ff7a7a";
+
+  }else{
+  barChart.data.datasets[0].backgroundColor[1]= "rgba(198, 198, 198, 1)";
+  }
+
 
   chartCard2.update();
   barChart.update();
@@ -948,19 +956,18 @@ var barChart = new Chart(ctx, {
     data: {
         labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','PT','RDW'],
         datasets: [{
-            labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','PT','RDW'],
+          backgroundColor: ["rgba(198, 198, 198, 1)","rgba(198, 198, 198, 1)","rgba(198, 198, 198, 1)",
+          "rgba(198, 198, 198, 1)","rgba(198, 198, 198, 1)","rgba(198, 198, 198, 1)","rgba(198, 198, 198, 1)",
+          "rgba(198, 198, 198, 1)","rgba(198, 198, 198, 1)"],
             data: [0,0,0,0,0,0,0,0,0],
-            fill: true,
             borderWidth: 0.5,
             borderColor: '#232323',
-            backgroundColor: "rgba(198, 198, 198, 1)",
             hoverBackgroundColor	: 'rgba(255, 178, 59, 1)',
             borderColor: "rgba(230, 230, 230, 0)",
             borderWidth: 1
         }]
     },
     options: {
-
       tooltips: {
             callbacks: {
                 label: function(tooltipItem, data) {
@@ -991,20 +998,19 @@ var barChart = new Chart(ctx, {
               min:-100,
               max:100,
           },
-            scaleLabel:{
-              display: true,
-            },
+
             lineWidth: 0.5,
               yAxes: [{
+                  display: false,
                   gridLines: {
                     display: false,
                   },
                   barPercentage: 0.6,
                   ticks: {
+
                       display: true,
                       beginAtZero: true,
-                      min:-100,
-                      max:100,
+
                       fontSize: 8,
                       fontFamily: "Roboto Mono",
                       fontStyle: 200,
@@ -1013,6 +1019,8 @@ var barChart = new Chart(ctx, {
             xAxes: [{
               // display: false,
               ticks: {
+                  min:-100,
+                  max:100,
                   fontSize: 10,
                   fontFamily: "Roboto Mono",
                   beginAtZero: true,
@@ -1052,6 +1060,7 @@ var chartCard2 = new Chart(ctx, {
         }]
     },
     options: {
+
       tooltips: {enabled: false},
       responsive: true,
       maintainAspectRatio: false,
