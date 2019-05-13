@@ -556,7 +556,7 @@ float: right;
 #barline1{
 	margin-left:312px;
 	margin-top: 448px;
-	border-left: 1.5px dashed;
+	border-left: 1.4px dashed;
 	color:#ff7a7a;
   height: 135px;
 	display: flex;
@@ -567,7 +567,7 @@ float: right;
 #barline2{
 	margin-left:469px;
 	margin-top: 448px;
-	border-left: 1.5px dashed;
+	border-left: 1.4px dashed;
 	color:#ff7a7a;
   height: 135px;
 	display: flex;
