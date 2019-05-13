@@ -72,11 +72,14 @@
            <br>
            <br>
            <span style="
+
            font-weight: 300;
          	 font-size: 12px;
           line-height: 1.8;
           ">
-           The barchart below shows Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+           The barchart below shows another representation of the results. It measures the distance between
+           the outlier and the center of the normal range (Chart on the right), and convert it into a percentage.
+           The two red dashed lines determine the noraml range.    </span>
          </div>
 
          <img style="
@@ -93,6 +96,17 @@
          ">
          <canvas id="chartCard2" ></canvas>
          </div>
+         <text style="
+         font-size: 10px;
+         font-family: 'Roboto Mono', monospace;
+         font-weight: 400;
+         color: #ff7a7a;
+         position: absolute;
+         display: flex;
+         margin-left: 355px;
+         margin-top: 425px;
+
+         ">Normal Range</text>
 
          <span id="barline1"></span>
          <span id="barline2"></span>
@@ -323,8 +337,8 @@
                   <input type="range" min="0" max="100" value="50" class="slider" id="MCHCrange" onchange="slider7data()">
                   <span class="units">% Hb/cell</span>
                   <br>
-                  <span class = "subhead">Platelets<br>
-                  <h2 class="subsubhead">–</h2>
+                  <span class = "subhead">PL<br>
+                  <h2 class="subsubhead">Platelets</h2>
                   <span style="color: rgba(255, 178, 59, 0.5); margin-left:160px" class="outputValue" id="PLoutput">–––</span>
                   <input type="range" min="10" max="900" value="450" class="slider" id="PLrange" onchange="slider8data()">
                   <span class="units">mm3</span>

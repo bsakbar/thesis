@@ -12,7 +12,7 @@ html {
 	width: 250px !important;
 	height: 250px !important;
 	margin-top: 50px;
-	margin-left: 25px;
+	margin-left: 32px;
 }
 
 #chart2 {
@@ -65,10 +65,10 @@ html {
 .yellowPoly{
 	position: absolute;
 	display: block;
-	width: 147px;
+	width: 175px;
 	/* margin-left: 81px; */
-	margin-left: 91px;
-	margin-top: 103px;
+	margin-left: 66px;
+	margin-top: 89px;
 }
 .greenPoly{
 	position: absolute;
@@ -171,6 +171,7 @@ html {
 	top: -115px;
 	position: relative;
 	cursor: pointer;
+	z-index: +1;
 }
 
 
@@ -371,12 +372,13 @@ a:focus{
 	letter-spacing: auto;
 	display: flex;
 	position: absolute;
-	/* z-index: +1; */
 	border: 0.5px solid #232323;
 	border-radius: 5px;
 	background-color: #ffffff;
 	width: 120px;
+
 }
+
 
 ::-webkit-datetime-edit {
 	padding: 3px;

@@ -215,7 +215,7 @@ var chart1 = new Chart(ctx, {
     type: 'radar',
     data: {
 
-        labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','Platelets','RDW'],
+        labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','PL','RDW'],
 
         datasets: [{
 
@@ -315,6 +315,12 @@ function slider2data(){
   }else{
   chartCard2.data.datasets[0].pointBackgroundColor[0]= "#FFB23B";
   }
+  if (norm_value > 80 || norm_value < 50){
+  barChart.data.datasets[0].backgroundColor[0]= "#ff7a7a";
+
+  }else{
+  barChart.data.datasets[0].backgroundColor[0]= "rgba(198, 198, 198, 1)";
+  }
 
   chartCard2.update();
   barChart.update();
@@ -340,6 +346,12 @@ function slider3data(){
   }else{
   chartCard2.data.datasets[0].pointBackgroundColor[2]= "#FFB23B";
   }
+  if (norm_value > 80 || norm_value < 50){
+  barChart.data.datasets[0].backgroundColor[2]= "#ff7a7a";
+
+  }else{
+  barChart.data.datasets[0].backgroundColor[2]= "rgba(198, 198, 198, 1)";
+  }
 
   chartCard2.update();
   barChart.update();
@@ -363,6 +375,12 @@ function slider4data(){
 
   }else{
   chartCard2.data.datasets[0].pointBackgroundColor[3]= "#FFB23B";
+  }
+  if (norm_value > 80 || norm_value < 50){
+  barChart.data.datasets[0].backgroundColor[3]= "#ff7a7a";
+
+  }else{
+  barChart.data.datasets[0].backgroundColor[3]= "rgba(198, 198, 198, 1)";
   }
 
   chartCard2.update();
@@ -388,6 +406,12 @@ function slider5data(){
   }else{
   chartCard2.data.datasets[0].pointBackgroundColor[4]= "#FFB23B";
   }
+  if (norm_value > 80 || norm_value < 50){
+  barChart.data.datasets[0].backgroundColor[4]= "#ff7a7a";
+
+  }else{
+  barChart.data.datasets[0].backgroundColor[4]= "rgba(198, 198, 198, 1)";
+  }
 
   chartCard2.update();
   barChart.update();
@@ -410,6 +434,12 @@ function slider6data(){
 
   }else{
   chartCard2.data.datasets[0].pointBackgroundColor[5]= "#FFB23B";
+  }
+  if (norm_value > 80 || norm_value < 50){
+  barChart.data.datasets[0].backgroundColor[5]= "#ff7a7a";
+
+  }else{
+  barChart.data.datasets[0].backgroundColor[5]= "rgba(198, 198, 198, 1)";
   }
 
   chartCard2.update();
@@ -434,6 +464,12 @@ function slider7data(){
   }else{
   chartCard2.data.datasets[0].pointBackgroundColor[6]= "#FFB23B";
   }
+  if (norm_value > 80 || norm_value < 50){
+  barChart.data.datasets[0].backgroundColor[6]= "#ff7a7a";
+
+  }else{
+  barChart.data.datasets[0].backgroundColor[6]= "rgba(198, 198, 198, 1)";
+  }
 
   chartCard2.update();
   barChart.update();
@@ -457,6 +493,12 @@ function slider8data(){
   }else{
   chartCard2.data.datasets[0].pointBackgroundColor[7]= "#FFB23B";
   }
+  if (norm_value > 80 || norm_value < 50){
+  barChart.data.datasets[0].backgroundColor[7]= "#ff7a7a";
+
+  }else{
+  barChart.data.datasets[0].backgroundColor[7]= "rgba(198, 198, 198, 1)";
+  }
 
   chartCard2.update();
   barChart.update();
@@ -479,6 +521,12 @@ function slider9data(){
 
   }else{
   chartCard2.data.datasets[0].pointBackgroundColor[8]= "#FFB23B";
+  }
+  if (norm_value > 80 || norm_value < 50){
+  barChart.data.datasets[0].backgroundColor[8]= "#ff7a7a";
+
+  }else{
+  barChart.data.datasets[0].backgroundColor[8]= "rgba(198, 198, 198, 1)";
   }
 
   chartCard2.update();
@@ -954,7 +1002,7 @@ var barChart = new Chart(ctx, {
 
     type: "horizontalBar",
     data: {
-        labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','PT','RDW'],
+        labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','PL','RDW'],
         datasets: [{
           backgroundColor: ["rgba(198, 198, 198, 1)","rgba(198, 198, 198, 1)","rgba(198, 198, 198, 1)",
           "rgba(198, 198, 198, 1)","rgba(198, 198, 198, 1)","rgba(198, 198, 198, 1)","rgba(198, 198, 198, 1)",
@@ -1041,7 +1089,7 @@ var chartCard2 = new Chart(ctx, {
     type: 'radar',
     data: {
 
-        labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','PT','RDW'],
+        labels: ['RBC', 'WBC', 'HGB', 'HT', 'MCV', 'MCH', 'MCHC','PL','RDW'],
 
         datasets: [{
             backgroundColor:'rgba(255, 178, 59, 0)',
