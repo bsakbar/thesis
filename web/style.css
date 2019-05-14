@@ -95,7 +95,7 @@ html {
 .card2 {
 	background: #ffffff;
 	position: fixed;
-	margin-top: 97px;
+	margin-top: 23px;
 	left: 700px;
 	width: 790px;
 	height: 630px;
@@ -273,7 +273,7 @@ html {
 .boxSlider {
 	width: 529px;
 	margin-left: 160px;
-	margin-top: 70px;
+	margin-top: -3px;
 	background: #ffffff;
 	border: 1px solid;
 	border-color: #232323;
@@ -284,10 +284,9 @@ html {
 }
 
 .logo{
-	width:50px;
+	width:95px;
 	margin-left: 200px;
-	margin-top: 71px;
-	top:50px;
+	margin-top: 100px;
 	position: relative;
 	display:  block;
 }
@@ -346,7 +345,7 @@ html {
 
 .circles>a {
 	background: #ffffff;
-	top: 91px;
+	top: 17px;
 	left: 200px;
 	display: inline-block;
 	width: 12px;
@@ -358,10 +357,10 @@ html {
 	margin: 0 0 0.5rem 0;
 	position: relative;
 }
-
-a:focus{
-	background: #ff7a7a !important;
-}
+/* 
+a:active{
+	background: #232323;
+} */
 
 
 
