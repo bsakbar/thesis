@@ -12,7 +12,3 @@ Blood is a fascinating component of the human body. With only a few drops of blo
 
 Created by: Batool Akbar <br>
 Advisor: Daniel Sauter
-
-
-
-https://drive.google.com/file/d/1kAJ0CnZ4jUIcOt8UW3APCIturqV2czwI/view?usp=sharing
