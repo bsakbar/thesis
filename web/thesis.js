@@ -1,8 +1,8 @@
-setTimeout(fade_out, 2500);
-function fade_out() {
-  $("#msg").fadeOut().empty();
-}
-
+// setTimeout(fade_out, 2500);
+// function fade_out() {
+//   $("#msg").fadeOut().empty();
+// }
+//
 
 Chart.defaults.global.defaultFontFamily = "Roboto Mono";
 
