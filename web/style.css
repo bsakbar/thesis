@@ -439,7 +439,7 @@ a:active{
 .bmi {
 	width: 600px;
 	top:410px;
-	margin-left:0px;
+	margin-left:-120px;
 	position: relative;
 	outline: none;
 	border: none;
